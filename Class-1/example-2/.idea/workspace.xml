@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbb7c4b-03fb-4cd1-98ce-4514235e1a81" name="Changes" comment="" />
+    <list default="true" id="ddbb7c4b-03fb-4cd1-98ce-4514235e1a81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Bcit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/BcitStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Journal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/out/test/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/PersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/out/test/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/PersonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Date.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/src/tests/ca/bcit/comp2601/lesson1/monikaszucs/DateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review-2501/src/tests/ca/bcit/comp2601/lesson1/monikaszucs/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../review-2501/src/tests/ca/bcit/comp2601/lesson1/monikaszucs/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,5 +45,16 @@
       <updated>1662777046290</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
