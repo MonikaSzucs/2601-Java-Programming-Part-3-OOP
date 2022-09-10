@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbb7c4b-03fb-4cd1-98ce-4514235e1a81" name="Changes" comment="" />
+    <list default="true" id="3d7e1b2e-46ba-43be-bb2b-705bbc5f6212" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../example-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../example-2/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2EYefEfUyCPhMiYESiNT4yGGaIV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EYb7IO4FcEtEvSGyBWsfrGf6pq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,15 +33,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ddbb7c4b-03fb-4cd1-98ce-4514235e1a81" name="Changes" comment="" />
-      <created>1662777046290</created>
+      <changelist id="3d7e1b2e-46ba-43be-bb2b-705bbc5f6212" name="Changes" comment="" />
+      <created>1662775296400</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662777046290</updated>
+      <updated>1662775296400</updated>
     </task>
     <servers />
   </component>
