@@ -148,6 +148,6 @@ class Date {
     }
 
     public String getDayOfTheWeek() {
-        
+        return "test";
     }
 }
