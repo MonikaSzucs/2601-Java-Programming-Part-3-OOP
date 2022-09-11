@@ -30,18 +30,22 @@ public class Name {
             throw new IllegalArgumentException("The argument is not valid. The first cannot be null or empty");
         }
         if(last == null || last.isBlank()) {
-            throw new IllegalArgumentException("The argument is not valid. The last cannot be null or empty");
+            throw new IllegalArgumentException("The argument is not valid. The first cannot be null or empty");
         }
 
-        if(first.length() > 45 || first.toLowerCase().contains("admin")) {
-            throw new IllegalArgumentException("The first is less than 45 characters or contains the word admin");
+        if(first.length() > 45) {
+            throw new IllegalArgumentException("The first name is longer than 45 characters");
+        } else if(first.toLowerCase().contains("admin")) {
+            throw new IllegalArgumentException("The first name has the word admin in it");
         } else {
             this.first = first;
         }
 
-        if(last.length() > 45 || last.toLowerCase().contains("admin")) {
-            throw new IllegalArgumentException("The last is greater than 45 characters or contains the word admin");
-        } else {
+        if(last.length() > 45 ) {
+            throw new IllegalArgumentException("The last name is longer than 45 characters");
+        } else if(last.toLowerCase().contains("admin")){
+            throw new IllegalArgumentException("The last name has the word admin in it");
+        }else {
             this.last = last;
         }
     }

@@ -53,43 +53,79 @@ class NameTest {
     }
 
     @Test
-    public void constructorThrows_withBadArgument() {
+    public void constructorThrows_withNullFirstName() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Name name = new Name(null, "wooDS");
         });
 
-        String expectedMessage = "bad first name!";
+        String expectedMessage = "The argument is not valid. The first cannot be null or empty";
         String actualMessage = exception.getMessage();
 
         assertTrue(actualMessage.equals(expectedMessage));
     }
 
     @Test
-    public void constructorThrows_withBadArgumentTwo() {
+    public void constructorThrows_withNullLastName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Name name = new Name("tigER", null);
+        });
+
+        String expectedMessage = "The argument is not valid. The first cannot be null or empty";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.equals(expectedMessage));
+    }
+
+    @Test
+    public void constructorThrows_withBlankFirstName() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Name name = new Name( "", "wooDS");
         });
 
-        String expectedMessage = "Is blank";
+        String expectedMessage = "The argument is not valid. The first cannot be null or empty";
         String actualMessage = exception.getMessage();
 
         assertTrue(actualMessage.equals(expectedMessage));
     }
 
     @Test
-    public void constructorThrows_withBadArgumenThree() {
+    public void constructorThrows_withBlankLastName() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            Name name = new Name( "admin", "wooDS");
+            Name name = new Name( "tigER", "");
         });
 
-        String expectedMessage = "Has the word admin";
+        String expectedMessage = "The argument is not valid. The first cannot be null or empty";
         String actualMessage = exception.getMessage();
 
         assertTrue(actualMessage.equals(expectedMessage));
     }
 
     @Test
-    public void checkingFirstNameLengthGreaterThanFourtyFive() {
+    public void constructorThrows_withAdminInFirstName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Name name = new Name( "helloadminhi", "wooDS");
+        });
+
+        String expectedMessage = "The first name has the word admin in it";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.equals(expectedMessage));
+    }
+
+    @Test
+    public void constructorThrows_withAdminInLastName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Name name = new Name( "tigER", "helloadminhi");
+        });
+
+        String expectedMessage = "The last name has the word admin in it";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.equals(expectedMessage));
+    }
+
+    @Test
+    public void constructorThrows_withFirstNameLengthGreaterThanFourtyFive() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Name name = new Name( "sfdsjlfjldkslkgdklgfdlkhjfdlkhjljhklfdjgroeedsf", "wooDS");
         });
@@ -97,7 +133,19 @@ class NameTest {
         String expectedMessage = "The first name is longer than 45 characters";
         String actualMessage = exception.getMessage();
 
-        assertTrue(name.length() > 4, "5 is greater the 4");
+        assertTrue(actualMessage.equals(expectedMessage));
+    }
+
+    @Test
+    public void constructorThrows_withLastNameLengthGreaterThanFourtyFive() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Name name = new Name( "tigER", "sfdsjlfjldkslkgdklgfdlkhjfdlkhjljhklfdjgroeedsf");
+        });
+
+        String expectedMessage = "The last name is longer than 45 characters";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.equals(expectedMessage));
     }
 
 }
