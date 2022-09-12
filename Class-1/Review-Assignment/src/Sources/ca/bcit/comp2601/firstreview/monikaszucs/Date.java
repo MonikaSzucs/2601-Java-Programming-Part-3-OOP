@@ -148,6 +148,80 @@ class Date {
     }
 
     public String getDayOfTheWeek() {
-        return "test";
+        Integer stepZero;
+
+        if ((getYear() & 3) == 0 && ((getYear() % 25) != 0 || (getYear() & 15) == 0)) {
+            stepZero = 6;
+        } else if(getYear()%2000 == 1) {
+            stepZero = 6;
+        } else if(getYear()%1800 == 1) {
+            stepZero = 2;
+        } else {
+            stepZero = 0;
+        }
+
+        Integer gettingLastTwoDigitsOfYear = getYear() % 100;
+        Integer stepOne = gettingLastTwoDigitsOfYear / 12;
+        Integer stepTwo = gettingLastTwoDigitsOfYear - (stepOne * 12);
+        Integer stepThree = stepTwo / 4;
+        Integer stepFour;
+
+        if(stepZero == 0) {
+            stepFour = getDay() + stepThree + stepTwo + stepOne + stepZero;
+        } else {
+            stepFour = getDay();
+        }
+
+        Integer stepFive;
+        if(getMonth() == 1) {
+            stepFive = stepFour + 1;
+        } else if(getMonth() == 2) {
+            stepFive = stepFour + 4;
+        } else if(getMonth() == 3) {
+            stepFive = stepFour + 4;
+        } else if(getMonth() == 4) {
+            stepFive = stepFour + 0;
+        } else if(getMonth() == 5) {
+            stepFive = stepFour + 2;
+        } else if(getMonth() == 6) {
+            stepFive = stepFour + 5;
+        } else if(getMonth() == 7) {
+            stepFive = stepFour + 0;
+        } else if(getMonth() == 8) {
+            stepFive = stepFour + 3;
+        } else if(getMonth() == 9) {
+            stepFive = stepFour + 6;
+        } else if(getMonth() == 10) {
+            stepFive = stepFour + 1;
+        } else if(getMonth() == 11) {
+            stepFive = stepFour + 4;
+        } else if(getMonth() == 12) {
+            stepFive = stepFour + 6;
+        } else {
+            throw new IllegalArgumentException("Not a valid month");
+        }
+
+        Integer stepSix = stepFive % 7;
+        String dayOfWeek;
+
+        if(stepSix == 0) {
+            dayOfWeek = "sat";
+        } else if(stepSix == 1) {
+            dayOfWeek = "sun";
+        } else if(stepSix == 2) {
+            dayOfWeek = "mon";
+        } else if(stepSix == 3) {
+            dayOfWeek = "tues";
+        } else if(stepSix == 4) {
+            dayOfWeek = "wed";
+        } else if(stepSix == 5) {
+            dayOfWeek = "thurs";
+        } else if(stepSix == 6) {
+            dayOfWeek = "fri";
+        } else {
+            throw new IllegalArgumentException("You got an illegal day of the week value");
+        }
+
+        return dayOfWeek;
     }
 }
