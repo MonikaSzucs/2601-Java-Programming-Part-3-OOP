@@ -148,31 +148,30 @@ class Date {
     }
 
     public String getDayOfTheWeek() {
-        Integer stepZero;
+        int stepZero;
 
-        if ((getYear() & 3) == 0 && ((getYear() % 25) != 0 || (getYear() & 15) == 0)) {
+        // Date dateTwo = new Date(2021, 3, 15);
+
+        if( (getMonth() ==1 || getMonth() ==2) && (getYear() % 4 == 0)){
             stepZero = 6;
-        } else if(getYear()%2000 == 1) {
+        } else if(getYear() >=2000 && getYear() <= 2999) {
             stepZero = 6;
-        } else if(getYear()%1800 == 1) {
+        } else if(getYear() >= 1800 && getYear() <= 1899) {
             stepZero = 2;
         } else {
             stepZero = 0;
         }
 
-        Integer gettingLastTwoDigitsOfYear = getYear() % 100;
-        Integer stepOne = gettingLastTwoDigitsOfYear / 12;
-        Integer stepTwo = gettingLastTwoDigitsOfYear - (stepOne * 12);
-        Integer stepThree = stepTwo / 4;
-        Integer stepFour;
+        int gettingLastTwoDigitsOfYear = getYear() % 100;
+        int stepOne = gettingLastTwoDigitsOfYear / 12;
+        int stepTwo = gettingLastTwoDigitsOfYear - (stepOne * 12);
+        int stepThree = stepTwo / 4;
+        int stepFour;
 
-        if(stepZero == 0) {
-            stepFour = getDay() + stepThree + stepTwo + stepOne + stepZero;
-        } else {
-            stepFour = getDay();
-        }
+        stepFour = getDay() + stepThree + stepTwo + stepOne + stepZero;
 
-        Integer stepFive;
+        int stepFive;
+
         if(getMonth() == 1) {
             stepFive = stepFour + 1;
         } else if(getMonth() == 2) {
@@ -201,7 +200,7 @@ class Date {
             throw new IllegalArgumentException("Not a valid month");
         }
 
-        Integer stepSix = stepFive % 7;
+        int stepSix = stepFive % 7;
         String dayOfWeek;
 
         if(stepSix == 0) {

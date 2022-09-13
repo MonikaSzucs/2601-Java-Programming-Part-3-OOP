@@ -42,10 +42,14 @@ class DateTest {
 
     @Test
     void getDayOfTheWeek() {
+        Date dateThree = new Date(1820, 3, 15);
+        assertEquals("wed", dateThree.getDayOfTheWeek());
+
         Date date = new Date(1977, 10, 31);
         assertEquals("mon", date.getDayOfTheWeek());
 
         Date dateTwo = new Date(2021, 3, 15);
         assertEquals("mon", dateTwo.getDayOfTheWeek());
+
     }
 }
