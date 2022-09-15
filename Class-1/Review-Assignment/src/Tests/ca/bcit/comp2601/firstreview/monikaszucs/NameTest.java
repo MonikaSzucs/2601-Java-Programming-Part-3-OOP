@@ -21,8 +21,8 @@ class NameTest {
         Name name = new Name("tigER", "wooDS");
         assertEquals("tigER", name.getFirst());
 
-        name = new Name("eLoN", "MuSk");
-        assertEquals("eLoN", name.getFirst());
+        Name nameTwo = new Name("eLoN", "MuSk");
+        assertEquals("eLoN", nameTwo.getFirst());
     }
 
     @Test
@@ -30,8 +30,8 @@ class NameTest {
         Name name = new Name("tigER", "wooDS");
         assertEquals("wooDS", name.getLast());
 
-        name = new Name("eLoN", "MuSk");
-        assertEquals("MuSk", name.getLast());
+        Name nameTwo = new Name("eLoN", "MuSk");
+        assertEquals("MuSk", nameTwo.getLast());
     }
 
     @Test
@@ -39,8 +39,8 @@ class NameTest {
         Name name = new Name("tigER", "wooDS");
         assertEquals("T.W.", name.getInitials());
 
-        name = new Name("eLoN", "MuSk");
-        assertEquals("E.M.", name.getInitials());
+        Name nameTwo = new Name("eLoN", "MuSk");
+        assertEquals("E.M.", nameTwo.getInitials());
     }
 
     @Test
@@ -48,8 +48,8 @@ class NameTest {
         Name name = new Name("tigER", "wooDS");
         assertEquals("Tiger Woods", name.getFullName());
 
-        name = new Name("eLoN", "MuSk");
-        assertEquals("Elon Musk", name.getFullName());
+        Name nameTwo = new Name("eLoN", "MuSk");
+        assertEquals("Elon Musk", nameTwo.getFullName());
     }
 
     @Test
