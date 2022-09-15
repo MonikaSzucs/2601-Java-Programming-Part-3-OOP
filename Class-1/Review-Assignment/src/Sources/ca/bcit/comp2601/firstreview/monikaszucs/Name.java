@@ -17,12 +17,16 @@ public class Name {
     private final String  first;
     private final String  last;
 
+    private static final Integer FOURTY_FIVE_CHARACTERS = 45;
+    private static final Integer INITIAL_CHARACTER      = 0;
+    private static final Integer SECOND_CHARACTER       = 1;
+
     /**
      * The constructor for the Name class
      *
-     * @param first the first name of the person
-     * @param last the last name of the person
-     * @throws IllegalArgumentException for the first and last name
+     * @param first the first name of the person in String
+     * @param last the last name of the person in String
+     * @throws IllegalArgumentException for the first and last name if the name if null, blank, or over 45 characters
      *
      */
     Name(final String first, final String last) {
@@ -33,7 +37,7 @@ public class Name {
             throw new IllegalArgumentException("The argument is not valid. The first cannot be null or empty");
         }
 
-        if(first.length() > 45) {
+        if(first.length() > FOURTY_FIVE_CHARACTERS) {
             throw new IllegalArgumentException("The first name is longer than 45 characters");
         } else if(first.toLowerCase().contains("admin")) {
             throw new IllegalArgumentException("The first name has the word admin in it");
@@ -41,7 +45,7 @@ public class Name {
             this.first = first;
         }
 
-        if(last.length() > 45 ) {
+        if(last.length() > FOURTY_FIVE_CHARACTERS) {
             throw new IllegalArgumentException("The last name is longer than 45 characters");
         } else if(last.toLowerCase().contains("admin")){
             throw new IllegalArgumentException("The last name has the word admin in it");
@@ -74,16 +78,16 @@ public class Name {
      * @return initials of the person containing the first letter of the first name and first letter of the last name
      */
     public String getInitials() {
-        return first.substring(0,1).toUpperCase() + "." + last.substring(0,1).toUpperCase() + ".";
+        return first.substring(INITIAL_CHARACTER,SECOND_CHARACTER).toUpperCase() + "." + last.substring(INITIAL_CHARACTER,SECOND_CHARACTER).toUpperCase() + ".";
     }
 
     /**
      * Getting the full name of the person
      *
-     * @return the first and last name of the person
+     * @return the first and last name of the person with first initials capitalized
      */
     public String getFullName() {
-        return first.substring(0,1).toUpperCase() + first.substring(1).toLowerCase() + " " +
-                last.substring(0,1).toUpperCase()  + last.substring(1).toLowerCase();
+        return first.substring(INITIAL_CHARACTER,SECOND_CHARACTER).toUpperCase() + first.substring(SECOND_CHARACTER).toLowerCase() + " " +
+                last.substring(INITIAL_CHARACTER,SECOND_CHARACTER).toUpperCase()  + last.substring(SECOND_CHARACTER).toLowerCase();
     }
 }

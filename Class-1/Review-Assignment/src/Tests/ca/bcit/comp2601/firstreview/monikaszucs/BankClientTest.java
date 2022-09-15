@@ -18,7 +18,6 @@ class BankClientTest {
 
     @Test
     void getDetails() {
-        //final Name name, final Date birthDate, final Date deathDate, final Date dateJoinedBank, final String clientID
         Name nameOne = new Name("Tiger", "Woods");
         Date birthdateOne = new Date(1879, 3, 14);
         Date deathDateOne = new Date(1955, 4, 18);

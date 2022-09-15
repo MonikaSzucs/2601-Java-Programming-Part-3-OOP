@@ -17,11 +17,27 @@ class BankAccountTest {
     }
 
     @Test
-    void withdraw() {
+    void deposit() {
         //final double amountUsd, final int pinToMatch, final String client, final String accountNumber,
         //final Date accountOpened, final Date accountClosed
-        Name nameOne = new Name("Monika", "Szucs");
+        Name nameOne = new Name("Tom", "Smith");
         Date accountOpenedOne = new Date(1879, 3, 14);
+        BankAccount accountOne = new BankAccount(200.00,1234567, nameOne.getFirst(),"123djb1", accountOpenedOne, null);
+
+        assertEquals(250.00, accountOne.deposit(50));
+
+
+        Name nameTwo = new Name("Fred", "George");
+        Date accountOpenedTwo = new Date(1879, 3, 14);
+        BankAccount accountTwo = new BankAccount(200.00,1234567, nameTwo.getFirst(),"123djb1", accountOpenedTwo, null);
+
+        assertEquals(150.00, accountOne.withdraw(50, 1234567));
+    }
+
+    @Test
+    void withdraw() {
+        Name nameOne = new Name("Monika", "Szucs");
+        Date accountOpenedOne = new Date(1993, 5, 7);
         BankAccount accountOne = new BankAccount(200.00,1234567, nameOne.getFirst(),"123djb1", accountOpenedOne, null);
 
         assertEquals(190.00, accountOne.withdraw(10));
@@ -33,5 +49,4 @@ class BankAccountTest {
 
         assertEquals(150.00, accountOne.withdraw(50, 1234567));
     }
-
 }
