@@ -29,12 +29,8 @@ class Person {
         return lastName;
     }
 
-
     String getDetails() {
         return "I am a " + this.getClass().getSimpleName() +
                 " and my last name is " + getLastName();
     }
-
-
-
 }
