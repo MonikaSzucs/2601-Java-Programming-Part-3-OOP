@@ -12,7 +12,7 @@ class PersonTest {
 
     @BeforeEach
     void setUp() {
-        //p = new Person("Woods", "Tiger");
+        p = new Person("Woods");
     }
 
     @AfterEach
@@ -24,6 +24,4 @@ class PersonTest {
     void getLastName() {
         assertEquals("Woods", p.getLastName());
     }
-
-
 }
