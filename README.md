@@ -1,4 +1,3 @@
-# 2601-Java-Programming-Part-3-OOP at BCIT
+# Equal Objects Should have Equal Hashcodes
 
-
-## SOLID Principles of Object Oriented Design
+# The better the developer you are the more abstract classes you should have

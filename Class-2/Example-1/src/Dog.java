@@ -2,11 +2,19 @@
 abstract class Dog extends Mammal{
     private final String name;
 
-    public Dog(final String name, final double weightKg, final int yearBorn) {
-        this.name = name;
+    Dog(final String name, final double weightKg, final int yearBorn) {
         super(weightKg, yearBorn);
+        this.name = name;
     }
 
+    @Override
+    public void speak(final int times) {
+        for (int i = 0; i < times; i++) {
+            System.out.println("woof");
+        }
+    }
+
+    @Override
     public void move() {
         System.out.println("run");
     }
@@ -29,12 +37,7 @@ abstract class Dog extends Mammal{
 
     }
 
-    @Override
-    public void speak(final int times) {
-        for (int i = 0; i < times; i++) {
-            System.out.println("woof");
-        }
-    }
+
 //
 //    @Override
 //    public int hashCode() {

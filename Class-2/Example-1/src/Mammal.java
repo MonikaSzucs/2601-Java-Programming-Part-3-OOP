@@ -1,12 +1,13 @@
 abstract class Mammal {
-    private int weightKg;
+    private double weightKg;
     private final int yearBorn;
 
-    Mammal(final int weightKg, final int yearBorn) {
-        super(weightKg, yearBorn);
+    Mammal(final double weightKg, final int yearBorn) {
+        this.weightKg = weightKg;
+        this.yearBorn = yearBorn;
     }
 
-    int getWeightKg() {
+    double getWeightKg() {
         return weightKg;
     }
 
@@ -14,6 +15,8 @@ abstract class Mammal {
         return yearBorn;
     }
 
+    // no body when you use abstract
+    // you can have parameters
     public abstract void speak(final int numTimes);
     public abstract void move();
 }

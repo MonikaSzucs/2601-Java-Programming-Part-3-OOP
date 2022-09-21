@@ -5,8 +5,13 @@ class Dolphin extends Mammal{
 
     @Override
     public void speak(final int times) {
-        System.out.println("ee eee ee");
+        for (int i = 0; i < times; i++) {
+            System.out.println("ee eee ee");
+        }
     }
 
-
+    @Override
+    public void move() {
+        System.out.println("swim");
+    }
 }
