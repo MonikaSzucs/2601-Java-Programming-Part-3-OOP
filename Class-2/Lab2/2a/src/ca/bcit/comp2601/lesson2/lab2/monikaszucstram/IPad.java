@@ -28,7 +28,7 @@ abstract class IPad extends IDevice {
      * @param operatingSystemVersion Checks to see what operating system version the device has
      */
     IPad(final String purpose, final boolean hasCase, final String operatingSystemVersion) {
-        super(purpose);
+        super(PURPOSE);
         this.hasCase = hasCase;
         this.operatingSystemVersion = operatingSystemVersion;
     }
@@ -70,20 +70,6 @@ abstract class IPad extends IDevice {
     }
 
     /**
-     * To String
-     *
-     * @return the purpose of the device, if it has a case or not and what operating system version it uses
-     */
-    @Override
-    public String toString() {
-        return "IPad{" +
-                "purpose=" + PURPOSE +
-                ", hasCase=" + hasCase +
-                ", operatingSystemVersion=" + operatingSystemVersion +
-                '}';
-    }
-
-    /**
      * Checks to see if the IPad is really an ipad
      *
      * @param o grabs the object IPad
@@ -95,16 +81,14 @@ abstract class IPad extends IDevice {
             return false;
         }
 
-        if(this == o) { // same address; i.e. same IPad
-            return true;
-        }
+        if(this == o) return true;
 
         if(!(o instanceof IPad)) {
             return false;
         }
 
         IPad ipad = (IPad)o;
-        return (this.operatingSystemVersion == operatingSystemVersion);
+        return (this.operatingSystemVersion.equals(ipad.operatingSystemVersion));
     }
 
     /**
@@ -116,5 +100,36 @@ abstract class IPad extends IDevice {
     public int hashCode()
     {
         return Objects.hash(operatingSystemVersion);
+    }
+
+    /**
+     *
+     * @return the purpose of the device
+     */
+    @Override
+    public String getPurpose() {
+        return "the purpose of this " + getClass() + " is '" + PURPOSE + "'";
+    }
+
+    /**
+     * Prints out the details
+     */
+    @Override
+    void printDetails(){
+        //todo;
+    }
+
+    /**
+     * To String
+     *
+     * @return the purpose of the device, if it has a case or not and what operating system version it uses
+     */
+    @Override
+    public String toString() {
+        return  super.toString() +
+                "IPad{" +
+                "hasCase=" + hasCase +
+                ", operatingSystemVersion=" + operatingSystemVersion +
+                '}';
     }
 }

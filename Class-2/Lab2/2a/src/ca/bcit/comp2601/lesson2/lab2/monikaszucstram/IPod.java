@@ -28,7 +28,7 @@ abstract class IPod extends IDevice {
      * @param maximumVolumeInDecibels the maximum volume in decibels
      */
     IPod(final String purpose, final int numberOfSongsStored, final double maximumVolumeInDecibels) {
-        super(purpose);
+        super(PURPOSE);
         this.numberOfSongsStored = numberOfSongsStored;
         this.maximumVolumeInDecibels = maximumVolumeInDecibels;
     }
@@ -70,21 +70,6 @@ abstract class IPod extends IDevice {
     }
 
     /**
-     * toString
-     *
-     * @return the information about the IPod which will contain the purpose, number of songs stored, and maximum
-     *          volume in decibels
-     */
-    @Override
-    public String toString() {
-        return "IPod{" +
-                "purpose=" + PURPOSE +
-                ", numberOfSongsStored=" + numberOfSongsStored +
-                ", maximumVolumeInDecibels='" + maximumVolumeInDecibels + '\'' +
-                '}';
-    }
-
-    /**
      * Equals
      *
      * @param o the object of the device
@@ -96,9 +81,7 @@ abstract class IPod extends IDevice {
             return false;
         }
 
-        if(this == o) {
-            return true;
-        }
+        if(this == o) return true;
 
         if(!(o instanceof IPod)) {
             return false;
@@ -117,5 +100,25 @@ abstract class IPod extends IDevice {
     public int hashCode()
     {
         return Objects.hash(numberOfSongsStored);
+    }
+
+    @Override
+    public String getPurpose() {
+        return  "The purpose of this " + getClass() + " is '" + PURPOSE + "'";
+    }
+
+    /**
+     * toString
+     *
+     * @return the information about the IPod which will contain the purpose, number of songs stored, and maximum
+     *          volume in decibels
+     */
+    @Override
+    public String toString() {
+        return  super.toString() +
+                "IPod{" +
+                " numberOfSongsStored=" + numberOfSongsStored +
+                ", maximumVolumeInDecibels='" + maximumVolumeInDecibels + '\'' +
+                '}';
     }
 }

@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93eb25c6-370a-4d8b-b0a4-f95901d9bcc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Example-1/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Example-1/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IDevice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPhone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPhoneSeven.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2a" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

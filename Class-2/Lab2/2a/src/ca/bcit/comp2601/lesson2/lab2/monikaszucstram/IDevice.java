@@ -13,13 +13,20 @@ package ca.bcit.comp2601.lesson2.lab2.monikaszucstram;
  *
  */
 abstract class IDevice {
-    private final String purpose;
+    private String purpose;
 
     /**
      *
      * @param purpose the purpose of the device for why it is used
      */
     IDevice(final String purpose) {
+        if(purpose == null) {
+            throw new NullPointerException("Purpose can not be null");
+        }
+        this.purpose = purpose;
+    }
+
+    public void setPurpose(final String purpose) {
         this.purpose = purpose;
     }
 
@@ -28,13 +35,13 @@ abstract class IDevice {
      * @return the purpose of the device
      */
     public String getPurpose() {
-        return purpose;
+        return this.purpose;
     };
 
     /**
      * Printing the details of the classes
      */
-    public abstract void printDetails();
+    abstract void printDetails();
 
     /**
      *

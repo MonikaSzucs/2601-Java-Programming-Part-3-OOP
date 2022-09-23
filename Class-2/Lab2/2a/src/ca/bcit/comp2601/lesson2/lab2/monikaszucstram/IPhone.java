@@ -14,7 +14,7 @@ import java.util.Objects;
  * @version 1.0
  *
  */
-abstract class IPhone extends IDevice {
+ abstract class IPhone extends IDevice {
     private double numberOfMinutesRemainingOnPhonePlan;
     private String carrier;
 
@@ -28,7 +28,7 @@ abstract class IPhone extends IDevice {
      * @param carrier to see what carrier the phone is with
      */
     IPhone(final String purpose, final double numberOfMinutesRemainingOnPhonePlan, final String carrier) {
-        super(purpose);
+        super(PURPOSE);
         this.numberOfMinutesRemainingOnPhonePlan = numberOfMinutesRemainingOnPhonePlan;
         this.carrier = carrier;
     }
@@ -70,21 +70,6 @@ abstract class IPhone extends IDevice {
     }
 
     /**
-     * toString
-     *
-     * @return a string of information on the Iphone which is the purpose, number of minutes remianing on the phone
-     *          plan and the carrier
-     */
-    @Override
-    public String toString() {
-        return "IPhone{" +
-                ", purpose=" + PURPOSE +
-                ", numberOfMinutesRemainingOnPhonePlan=" + numberOfMinutesRemainingOnPhonePlan +
-                ", carrier='" + carrier + '\'' +
-                '}';
-    }
-
-    /**
      * Equals
      *
      * @param o grabbing the object
@@ -96,9 +81,7 @@ abstract class IPhone extends IDevice {
             return false;
         }
 
-        if(this == o) {
-            return true;
-        }
+        if(this == o) return true;
 
         if(!(o instanceof IPhone)) {
             return false;
@@ -106,13 +89,8 @@ abstract class IPhone extends IDevice {
 
         IPhone iphone = (IPhone)o;
         double difference;
-        difference = this.numberOfMinutesRemainingOnPhonePlan - iphone.numberOfMinutesRemainingOnPhonePlan;
-
-        if(difference > 10.0 || difference < -10.0) {
-            return false;
-        } else {
-            return true;
-        }
+        difference = Math.abs(this.numberOfMinutesRemainingOnPhonePlan - iphone.numberOfMinutesRemainingOnPhonePlan);
+        return difference <= 10;
     }
 
     /**
@@ -124,5 +102,37 @@ abstract class IPhone extends IDevice {
     public int hashCode()
     {
         return Objects.hash(numberOfMinutesRemainingOnPhonePlan);
+    }
+
+    /**
+     *
+     * @return the purpose of this device
+     */
+    @Override
+    public String getPurpose() {
+        return "The purpose of this " + getClass() + " is '" + PURPOSE + "'";
+    }
+
+    /**
+     * prints out the details
+     */
+    @Override
+    void printDetails() {
+        // todo
+    }
+
+    /**
+     * toString
+     *
+     * @return a string of information on the Iphone which is the purpose, number of minutes remianing on the phone
+     *          plan and the carrier
+     */
+    @Override
+    public String toString() {
+        return super.toString() +
+                "IPhone{" +
+                "numberOfMinutesRemainingOnPhonePlan=" + numberOfMinutesRemainingOnPhonePlan +
+                ", carrier='" + carrier + '\'' +
+                '}';
     }
 }
