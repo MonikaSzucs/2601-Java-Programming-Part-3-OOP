@@ -3,6 +3,13 @@ public class Dog extends Mammals implements Comparable<Dog> {
     private String name;
     private int yearBorn;
 
+    public Dog(String name, int yearBorn) {
+        super();
+        this.name = name;
+        this.yearBorn = yearBorn;
+    }
+
+
     @Override
     public int compareTo(final Dog d) {
         // dogs with longer names are bigger
@@ -37,12 +44,6 @@ public class Dog extends Mammals implements Comparable<Dog> {
                 "name='" + name + '\'' +
                 ", yearBorn=" + yearBorn +
                 '}' + "\n";
-    }
-
-    public Dog(String name, int yearBorn) {
-        super();
-        this.name = name;
-        this.yearBorn = yearBorn;
     }
 
     @Override
