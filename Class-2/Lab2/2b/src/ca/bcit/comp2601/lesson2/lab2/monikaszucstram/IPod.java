@@ -106,6 +106,15 @@ abstract class IPod extends IDevice {
         return  "The purpose of this " + getClass() + " is '" + PURPOSE + "'";
     }
 
+
+    /**
+     * prints out the details
+     */
+    @Override
+    void printDetails() {
+        System.out.println(getPurpose());
+    }
+
     /**
      * toString
      *

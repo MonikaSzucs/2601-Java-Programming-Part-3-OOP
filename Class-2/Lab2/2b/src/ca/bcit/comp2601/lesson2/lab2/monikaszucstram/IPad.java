@@ -115,7 +115,7 @@ abstract class IPad extends IDevice {
      */
     @Override
     void printDetails(){
-        //todo;
+        System.out.println(getPurpose());
     }
 
     /**

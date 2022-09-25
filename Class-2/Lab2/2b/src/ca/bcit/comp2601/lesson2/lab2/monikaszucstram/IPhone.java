@@ -19,6 +19,7 @@ abstract class IPhone extends IDevice {
     private String carrier;
 
     private static final String PURPOSE = "talking";
+    private static final int MAX_MINUTES_ON_DATA = 10;
 
     /**
      * Constructor
@@ -38,6 +39,7 @@ abstract class IPhone extends IDevice {
      * @param numberOfMinutesRemainingOnPhonePlan to set the number of minutes remaining on the phone plan
      */
     public void setNumberOfMinutesRemainingOnPhonePlan(final double numberOfMinutesRemainingOnPhonePlan) {
+        // check for negative or decimals
         this.numberOfMinutesRemainingOnPhonePlan = numberOfMinutesRemainingOnPhonePlan;
     }
 
@@ -71,8 +73,8 @@ abstract class IPhone extends IDevice {
     /**
      * Equals
      *
-     * @param o grabbing the object
-     * @return true if the objectand the iphone we are comparing it to matches but false if they are different
+     * @param o the object to which this Iphone is being compared
+     * @return true if the iphone's have the same number of minutes remaining
      */
     @Override
     public boolean equals(final Object o) {
@@ -87,9 +89,11 @@ abstract class IPhone extends IDevice {
         }
 
         IPhone iphone = (IPhone)o;
-        double difference;
-        difference = Math.abs(this.numberOfMinutesRemainingOnPhonePlan - iphone.numberOfMinutesRemainingOnPhonePlan);
-        return difference <= 10;
+        final double MINS_TOLERANCE = 0.000001;
+        return(Math.abs(this.numberOfMinutesRemainingOnPhonePlan - iphone.numberOfMinutesRemainingOnPhonePlan) < MINS_TOLERANCE);
+        //double difference;
+        //difference = Math.abs(this.numberOfMinutesRemainingOnPhonePlan - iphone.numberOfMinutesRemainingOnPhonePlan);
+        //return difference <= MAX_MINUTES_ON_DATA;
     }
 
     /**
@@ -108,7 +112,7 @@ abstract class IPhone extends IDevice {
      * @return the purpose of this device
      */
     @Override
-    public String getPurpose() {
+    void printPurpose() {
         return "The purpose of this " + getClass() + " is '" + PURPOSE + "'";
     }
 
@@ -117,7 +121,7 @@ abstract class IPhone extends IDevice {
      */
     @Override
     void printDetails() {
-        // todo
+        System.out.println(getPurpose());
     }
 
     /**

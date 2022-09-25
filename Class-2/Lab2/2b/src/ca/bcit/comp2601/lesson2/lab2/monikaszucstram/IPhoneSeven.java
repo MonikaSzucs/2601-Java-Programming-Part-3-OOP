@@ -14,7 +14,7 @@ import java.util.Objects;
  * @version 1.0
  *
  */
-abstract class IPhoneSeven extends IPhone {
+class IPhoneSeven extends IPhone {
     private final boolean highResolutionCamera;
     private final int gigabytesOfMemory;
 
@@ -62,9 +62,8 @@ abstract class IPhoneSeven extends IPhone {
             return false;
         }
 
-        if(this == o) {
-            return true;
-        }
+        if(this == o) return true;
+
 
         if(!(o instanceof IPhoneSeven)) {
             return false;

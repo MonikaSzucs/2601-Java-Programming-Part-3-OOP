@@ -34,7 +34,7 @@ abstract class IDevice {
      *
      * @return the purpose of the device
      */
-    public String getPurpose() {
+    public String printPurpose() {
         return this.purpose;
     };
 
