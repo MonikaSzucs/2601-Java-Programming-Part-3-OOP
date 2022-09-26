@@ -1,5 +1,4 @@
 public class HockeyPlayer extends Employee {
-    private final String firstName;
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -11,14 +10,25 @@ public class HockeyPlayer extends Employee {
     private static final String WORK_VERB = "play";
     private static final double OVERTIME_PAY_RATE = 0.0;
 
-    HockeyPlayer(final String firstName, final String dressCode, final boolean paidSalary, final boolean educationRequired, final String workVerb) {
-        this.firstName = firstName;
-        this.dressCode = dressCode;
-        this.paidSalary = paidSalary;
-        this.educationRequired = educationRequired;
-        this.workVerb = workVerb;
+    HockeyPlayer(final String name, int goalNumber)
+    {
+        super(name);
+        this.dressCode = DRESS_CODE;
+        this.paidSalary = true;
+        this.educationRequired = false;
+        this.workVerb = WORK_VERB;
+        this.numberOfGoals = goalNumber;
     }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
+
+    public int getGoals()
+    {
+        return numberOfGoals;
+    }
     @Override
     public String getDressCode() {
         return DRESS_CODE;
@@ -38,4 +48,10 @@ public class HockeyPlayer extends Employee {
     public String getWorkVerb() {
         return WORK_VERB;
     }
+
+    @Override
+    public double getOverTimePayRate()
+    {
+        return OVERTIME_PAY_RATE;
+    };
 }

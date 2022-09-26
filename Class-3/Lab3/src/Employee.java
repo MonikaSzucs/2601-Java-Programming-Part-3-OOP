@@ -1,8 +1,17 @@
 public abstract class Employee implements Employable {
     private final String name;
 
-    @Override
-    public double getOverTimePayRate() {
-        System.out.println("$0");
+    public Employee(String name) {
+        this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getOverTimePayRate()
+    {
+        return 0;
+    };
 }

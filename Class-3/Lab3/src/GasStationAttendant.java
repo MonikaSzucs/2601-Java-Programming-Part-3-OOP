@@ -1,22 +1,27 @@
 public class GasStationAttendant extends Employee {
-    private final String firstName;
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
     private final String workVerb;
 
-    private double numberOfDollarsStolenPerDay;
+    private int numberOfDollarsStolenPerDay;
 
     private static final String DRESS_CODE = "uniform";
     private static final String WORK_VERB = "pump";
     private static final double OVERTIME_PAY_RATE = 1.5;
 
-    GasStationAttendant(final String firstName, final String dressCode, final boolean paidSalary, final boolean educationRequired, final String workVerb) {
-        this.firstName = firstName;
-        this.dressCode = dressCode;
-        this.paidSalary = paidSalary;
-        this.educationRequired = educationRequired;
-        this.workVerb = workVerb;
+    GasStationAttendant(final String firstName, final int numberOfDollarsStolenPerDay) {
+        super(firstName);
+        this.dressCode = DRESS_CODE;
+        this.paidSalary = false;
+        this.educationRequired = false;
+        this.workVerb = WORK_VERB;
+        this.numberOfDollarsStolenPerDay = numberOfDollarsStolenPerDay;
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
     }
 
     @Override
@@ -37,5 +42,10 @@ public class GasStationAttendant extends Employee {
     @Override
     public String getWorkVerb() {
         return WORK_VERB;
+    }
+
+    public int getNumberOfDollarsStolenPerDay()
+    {
+        return numberOfDollarsStolenPerDay;
     }
 }

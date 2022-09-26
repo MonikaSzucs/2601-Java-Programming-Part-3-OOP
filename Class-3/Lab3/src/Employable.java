@@ -1,4 +1,5 @@
 public interface Employable {
+
     public String getDressCode();
 
     public boolean isPaidSalary();
@@ -10,4 +11,6 @@ public interface Employable {
     default public boolean getsPaid(){
         return true;
     }
+
+    double getOverTimePayRate();
 }

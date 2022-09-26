@@ -1,5 +1,4 @@
 public class Professor extends Employee {
-    private final String firstName;
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -11,12 +10,21 @@ public class Professor extends Employee {
     private static final String WORK_VERB = "teach";
     private static final double OVERTIME_PAY_RATE = 2.0;
 
-    Professor(final String firstName, final String dressCode, final boolean paidSalary, final boolean educationRequired, final String workVerb) {
-        this.firstName = firstName;
-        this.dressCode = dressCode;
-        this.paidSalary = paidSalary;
-        this.educationRequired = educationRequired;
-        this.workVerb = workVerb;
+
+    Professor(final String name, final String teachingMajor)
+    {
+        super(name);
+        this.dressCode = DRESS_CODE;
+        this.paidSalary = true;
+        this.educationRequired = true;
+        this.workVerb = WORK_VERB;
+        this.teachingMajor = teachingMajor;
+    }
+
+
+    @Override
+    public String getName() {
+        return super.getName();
     }
 
     @Override
@@ -37,5 +45,10 @@ public class Professor extends Employee {
     @Override
     public String getWorkVerb() {
         return WORK_VERB;
+    }
+
+    public String getTeachingMajor()
+    {
+        return teachingMajor;
     }
 }

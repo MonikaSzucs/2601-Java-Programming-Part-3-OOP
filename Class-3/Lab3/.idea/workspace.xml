@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59505c4a-ade8-44cc-a650-c889bab450f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Employable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Employees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GasStationAttendant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HockeyPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example/src/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/src/Mammals.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example/src/Mammals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-2/Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-2/Lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GasStationAttendant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HockeyPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Professor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +43,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Employees" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Employees" />
+      <module name="Lab3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Employees" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
