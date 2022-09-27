@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant> {
     private final String dressCode;
     private boolean paidSalary;
@@ -51,10 +53,38 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
 
     @Override
     public int compareTo(final GasStationAttendant gasStationAttendant) {
-        if(numberOfDollarsStolenPerDay > gasStationAttendant.getNumberOfDollarsStolenPerDay()) {
+        if(numberOfDollarsStolenPerDay < gasStationAttendant.getNumberOfDollarsStolenPerDay()) {
             return +120;
         } else {
             return -120;
         }
     }
+
+    @Override
+    public String toString() {
+        return "GasStationAttendant{" +
+                "firstName='" + super.getName() + '\'' +
+                ", dressCode=" + DRESS_CODE +
+                ", paidSalary=" + paidSalary +
+                ", educationRequired=" + educationRequired +
+                ", workVerb=" + workVerb +
+                ", numberOfDollarsStolenPerDay=" + numberOfDollarsStolenPerDay +
+                '}' + "\n";
+    }
+
+    @Override
+    public boolean equals(final Object o)
+    {
+        if(this == o) return true;
+        if(!(o instanceof GasStationAttendant)) return false;
+        GasStationAttendant gasStationAttendant = (GasStationAttendant) o;
+        return numberOfDollarsStolenPerDay == gasStationAttendant.numberOfDollarsStolenPerDay;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(numberOfDollarsStolenPerDay);
+    }
+
 }

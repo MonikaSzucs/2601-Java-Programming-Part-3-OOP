@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Employees {
@@ -43,10 +44,64 @@ public class Employees {
             } else if (employee1 instanceof  Professor) {
                 System.out.print("teaches " + ((Professor) employee1).getTeachingMajor() + "\n");
             } else if (employee1 instanceof Parent) {
-                System.out.print("spends " + ((Parent) employee1).getNumberOfHoursSpentPerWeekWithKids() + " hours/week with kids");
+                System.out.print("spends " + ((Parent) employee1).getNumberOfHoursSpentPerWeekWithKids() + " hours/week with kids \n");
             } else if (employee1 instanceof GasStationAttendant) {
-                System.out.print("steals " + ((GasStationAttendant) employee1).getNumberOfDollarsStolenPerDay() + " dollars a day");
+                System.out.print("steals " + ((GasStationAttendant) employee1).getNumberOfDollarsStolenPerDay() + " dollars a day \n");
             }
         }
+
+        System.out.println(" test ");
+        List<GasStationAttendant> gasStationAttendantsList;
+        gasStationAttendantsList = new ArrayList<>();
+
+        gasStationAttendantsList.add(new GasStationAttendant("Joe Smith",  10));
+        gasStationAttendantsList.add(new GasStationAttendant("Tony Baloney",  100));
+        gasStationAttendantsList.add(new GasStationAttendant("Benjamin Franklin",  100));
+        gasStationAttendantsList.add(new GasStationAttendant("Mary Fairy",  101));
+        gasStationAttendantsList.add(new GasStationAttendant("Bee See",  1));
+        System.out.println(gasStationAttendantsList);
+
+        Collections.sort(gasStationAttendantsList);
+        System.out.println(gasStationAttendantsList);
+
+
+        List<HockeyPlayer> hockeyPlayerList;
+        hockeyPlayerList = new ArrayList<>();
+
+        hockeyPlayerList.add(new HockeyPlayer("Wayne Gretzky",  894));
+        hockeyPlayerList.add(new HockeyPlayer("Who Ever",  0));
+        hockeyPlayerList.add(new HockeyPlayer("Brent Gretzky",  1));
+        hockeyPlayerList.add(new HockeyPlayer("Pavel Burey",  437));
+        hockeyPlayerList.add(new HockeyPlayer("Jason Harrison",  0));
+        System.out.println(hockeyPlayerList);
+
+        Collections.sort(hockeyPlayerList);
+        System.out.println(hockeyPlayerList);
+
+        List<Parent> parentList;
+        parentList = new ArrayList<>();
+
+        parentList.add(new Parent("Tiger Woods",  1));
+        parentList.add(new Parent("Super Mom",  168));
+        parentList.add(new Parent("Lazy Larry",  20));
+        parentList.add(new Parent("Ex Hausted",  168));
+        parentList.add(new Parent("Super Dad",  167));
+        System.out.println(parentList);
+
+        Collections.sort(parentList);
+        System.out.println(parentList);
+
+        List<Professor> professorList;
+        professorList = new ArrayList<>();
+
+        professorList.add(new Professor("Albert Einstein",  "Physics"));
+        professorList.add(new Professor("Jason Harrison",  "Computer Systems"));
+        professorList.add(new Professor("Richard Feynman",  "Physics"));
+        professorList.add(new Professor("BCIT Instructor",  "Computer Systems"));
+        professorList.add(new Professor("Kurt Godel",  "Logic"));
+        System.out.println(professorList);
+
+        Collections.sort(professorList);
+        System.out.println(professorList);
     }
 }

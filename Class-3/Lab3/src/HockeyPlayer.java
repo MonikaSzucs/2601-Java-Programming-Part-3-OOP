@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
     private final String dressCode;
     private boolean paidSalary;
@@ -57,10 +59,37 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 
     @Override
     public int compareTo(final HockeyPlayer hockeyPlayer) {
-        if(numberOfGoals > hockeyPlayer.getGoals()) {
+        if(numberOfGoals < hockeyPlayer.getGoals()) {
             return +120;
         } else {
             return -120;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "HockeyPlayer{" +
+                "firstName='" + super.getName() + '\'' +
+                ", dressCode=" + DRESS_CODE +
+                ", paidSalary=" + paidSalary +
+                ", educationRequired=" + educationRequired +
+                ", workVerb=" + workVerb +
+                ", numberOfGoals=" + numberOfGoals +
+                '}' + "\n";
+    }
+
+    @Override
+    public boolean equals(final Object o)
+    {
+        if(this == o) return true;
+        if(!(o instanceof HockeyPlayer)) return false;
+        HockeyPlayer hockeyPlayer = (HockeyPlayer) o;
+        return numberOfGoals == hockeyPlayer.numberOfGoals;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(numberOfGoals);
     }
 }

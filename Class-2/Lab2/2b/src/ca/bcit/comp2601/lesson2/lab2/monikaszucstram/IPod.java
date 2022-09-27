@@ -14,7 +14,7 @@ import java.util.Objects;
  * @version 1.0
  *
  */
-abstract class IPod extends IDevice {
+class IPod extends IDevice {
     private int numberOfSongsStored;
     private double maximumVolumeInDecibels;
 

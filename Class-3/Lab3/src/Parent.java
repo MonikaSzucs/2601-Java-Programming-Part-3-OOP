@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Parent extends Employee implements Comparable<Parent> {
     private final String dressCode;
     private boolean paidSalary;
@@ -51,10 +53,37 @@ public class Parent extends Employee implements Comparable<Parent> {
 
     @Override
     public int compareTo(final Parent parent) {
-        if(numberOfHoursSpentPerWeekWithKids > parent.getNumberOfHoursSpentPerWeekWithKids()) {
+        if(numberOfHoursSpentPerWeekWithKids < parent.getNumberOfHoursSpentPerWeekWithKids()) {
             return +120;
         } else {
             return -120;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "firstName='" + super.getName() + '\'' +
+                ", dressCode=" + DRESS_CODE +
+                ", paidSalary=" + paidSalary +
+                ", educationRequired=" + educationRequired +
+                ", workVerb=" + workVerb +
+                ", numberOfHoursSpentPerWeekWithKids=" + numberOfHoursSpentPerWeekWithKids +
+                '}' + "\n";
+    }
+
+    @Override
+    public boolean equals(final Object o)
+    {
+        if(this == o) return true;
+        if(!(o instanceof Parent)) return false;
+        Parent parent = (Parent) o;
+        return numberOfHoursSpentPerWeekWithKids == parent.numberOfHoursSpentPerWeekWithKids;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(numberOfHoursSpentPerWeekWithKids);
     }
 }
