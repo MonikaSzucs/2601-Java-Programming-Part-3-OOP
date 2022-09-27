@@ -1,4 +1,4 @@
-public class Parent extends Employee {
+public class Parent extends Employee implements Comparable<Parent> {
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -47,5 +47,14 @@ public class Parent extends Employee {
     public int getNumberOfHoursSpentPerWeekWithKids()
     {
         return numberOfHoursSpentPerWeekWithKids;
+    }
+
+    @Override
+    public int compareTo(final Parent parent) {
+        if(numberOfHoursSpentPerWeekWithKids > parent.getNumberOfHoursSpentPerWeekWithKids()) {
+            return +120;
+        } else {
+            return -120;
+        }
     }
 }

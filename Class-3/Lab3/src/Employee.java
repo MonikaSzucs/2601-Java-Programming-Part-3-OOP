@@ -13,5 +13,21 @@ public abstract class Employee implements Employable {
     public double getOverTimePayRate()
     {
         return 0;
-    };
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if(o == null) {
+            return false;
+        }
+
+        if(this == o) return true;
+
+        if(!(o instanceof Employee)) {
+            return false;
+        }
+
+        Employee employee = (Employee) o;
+        return (this.name.equals(employee.name));
+    }
 }

@@ -1,4 +1,4 @@
-public class Professor extends Employee {
+public class Professor extends Employee implements Comparable<Professor> {
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -50,5 +50,14 @@ public class Professor extends Employee {
     public String getTeachingMajor()
     {
         return teachingMajor;
+    }
+
+    @Override
+    public int compareTo(final Professor professor) {
+        if(professor.getTeachingMajor().equals("Computer Science")) {
+            return +120;
+        } else {
+            return -120;
+        }
     }
 }

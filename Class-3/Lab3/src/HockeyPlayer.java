@@ -1,4 +1,4 @@
-public class HockeyPlayer extends Employee {
+public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -53,5 +53,14 @@ public class HockeyPlayer extends Employee {
     public double getOverTimePayRate()
     {
         return OVERTIME_PAY_RATE;
-    };
+    }
+
+    @Override
+    public int compareTo(final HockeyPlayer hockeyPlayer) {
+        if(numberOfGoals > hockeyPlayer.getGoals()) {
+            return +120;
+        } else {
+            return -120;
+        }
+    }
 }

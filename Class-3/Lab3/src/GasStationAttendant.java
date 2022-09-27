@@ -1,4 +1,4 @@
-public class GasStationAttendant extends Employee {
+public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant> {
     private final String dressCode;
     private boolean paidSalary;
     private final boolean educationRequired;
@@ -47,5 +47,14 @@ public class GasStationAttendant extends Employee {
     public int getNumberOfDollarsStolenPerDay()
     {
         return numberOfDollarsStolenPerDay;
+    }
+
+    @Override
+    public int compareTo(final GasStationAttendant gasStationAttendant) {
+        if(numberOfDollarsStolenPerDay > gasStationAttendant.getNumberOfDollarsStolenPerDay()) {
+            return +120;
+        } else {
+            return -120;
+        }
     }
 }
