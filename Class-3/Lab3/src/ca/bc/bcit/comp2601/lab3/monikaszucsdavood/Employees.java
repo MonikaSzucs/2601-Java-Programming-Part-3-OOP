@@ -1,7 +1,22 @@
+package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Employees.java
+ *
+ * A Employees Class
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Spring/Summer 2022
+ * Lab 3
+ * @author Monika Szucs
+ * @author Davood Tabrizi
+ *
+ * @version 1.1
+ */
 public class Employees {
 
     public static void main(final String[] args) {

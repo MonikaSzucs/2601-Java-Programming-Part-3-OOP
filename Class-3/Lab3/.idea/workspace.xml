@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59505c4a-ade8-44cc-a650-c889bab450f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-2/Parham-Lab/src/Parham-Lab.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class-2/Lab2/2b/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPod.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-2/Lab2/2b/src/ca/bcit/comp2601/lesson2/lab2/monikaszucstram/IPod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/Employees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/GasStationAttendant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/GasStationAttendant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/HockeyPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/HockeyPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/Parent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/Professor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GasStationAttendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HockeyPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/out/production/example/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../example/out/production/example/Dog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../example/out/production/example/Mammals.class" beforeDir="false" afterPath="$PROJECT_DIR$/../example/out/production/example/Mammals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employees.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/GasStationAttendant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/HockeyPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Professor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +51,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../lab3_interface" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Employees (1)">
+    <configuration name="Employees (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.bc.bcit.comp2601.lab3.monikaszucsdavood.Employees" />
+      <module name="Lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.bc.bcit.comp2601.lab3.monikaszucsdavood.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Employees" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Employees" />
       <module name="Lab3" />
@@ -66,6 +77,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Employees (1)" />
         <item itemvalue="Application.Employees" />
       </list>
     </recent_temporary>

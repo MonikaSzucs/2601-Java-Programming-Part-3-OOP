@@ -1,5 +1,20 @@
+package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
+
 import java.util.Objects;
 
+/**
+ * Professor.java
+ *
+ * A Professor Class
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Spring/Summer 2022
+ * Lab 3
+ * @author Monika Szucs
+ * @author Davood Tabrizi
+ *
+ * @version 1.1
+ */
 public class Professor extends Employee implements Comparable<Professor> {
     private final String dressCode;
     private boolean paidSalary;
@@ -12,9 +27,13 @@ public class Professor extends Employee implements Comparable<Professor> {
     private static final String WORK_VERB = "teach";
     private static final double OVERTIME_PAY_RATE = 2.0;
 
-
-    Professor(final String name, final String teachingMajor)
-    {
+    /**
+     * Constructor
+     *
+     * @param name the name of the professor
+     * @param teachingMajor the major that the professor is teaching
+     */
+    Professor(final String name, final String teachingMajor) {
         super(name);
         this.dressCode = DRESS_CODE;
         this.paidSalary = true;
@@ -23,37 +42,71 @@ public class Professor extends Employee implements Comparable<Professor> {
         this.teachingMajor = teachingMajor;
     }
 
-
+    /**
+     * The getter
+     *
+     * @return the name of the professor
+     */
     @Override
     public String getName() {
         return super.getName();
     }
 
+    /**
+     * The Getter
+     *
+     * @return the dress code
+     */
     @Override
     public String getDressCode() {
         return DRESS_CODE;
     }
 
+    /**
+     * The Getter
+     *
+     * @return if the professor has a paid salary or not
+     */
     @Override
     public boolean isPaidSalary() {
         return paidSalary;
     }
 
+    /**
+     * The Getter
+     *
+     * @return if an education is required or not
+     */
     @Override
     public boolean postSecondaryEducationRequired() {
         return educationRequired;
     }
 
+    /**
+     * The Getter
+     *
+     * @return what the work verb is
+     */
     @Override
     public String getWorkVerb() {
         return WORK_VERB;
     }
 
-    public String getTeachingMajor()
-    {
+    /**
+     * The Getter
+     *
+     * @return the major the teacher is teaching
+     */
+    public String getTeachingMajor() {
         return teachingMajor;
     }
 
+    /**
+     * The Compare To Method
+     *
+     * @param professor object
+     * @return the order of the professor based on the teaching major
+     */
     @Override
     public int compareTo(final Professor professor) {
         if(this.teachingMajor.length() < professor.teachingMajor.length()) {
@@ -63,6 +116,11 @@ public class Professor extends Employee implements Comparable<Professor> {
         }
     }
 
+    /**
+     * To String Method
+     *
+     * @return the string containing the information on the professor
+     */
     @Override
     public String toString() {
         return "Professor{" +
@@ -75,18 +133,27 @@ public class Professor extends Employee implements Comparable<Professor> {
                 '}' + "\n";
     }
 
+    /**
+     * Equals Method
+     *
+     * @param o is the value of the Object
+     * @return if the teaching major compared to the Objects teaching major matches
+     */
     @Override
-    public boolean equals(final Object o)
-    {
+    public boolean equals(final Object o) {
         if(this == o) return true;
         if(!(o instanceof Professor)) return false;
         Professor professor = (Professor) o;
         return teachingMajor.equals(professor.teachingMajor);
     }
 
+    /**
+     * The hashCode Method
+     *
+     * @return the value of 0
+     */
     @Override
-    public int hashCode()
-    {
-        return Objects.hash(teachingMajor);
+    public int hashCode() {
+        return 0;
     }
 }
