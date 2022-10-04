@@ -26,10 +26,11 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     private static final String DRESS_CODE = "uniform";
     private static final String WORK_VERB = "pump";
     private static final double OVERTIME_PAY_RATE = 1.5;
+    private static final Integer POSITIVE_NUMBER = +120;
+    private static final Integer NEGATIVE_NUMBER = -120;
+    private static final Integer HASHCODE_RETURN = 0;
 
     /**
-     * Constructor
-     *
      * @param firstName the first name of the gas station attendant
      * @param numberOfDollarsStolenPerDay the number of dollars stolen per day in Canadian Dollars
      */
@@ -43,8 +44,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
-     *
      * @return the name of the gas station attendant
      */
     @Override
@@ -53,7 +52,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
      * @return the dress code of the gas station attendant
      */
     @Override
@@ -62,8 +60,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
-     *
      * @return if the gas station attendant has a paid salary or not
      */
     @Override
@@ -72,8 +68,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
-     *
      * @return if an education is required
      */
     @Override
@@ -82,8 +76,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
-     *
      * @return what the work verb is
      */
     @Override
@@ -92,8 +84,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Getter
-     *
      * @return the number of dollars stolen per day in Canadian dollars
      */
     public int getNumberOfDollarsStolenPerDay() {
@@ -101,23 +91,19 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The Compare To Method
-     *
      * @param gasStationAttendant the gas station attendant Object
      * @return the order of the gas station attendant based on the number of dollars stolen per day
      */
     @Override
     public int compareTo(final GasStationAttendant gasStationAttendant) {
         if(numberOfDollarsStolenPerDay < gasStationAttendant.getNumberOfDollarsStolenPerDay()) {
-            return +120;
+            return POSITIVE_NUMBER;
         } else {
-            return -120;
+            return NEGATIVE_NUMBER;
         }
     }
 
     /**
-     * To String Method
-     *
      * @return the string containing the information on the gas station attendant
      */
     @Override
@@ -133,8 +119,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * Equals Method
-     *
      * @param o is the value of the Object
      * @return if the numbers of dollars stolen per day is equivalent to the Objects dollars stolen per day
      */
@@ -147,13 +131,11 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
-     * The hashCode Method
-     *
      * @return the value of 0;
      */
     @Override
     public int hashCode() {
-        return 0;
+        return HASHCODE_RETURN;
     }
 
 }

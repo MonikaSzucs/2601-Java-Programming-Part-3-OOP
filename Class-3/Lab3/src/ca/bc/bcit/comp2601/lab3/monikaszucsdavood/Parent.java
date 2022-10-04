@@ -26,10 +26,11 @@ public class Parent extends Employee implements Comparable<Parent> {
     private static final String DRESS_CODE = "anything";
     private static final String WORK_VERB = "care";
     private static final double OVERTIME_PAY_RATE = -2.0;
+    private static final Integer POSITIVE_NUMBER = +120;
+    private static final Integer NEGATIVE_NUMBER = -120;
+    private static final Integer HASHCODE_RETURN = 0;
 
     /**
-     * Constructor
-     *
      * @param name the name of the parent
      * @param numberOfHoursSpentPerWeekWithKids the number of hours the parent spends with the kids
      */
@@ -43,8 +44,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
-     *
      * @return the name of the parent
      */
     @Override
@@ -53,8 +52,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
-     *
      * @return the dress code of the parent
      */
     @Override
@@ -63,8 +60,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
-     *
      * @return if the salary is paid or not
      */
     @Override
@@ -73,7 +68,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
      * @return the educational requirement to be a parent
      */
     @Override
@@ -82,8 +76,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
-     *
      * @return the work verb of the parent
      */
     @Override
@@ -92,8 +84,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The getter
-     *
      * @return the number of hours that the parent spends with the kids
      */
     public int getNumberOfHoursSpentPerWeekWithKids() {
@@ -101,24 +91,20 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The compare to method
-     *
      * @param parent the Object parent
      * @return the order ranking based on the number of hours spent per week with the kids
      */
     @Override
     public int compareTo(final Parent parent) {
         if(numberOfHoursSpentPerWeekWithKids < parent.getNumberOfHoursSpentPerWeekWithKids()) {
-            return +120;
+            return POSITIVE_NUMBER;
         } else {
-            return -120;
+            return NEGATIVE_NUMBER;
         }
     }
 
     /**
-     * To String
-     *
-     * @return a string aboout the parent
+     * @return a string about the parent
      */
     @Override
     public String toString() {
@@ -133,8 +119,6 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * Equals method
-     *
      * @param o is the value of the Object
      * @return if the number of hours spent with the kids is equals to the Objects hours spent with kids
      */
@@ -147,12 +131,10 @@ public class Parent extends Employee implements Comparable<Parent> {
     }
 
     /**
-     * The hashCode method
-     *
      * @return the value of 0
      */
     @Override
     public int hashCode() {
-        return 0;
+        return HASHCODE_RETURN;
     }
 }

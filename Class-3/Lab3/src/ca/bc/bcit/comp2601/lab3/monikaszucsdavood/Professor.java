@@ -26,10 +26,11 @@ public class Professor extends Employee implements Comparable<Professor> {
     private static final String DRESS_CODE = "fancy";
     private static final String WORK_VERB = "teach";
     private static final double OVERTIME_PAY_RATE = 2.0;
+    private static final Integer POSITIVE_NUMBER = +120;
+    private static final Integer NEGATIVE_NUMBER = -120;
+    private static final Integer HASHCODE_RETURN = 0;
 
     /**
-     * Constructor
-     *
      * @param name the name of the professor
      * @param teachingMajor the major that the professor is teaching
      */
@@ -43,8 +44,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The getter
-     *
      * @return the name of the professor
      */
     @Override
@@ -53,8 +52,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Getter
-     *
      * @return the dress code
      */
     @Override
@@ -63,8 +60,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Getter
-     *
      * @return if the professor has a paid salary or not
      */
     @Override
@@ -73,8 +68,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Getter
-     *
      * @return if an education is required or not
      */
     @Override
@@ -83,8 +76,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Getter
-     *
      * @return what the work verb is
      */
     @Override
@@ -93,8 +84,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Getter
-     *
      * @return the major the teacher is teaching
      */
     public String getTeachingMajor() {
@@ -102,23 +91,19 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The Compare To Method
-     *
      * @param professor object
      * @return the order of the professor based on the teaching major
      */
     @Override
     public int compareTo(final Professor professor) {
         if(this.teachingMajor.length() < professor.teachingMajor.length()) {
-            return +120;
+            return POSITIVE_NUMBER;
         } else {
-            return -120;
+            return NEGATIVE_NUMBER;
         }
     }
 
     /**
-     * To String Method
-     *
      * @return the string containing the information on the professor
      */
     @Override
@@ -134,8 +119,6 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * Equals Method
-     *
      * @param o is the value of the Object
      * @return if the teaching major compared to the Objects teaching major matches
      */
@@ -148,12 +131,10 @@ public class Professor extends Employee implements Comparable<Professor> {
     }
 
     /**
-     * The hashCode Method
-     *
      * @return the value of 0
      */
     @Override
     public int hashCode() {
-        return 0;
+        return HASHCODE_RETURN;
     }
 }

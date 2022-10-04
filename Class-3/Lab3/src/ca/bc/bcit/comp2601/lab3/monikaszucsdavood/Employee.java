@@ -15,10 +15,9 @@ package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
  */
 public abstract class Employee implements Employable {
     private final String name;
+    private static final Integer DEFAULT_OVER_TIME_PAY_RATE = 0;
 
     /**
-     * Constructor
-     *
      * @param name the name of the employee
      */
     public Employee(final String name) {
@@ -26,8 +25,6 @@ public abstract class Employee implements Employable {
     }
 
     /**
-     * The getter
-     *
      * @return the name of the employee
      */
     public String getName() {
@@ -35,17 +32,14 @@ public abstract class Employee implements Employable {
     }
 
     /**
-     * The getter
      * @return the value of the pay rate
      */
     @Override
     public double getOverTimePayRate() {
-        return 0;
+        return DEFAULT_OVER_TIME_PAY_RATE;
     }
 
     /**
-     * The equals method
-     *
      * @param o is the value of the Object
      * @return if the Object is really an Employee or not
      */

@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59505c4a-ade8-44cc-a650-c889bab450f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab3.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Employees.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/GasStationAttendant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/HockeyPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Parent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/Professor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../lab3_interface" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Employees (1)">
     <configuration name="Employees (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
