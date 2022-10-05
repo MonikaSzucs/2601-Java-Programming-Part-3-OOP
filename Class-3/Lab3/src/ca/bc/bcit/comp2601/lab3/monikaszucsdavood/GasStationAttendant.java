@@ -16,14 +16,11 @@ import java.util.Objects;
  * @version 1.1
  */
 public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant> {
-    private final String dressCode;
-    private boolean paidSalary;
-    private final boolean educationRequired;
-    private final String workVerb;
-
     private int numberOfDollarsStolenPerDay;
 
     private static final String DRESS_CODE = "uniform";
+    private static final Boolean PAID_SALARY = false;
+    private static final Boolean EDUCATION_REQUIRED = false;
     private static final String WORK_VERB = "pump";
     private static final double OVERTIME_PAY_RATE = 1.5;
     private static final Integer POSITIVE_NUMBER = +120;
@@ -36,10 +33,6 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
      */
     GasStationAttendant(final String firstName, final int numberOfDollarsStolenPerDay) {
         super(firstName);
-        this.dressCode = DRESS_CODE;
-        this.paidSalary = false;
-        this.educationRequired = false;
-        this.workVerb = WORK_VERB;
         this.numberOfDollarsStolenPerDay = numberOfDollarsStolenPerDay;
     }
 
@@ -60,11 +53,19 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     }
 
     /**
+     * @return the over time pay rate
+     */
+    @Override
+    public double getOverTimePayRate() {
+        return OVERTIME_PAY_RATE;
+    }
+
+    /**
      * @return if the gas station attendant has a paid salary or not
      */
     @Override
     public boolean isPaidSalary() {
-        return paidSalary;
+        return PAID_SALARY;
     }
 
     /**
@@ -72,7 +73,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
      */
     @Override
     public boolean postSecondaryEducationRequired() {
-        return educationRequired;
+        return EDUCATION_REQUIRED;
     }
 
     /**
@@ -111,9 +112,9 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
         return "GasStationAttendant{" +
                 "firstName='" + super.getName() + '\'' +
                 ", dressCode=" + DRESS_CODE +
-                ", paidSalary=" + paidSalary +
-                ", educationRequired=" + educationRequired +
-                ", workVerb=" + workVerb +
+                ", paidSalary=" + PAID_SALARY +
+                ", educationRequired=" + EDUCATION_REQUIRED +
+                ", workVerb=" + WORK_VERB +
                 ", numberOfDollarsStolenPerDay=" + numberOfDollarsStolenPerDay +
                 '}' + "\n";
     }
@@ -137,5 +138,4 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     public int hashCode() {
         return HASHCODE_RETURN;
     }
-
 }

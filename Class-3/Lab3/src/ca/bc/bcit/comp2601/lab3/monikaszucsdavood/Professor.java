@@ -16,14 +16,11 @@ import java.util.Objects;
  * @version 1.1
  */
 public class Professor extends Employee implements Comparable<Professor> {
-    private final String dressCode;
-    private boolean paidSalary;
-    private final boolean educationRequired;
-    private final String workVerb;
-
     private String teachingMajor;
 
     private static final String DRESS_CODE = "fancy";
+    private static final Boolean PAID_SALARY = true;
+    private static final Boolean EDUCATION_REQUIRED = true;
     private static final String WORK_VERB = "teach";
     private static final double OVERTIME_PAY_RATE = 2.0;
     private static final Integer POSITIVE_NUMBER = +120;
@@ -36,10 +33,6 @@ public class Professor extends Employee implements Comparable<Professor> {
      */
     Professor(final String name, final String teachingMajor) {
         super(name);
-        this.dressCode = DRESS_CODE;
-        this.paidSalary = true;
-        this.educationRequired = true;
-        this.workVerb = WORK_VERB;
         this.teachingMajor = teachingMajor;
     }
 
@@ -64,7 +57,15 @@ public class Professor extends Employee implements Comparable<Professor> {
      */
     @Override
     public boolean isPaidSalary() {
-        return paidSalary;
+        return PAID_SALARY;
+    }
+
+    /**
+     * @return the over time pay rate
+     */
+    @Override
+    public double getOverTimePayRate() {
+        return OVERTIME_PAY_RATE;
     }
 
     /**
@@ -72,7 +73,7 @@ public class Professor extends Employee implements Comparable<Professor> {
      */
     @Override
     public boolean postSecondaryEducationRequired() {
-        return educationRequired;
+        return EDUCATION_REQUIRED;
     }
 
     /**
@@ -111,9 +112,9 @@ public class Professor extends Employee implements Comparable<Professor> {
         return "Professor{" +
                 "firstName='" + super.getName() + '\'' +
                 ", dressCode=" + DRESS_CODE +
-                ", paidSalary=" + paidSalary +
-                ", educationRequired=" + educationRequired +
-                ", workVerb=" + workVerb +
+                ", paidSalary=" + PAID_SALARY +
+                ", educationRequired=" + EDUCATION_REQUIRED +
+                ", workVerb=" + WORK_VERB +
                 ", teachingMajor=" + teachingMajor +
                 '}' + "\n";
     }

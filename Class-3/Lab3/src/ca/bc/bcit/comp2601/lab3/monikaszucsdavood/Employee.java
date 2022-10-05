@@ -6,7 +6,7 @@ package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
  * A Employee Class
  *
  * COMP 2601 - CRN: 48065
- * Friday evenings, Spring/Summer 2022
+ * Friday evenings, Fall 2022
  * Lab 3
  * @author Monika Szucs
  * @author Davood Tabrizi

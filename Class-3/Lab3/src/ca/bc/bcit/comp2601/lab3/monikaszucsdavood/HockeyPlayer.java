@@ -8,7 +8,7 @@ import java.util.Objects;
  * A Hockey Player Class
  *
  * COMP 2601 - CRN: 48065
- * Friday evenings, Spring/Summer 2022
+ * Friday evenings, Fall 2022
  * Lab 3
  * @author Monika Szucs
  * @author Davood Tabrizi
@@ -16,14 +16,11 @@ import java.util.Objects;
  * @version 1.1
  */
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
-    private final String dressCode;
-    private boolean paidSalary;
-    private final boolean educationRequired;
-    private final String workVerb;
-
     private int numberOfGoals;
 
     private static final String DRESS_CODE = "jersey";
+    private static final Boolean PAID_SALARY = true;
+    private static final Boolean EDUCATION_REQUIREMENT = false;
     private static final String WORK_VERB = "play";
     private static final double OVERTIME_PAY_RATE = 0.0;
     private static final Integer POSITIVE_NUMBER = +120;
@@ -36,10 +33,6 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     HockeyPlayer(final String name, final int goalNumber) {
         super(name);
-        this.dressCode = DRESS_CODE;
-        this.paidSalary = true;
-        this.educationRequired = false;
-        this.workVerb = WORK_VERB;
         this.numberOfGoals = goalNumber;
     }
 
@@ -71,7 +64,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     @Override
     public boolean isPaidSalary() {
-        return paidSalary;
+        return PAID_SALARY;
     }
 
     /**
@@ -79,7 +72,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     @Override
     public boolean postSecondaryEducationRequired() {
-        return educationRequired;
+        return EDUCATION_REQUIREMENT;
     }
 
     /**
@@ -119,9 +112,9 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
         return "HockeyPlayer{" +
                 "firstName='" + super.getName() + '\'' +
                 ", dressCode=" + DRESS_CODE +
-                ", paidSalary=" + paidSalary +
-                ", educationRequired=" + educationRequired +
-                ", workVerb=" + workVerb +
+                ", paidSalary=" + PAID_SALARY +
+                ", educationRequired=" + EDUCATION_REQUIREMENT +
+                ", workVerb=" + WORK_VERB +
                 ", numberOfGoals=" + numberOfGoals +
                 '}' + "\n";
     }
