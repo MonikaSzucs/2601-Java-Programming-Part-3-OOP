@@ -1,9 +1,19 @@
 import java.util.Comparator;
 
-class Person {
+abstract class Person implements Comparable {
+    private Date born;
+    private Date died;
+    private Name name;
 
     Person(final Date born, final Name name) {
-
+        if(born == null) {
+            throw new IllegalArgumentException("The date cannot be null");
+        }
+        if(name == null) {
+            throw new IllegalArgumentException("The name cannot be null");
+        }
+        this.born = born;
+        this.name = name;
 
     }
 

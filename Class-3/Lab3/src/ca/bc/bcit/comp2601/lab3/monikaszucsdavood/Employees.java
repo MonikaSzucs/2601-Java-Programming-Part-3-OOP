@@ -19,9 +19,39 @@ import java.util.List;
  */
 public class Employees {
 
+    /**
+     *
+     * @param employees the employees
+     * @return the employees that are of equal objects
+     */
+    public static ArrayList<Employee> getEqual(ArrayList<Employee> employees) {
+        ArrayList<Employee> equalObjectList;
+        equalObjectList = new ArrayList<>();
+
+        for (int i = 0; i < employees.size(); i++)
+        {
+            for(  int j = 0; j < employees.size(); j++)
+            {
+                if(i == j)
+                {
+                    continue;
+                }
+                else{
+                    if(employees.get(i).getClass().getSimpleName().equals
+                            (employees.get(j).getClass().getSimpleName()) &&
+                            employees.get(i).equals(employees.get(j)))
+                    {
+
+                        equalObjectList.add(employees.get(j));
+                    }
+                }
+            }
+        }
+        return equalObjectList;
+    }
+
     public static void main(final String[] args) {
-        List list;
-        List<Employee> employee;
+        ArrayList<Employee> employees;
         List<GasStationAttendant> gasStationAttendantsList;
         List<HockeyPlayer> hockeyPlayerList;
         List<Parent> parentList;
@@ -51,8 +81,7 @@ public class Employees {
         GasStationAttendant gasStationAttendantFour;
         GasStationAttendant gasStationAttendantFive;
 
-        list                        = new ArrayList();
-        employee                    = new ArrayList<>();
+        employees                   = new ArrayList<>();
         gasStationAttendantsList    = new ArrayList<>();
         hockeyPlayerList            = new ArrayList<>();
         parentList                  = new ArrayList<>();
@@ -82,32 +111,32 @@ public class Employees {
         gasStationAttendantFour = new GasStationAttendant("Mary Fairy",  101);
         gasStationAttendantFive = new GasStationAttendant("Bee See",  1);
 
-        employee.add(hockeyPlayerOne);
-        employee.add(hockeyPlayerTwo);
-        employee.add(hockeyPlayerThree);
-        employee.add(hockeyPlayerFour);
-        employee.add(hockeyPlayerFive);
+        employees.add(hockeyPlayerOne);
+        employees.add(hockeyPlayerTwo);
+        employees.add(hockeyPlayerThree);
+        employees.add(hockeyPlayerFour);
+        employees.add(hockeyPlayerFive);
 
-        employee.add(professorOne);
-        employee.add(professorTwo);
-        employee.add(professorThree);
-        employee.add(professorFour);
-        employee.add(professorFive);
+        employees.add(professorOne);
+        employees.add(professorTwo);
+        employees.add(professorThree);
+        employees.add(professorFour);
+        employees.add(professorFive);
 
-        employee.add(parentOne);
-        employee.add(parentTwo);
-        employee.add(parentThree);
-        employee.add(parentFour);
-        employee.add(parentFive);
+        employees.add(parentOne);
+        employees.add(parentTwo);
+        employees.add(parentThree);
+        employees.add(parentFour);
+        employees.add(parentFive);
 
-        employee.add(gasStationAttendantOne);
-        employee.add(gasStationAttendantTwo);
-        employee.add(gasStationAttendantThree);
-        employee.add(gasStationAttendantFour);
-        employee.add(gasStationAttendantFive);
+        employees.add(gasStationAttendantOne);
+        employees.add(gasStationAttendantTwo);
+        employees.add(gasStationAttendantThree);
+        employees.add(gasStationAttendantFour);
+        employees.add(gasStationAttendantFive);
 
 
-        for(Employee employee1: employee) {
+        for(Employee employee1: employees) {
             System.out.print(employee1.getClass().getName() + " " + employee1.getName() + " " );
 
             if(employee1 instanceof HockeyPlayer) {
@@ -161,6 +190,7 @@ public class Employees {
         Collections.sort(professorList);
         System.out.println(professorList);
 
-        //System.out.println(getEqual(employees));
+        System.out.println("---");
+        System.out.println(getEqual(employees));
     }
 }
