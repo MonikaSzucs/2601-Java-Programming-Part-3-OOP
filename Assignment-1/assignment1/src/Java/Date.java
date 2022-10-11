@@ -39,16 +39,53 @@ abstract class Date implements Orderable, Comparable {
 //    }
 
     public Date previous() {
-        return Date;
+        int dayBefore = getDay() - 1;
+        int month = getMonth();
+        int year = getYear();
+
+        if(dayBefore == 0) {
+            month = getMonth() - 1;
+            if (month == 0) {
+                month = 12;
+                year = getYear() - 1;
+            }
+            dayBefore = getNumberOfDaysPerMonth(getMonth() - 1, getYear());
+        }
+
+        return new Date(dayBefore, month, year) {
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        };
     }
 
     public Date next() {
-        return Date;
+        int dayNext= getDay() - 1;
+        int month = getMonth();
+        int year = getYear();
+
+
+        if(dayNext > getNumberOfDaysPerMonth(getMonth() + 1, getYear())) {
+            month = getMonth() + 1;
+            if (month == 13) {
+                month = 1;
+                year = getYear() + 1;
+            }
+            dayNext = getNumberOfDaysPerMonth(getMonth(), getYear());
+        }
+
+        return new Date(dayNext, month, year) {
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        };
     }
 
-    public int compareTo(final Date d) {
-        return "";
-    }
+//    public int compareTo(final Date d) {
+//        return d.getDay();
+//    }
 
     public String getDayOfTheWeek() {
         String dayOfTheWeek = null;

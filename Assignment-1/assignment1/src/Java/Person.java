@@ -1,16 +1,16 @@
 import java.util.Comparator;
 
 abstract class Person implements Comparable {
-    private Date born;
+    Date born;
     private Date died;
-    private Name name;
+    Name name;
 
-    Person(final Date born, final Name name) {
+    Person(final Date born, final Name name) throws IllegalPersonException {
         if(born == null) {
-            throw new IllegalArgumentException("The date cannot be null");
+            throw new IllegalPersonException("The date cannot be null");
         }
         if(name == null) {
-            throw new IllegalArgumentException("The name cannot be null");
+            throw new IllegalPersonException("The name cannot be null");
         }
         this.born = born;
         this.name = name;
@@ -19,6 +19,7 @@ abstract class Person implements Comparable {
 
     public void die(final Date dateOfDeath) {
 
+
     }
 
     public boolean isAlive() {
@@ -26,7 +27,7 @@ abstract class Person implements Comparable {
     }
 
     public int compareTo(final Person p) {
-
+        return 3;
     }
 
 //    public String toString(){
