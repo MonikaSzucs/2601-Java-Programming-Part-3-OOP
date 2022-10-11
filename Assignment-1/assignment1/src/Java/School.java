@@ -21,7 +21,7 @@ public class School {
         System.out.println(toString());
     }
 
-    public void printAgesAndYears(final String fullName, final int yearBoard, final int maxYear) {
+    public void printAgesAndYears() {
         System.out.println();
         File file = new File("test-writeable.txt");
     }

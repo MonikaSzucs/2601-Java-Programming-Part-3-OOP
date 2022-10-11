@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-abstract class Person implements Comparable {
+class Person implements Comparable {
     Date born;
     private Date died;
     Name name;
@@ -22,12 +22,26 @@ abstract class Person implements Comparable {
 
     }
 
+    public void getDateOfBirth() {
+        System.out.println(born.getYyyyMmDd());
+    }
+
+    public void getDateOfDeath() {
+        System.out.println(born.getYyyyMmDd());
+    }
+
+
     public boolean isAlive() {
         return false;
     }
 
     public int compareTo(final Person p) {
         return 3;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 
 //    public String toString(){

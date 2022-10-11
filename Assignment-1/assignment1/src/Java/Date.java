@@ -1,4 +1,4 @@
-abstract class Date implements Orderable, Comparable {
+class Date implements Orderable, Comparable {
     private final int day;
     private final int month;
     private final int year;
@@ -179,5 +179,10 @@ abstract class Date implements Orderable, Comparable {
 
     private boolean isLeapYear() {
         return true;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
