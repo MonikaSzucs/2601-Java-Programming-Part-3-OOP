@@ -1,3 +1,4 @@
+@FunctionalInterface
 public interface Writeable {
-    public void printDate(String s, int min, int max);
+    public void printData(final String s, final int min, final int max);
 }

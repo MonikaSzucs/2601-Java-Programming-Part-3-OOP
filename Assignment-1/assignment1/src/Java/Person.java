@@ -2,7 +2,7 @@ import java.util.Comparator;
 
 class Person implements Comparable {
     Date born;
-    private Date died;
+    Date died;
     Name name;
 
     Person(final Date born, final Name name) throws IllegalPersonException {
@@ -22,12 +22,12 @@ class Person implements Comparable {
 
     }
 
-    public void getDateOfBirth() {
-        System.out.println(born.getYyyyMmDd());
+    public Date getDateOfBirth() {
+        return new Date(born.getYear(), born.getMonth(), born.getDay());
     }
 
-    public void getDateOfDeath() {
-        System.out.println(born.getYyyyMmDd());
+    public Date getDateOfDeath() {
+        return new Date(died.getYear(), died.getMonth(), died.getDay());
     }
 
 

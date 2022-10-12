@@ -626,6 +626,7 @@ public class Assignment1Tester
                 }
             }
         };
+
         w.printData("BCIT", 10, 120);    // Writes BCIT to the file 110 times
         w.printData("bye", 1, 40);       // Writes bye to the file 39 times
 
