@@ -11,11 +11,16 @@ class Date implements Orderable, Comparable {
             throw new IllegalArgumentException("invalid month");
         }
 
-        // check day out of bounds
-
         this.day = day;
         this.month = month;
         this.year = year;
+        // check day out of bounds
+//        System.out.println("--here-");
+        //System.out.println(getNumberOfDaysPerMonth(month, year));
+        if(day > getNumberOfDaysPerMonth(month, year)) {
+            //System.out.println(day+" "+month+" "+year+ " "+getNumberOfDaysPerMonth(month, year));
+            throw new IllegalArgumentException("invalid day of the month");
+        }
     }
 
     public int getDay() {
@@ -42,8 +47,8 @@ class Date implements Orderable, Comparable {
         }
 
         formattedDate = String.format("%s-%s-%s",getYear(),formattedMonth,formattedDay);
-        System.out.println(formattedDate);
-        System.out.println("--");
+//        System.out.println(formattedDate);
+//        System.out.println("--");
         return formattedDate;
     }
 
@@ -58,7 +63,7 @@ class Date implements Orderable, Comparable {
                 month = 12;
                 year = getYear() - 1;
             }
-            dayBefore = getNumberOfDaysPerMonth(getMonth() - 1, getYear());
+            dayBefore = getNumberOfDaysPerMonth(month, year);
         }
 
         return new Date(dayBefore, month, year) {
@@ -70,19 +75,20 @@ class Date implements Orderable, Comparable {
     }
 
     public Date next() {
-        System.out.println("Next--");
+//        System.out.println("Next--");
         int dayNext= getDay() + 1;
         int month = getMonth();
         int year = getYear();
 
-
-        if(dayNext > getNumberOfDaysPerMonth(getMonth() + 1, getYear())) {
+        // Feb 29 + 1
+        // feb 30 >  march no. of days
+        if(dayNext > getNumberOfDaysPerMonth(getMonth(), getYear())) {
             month = getMonth() + 1;
             if (month == 13) {
                 month = 1;
                 year = getYear() + 1;
             }
-            dayNext = getNumberOfDaysPerMonth(getMonth(), getYear());
+            dayNext = 1; //getNumberOfDaysPerMonth(getMonth(), getYear());
         }
 
         return new Date(dayNext, month, year) {
@@ -180,11 +186,21 @@ class Date implements Orderable, Comparable {
     }
 
     private int getNumberOfDaysPerMonth(final int month, final int year) {
-        return 2;
+        if(month == 2) {
+            if(isLeapYear()) {
+                return 29;
+            } else {
+                return 28;
+            }
+        } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            return 30;
+        } else {
+            return 31;
+        }
     }
 
     private boolean isLeapYear() {
-        return true;
+        return (((getYear() % 4 == 0) && (getYear() % 100 != 0)) || (getYear() % 400 == 0));
     }
 
     @Override
@@ -198,6 +214,28 @@ class Date implements Orderable, Comparable {
 
     @Override
     public int compareTo(Object o) {
+        if(o.getClass() != Date.class){
+            throw new IllegalArgumentException("Comparing date object to an object of a different class.");
+        }
+        Date temp = (Date) o;
+        if(temp.getYear()>this.getYear()){
+            return -1;
+        }
+        else if(temp.getYear()<this.getYear()){
+            return 1;
+        }
+        else if(temp.getMonth()>this.getMonth()) {
+            return -1;
+        }
+        else if(temp.getMonth()<this.getMonth()) {
+            return 1;
+        }
+        else if(temp.getDay()>this.getDay()) {
+            return -1;
+        }
+        else if(temp.getDay()<this.getDay()) {
+            return 1;
+        }
         return 0;
     }
 }

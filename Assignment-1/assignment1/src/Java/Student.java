@@ -21,14 +21,22 @@ public class Student extends Person {
         return studentNumber;
     }
 
-    @Override
+
     public String toString() {
         //"Tiger Woods (student number: A12345678) was born 1975-12-30 and is still alive"
-        return name.getPrettyName() +
+        String returnString =  name.getPrettyName() +
                 " (" +
                 "student number: " + getStudentNumber() +
                 ')' +
                 " was born " + born.getYyyyMmDd();
+        if(this.isAlive()){
+            returnString += " and is still alive";
+        }
+        else{
+            returnString += " and died ";
+            returnString += died.getYyyyMmDd();
+        }
+        return returnString;
     }
 
     @Override

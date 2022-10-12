@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59505c4a-ade8-44cc-a650-c889bab450f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab3 Monika Szucs.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/OfficialAssignment1COMP2601.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/OfficialAssignment1COMP2601.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Date.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Name.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/School.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/School.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/production/assignment1/Teacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/test/assignment1/Assignment1Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/out/test/assignment1/Assignment1Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Java/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Tests/Assignment1Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment-1/assignment1/src/Tests/Assignment1Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../example/src/Dog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Class-1/review-2501" />
   </component>
   <component name="RunManager" selected="Application.Employees (1)">
     <configuration name="Employees (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

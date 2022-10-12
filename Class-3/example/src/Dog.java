@@ -27,7 +27,6 @@ public class Dog extends Mammals implements Comparable<Dog> {
 //        } else {
 //            return 0;
 //        }
-
         // or if not name then return by birthday
 //        if(this.name.length() > d.name.length()) {
 //            return 1;

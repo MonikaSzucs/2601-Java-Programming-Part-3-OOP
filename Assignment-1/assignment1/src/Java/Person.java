@@ -18,21 +18,18 @@ class Person implements Comparable {
     }
 
     public void die(final Date dateOfDeath) {
-        if(dateOfDeath == null) {
-            System.out.println("is still alive");
-        }
-        System.out.println(dateOfDeath.getYear() + "-" + dateOfDeath.getMonth() + "-" + dateOfDeath.getDay());
-
+        died = dateOfDeath;
+//        System.out.println(died.getYear() + "-" + died.getMonth() + "-" + died.getDay());
     }
 
     public Date getDateOfBirth() {
-        return new Date(born.getYear(), born.getMonth(), born.getDay());
+        return new Date(born.getDay(), born.getMonth(), born.getYear());
     }
 
     public Date getDateOfDeath() {
         Date newDate;
         if(died != null) {
-            newDate = new Date(died.getYear(), died.getMonth(), died.getDay());
+            newDate = new Date( died.getDay(), died.getMonth(),died.getYear());
         } else {
             newDate = new Date(1, 1, 1);
         }
@@ -42,15 +39,33 @@ class Person implements Comparable {
 
 
     public boolean isAlive() {
-        return false;
+        return died == null;
     }
 
     public int compareTo(final Person p) {
-        return 3;
+        return this.getDateOfBirth().compareTo(p.getDateOfBirth());
     }
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        if(o.getClass() != Person.class){
+            throw new IllegalArgumentException("Comparing Person object to an object of a different class.");
+        }
+        Person p = (Person) o;
+        return compareTo(p);
+    }
+
+    @Override
+    public String toString() {
+        //Albert Einstein (A.E.) was born on Friday 1879-03-14 and died on Monday 1955-04-18.System.lineSeparator()
+        String returnValue = name.getPrettyName();
+        returnValue+=" was born"+ " "+born.getYyyyMmDd();
+        if(!isAlive()){
+            returnValue+=" and died on " + died.getYyyyMmDd();
+        }
+        else{
+            returnValue+=" and is still alive";
+        }
+        return returnValue;
     }
 }

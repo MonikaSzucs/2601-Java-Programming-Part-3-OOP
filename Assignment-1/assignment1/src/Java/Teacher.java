@@ -21,13 +21,22 @@ public class Teacher extends Person {
         return specialty;
     }
 
-    @Override
+
     public String toString() {
         //"Tiger Woods (specialty: mathematics) was born 1975-12-30 and is still alive"
-        return  name.getPrettyName() +
+        String returnString =  name.getPrettyName() +
                 " (" +
                 "specialty: " + getSpecialty() +
-                ") " + born.getYyyyMmDd() + " and " + getDateOfDeath().getYyyyMmDd();
+                ')' +
+                " was born " + born.getYyyyMmDd();
+        if(this.isAlive()){
+            returnString += " and is still alive";
+        }
+        else{
+            returnString += " and died ";
+            returnString += died.getYyyyMmDd();
+        }
+        return returnString;
     }
 
     @Override

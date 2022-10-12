@@ -6,22 +6,22 @@ class Name {
 
     Name(final String first, final String last) {
         if(first == null || first.isBlank()) {
-            throw new IllegalArgumentException("The first name cannot be null or blank");
+            throw new IllegalArgumentException("invalid first name");
         }
 
         if(last == null || last.isBlank()) {
-            throw new IllegalArgumentException("The last name cannot be null or blank");
+            throw new IllegalArgumentException("invalid last name");
         }
 
         this.first = first;
         this.last = last;
     }
 
-    public String getFirst(final String first) {
+    public String getFirst() {
         return first;
     }
 
-    public String setLast(final String last) {
+    public String getLast() {
         return last;
     }
 
