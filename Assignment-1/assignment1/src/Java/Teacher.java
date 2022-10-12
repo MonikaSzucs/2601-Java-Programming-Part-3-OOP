@@ -4,10 +4,13 @@ public class Teacher extends Person {
     Teacher(final Date born, final Name name, final String specialty) throws IllegalPersonException {
         super(born, name);
         if(born == null) {
-            throw new IllegalPersonException("wrong date");
+            throw new IllegalPersonException("invalid date of birth");
         }
         if(name == null) {
-            throw new IllegalPersonException("wrong name");
+            throw new IllegalPersonException("invalid name");
+        }
+        if(specialty.isBlank()) {
+            throw new IllegalPersonException("bad specialty");
         }
         this.born = born;
         this.name = name;
@@ -20,10 +23,11 @@ public class Teacher extends Person {
 
     @Override
     public String toString() {
+        //"Tiger Woods (specialty: mathematics) was born 1975-12-30 and is still alive"
         return  name.getPrettyName() +
-                "(" +
+                " (" +
                 "specialty: " + getSpecialty() +
-                ')' + born.getYyyyMmDd();
+                ") " + born.getYyyyMmDd() + " and " + getDateOfDeath().getYyyyMmDd();
     }
 
     @Override

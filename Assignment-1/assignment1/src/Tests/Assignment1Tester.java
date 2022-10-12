@@ -305,6 +305,9 @@ public class Assignment1Tester
         Date born = new Date(30, 12, 1975);
         Name name = new Name("tiGer", "woODs");
         Teacher t1 = new Teacher(born, name, "mathematics");
+
+
+
         if(!t1.getSpecialty().equals("mathematics"))
         {
             System.out.println("Teacher class is wrong: code 4");
@@ -338,6 +341,10 @@ public class Assignment1Tester
     {
         Date d;
         d = new Date(1, 1, 2021);
+
+        System.out.println(d);//-
+        System.out.println(d.getDayOfTheWeek());//-
+        System.out.println(d.getYyyyMmDd());
         if((!d.getDayOfTheWeek().equals("Friday")) ||
            (!d.getYyyyMmDd().equals("2021-01-01")) ||
            (!d.next().getYyyyMmDd().equals("2021-01-02")) ||

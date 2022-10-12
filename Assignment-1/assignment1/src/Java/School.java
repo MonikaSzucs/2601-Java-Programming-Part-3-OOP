@@ -65,28 +65,5 @@ public class School {
                 }
             }
         };
-
-
-
-
-//        printDate(()-> {
-//            for(int i = min; i < max; i++)
-//            {
-//                FileReader reader;
-//                FileWriter writer;
-//                Scanner scanner;
-//
-//                try
-//                {
-//                    writer = new FileWriter("test-writeable.txt", true);
-//                    writer.write(description);
-//                    writer.close();
-//                }
-//                catch(final IOException e)
-//                {
-//                    System.out.println(e.getMessage());
-//                }
-//            }
-//        });
     }
 }

@@ -7,10 +7,10 @@ class Person implements Comparable {
 
     Person(final Date born, final Name name) throws IllegalPersonException {
         if(born == null) {
-            throw new IllegalPersonException("The date cannot be null");
+            throw new IllegalPersonException("invalid date of birth");
         }
         if(name == null) {
-            throw new IllegalPersonException("The name cannot be null");
+            throw new IllegalPersonException("invalid name");
         }
         this.born = born;
         this.name = name;
@@ -18,7 +18,10 @@ class Person implements Comparable {
     }
 
     public void die(final Date dateOfDeath) {
-
+        if(dateOfDeath == null) {
+            System.out.println("is still alive");
+        }
+        System.out.println(dateOfDeath.getYear() + "-" + dateOfDeath.getMonth() + "-" + dateOfDeath.getDay());
 
     }
 
@@ -27,7 +30,14 @@ class Person implements Comparable {
     }
 
     public Date getDateOfDeath() {
-        return new Date(died.getYear(), died.getMonth(), died.getDay());
+        Date newDate;
+        if(died != null) {
+            newDate = new Date(died.getYear(), died.getMonth(), died.getDay());
+        } else {
+            newDate = new Date(1, 1, 1);
+        }
+
+        return newDate;
     }
 
 
@@ -43,10 +53,4 @@ class Person implements Comparable {
     public int compareTo(Object o) {
         return 0;
     }
-
-//    public String toString(){
-//        do later
-//    }
-
-
 }

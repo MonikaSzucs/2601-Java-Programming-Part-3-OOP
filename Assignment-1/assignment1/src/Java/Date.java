@@ -5,10 +5,10 @@ class Date implements Orderable, Comparable {
 
     Date(final int day, final int month, final int year) {
         if(year <= 0) {
-            throw new IllegalArgumentException("The year cannot be less can or equal to zero");
+            throw new IllegalArgumentException("invalid year");
         }
         if(month > 12 || month < 1) {
-            throw new IllegalArgumentException("The month is out of bounds");
+            throw new IllegalArgumentException("invalid month");
         }
 
         // check day out of bounds
@@ -31,12 +31,21 @@ class Date implements Orderable, Comparable {
     }
 
     public String getYyyyMmDd() {
-        return getYear() + "-" + getMonth() + "-" + getDay();
-    }
+        String formattedDate;
+        String formattedMonth = Integer.toString(getMonth());
+        String formattedDay = Integer.toString(getDay());
+        if(getMonth() < 10) {
+            formattedMonth = "0" + getMonth();
+        }
+        if(getDay() < 10) {
+            formattedDay = "0" + getDay();
+        }
 
-//    public String toString() {
-//        do this later
-//    }
+        formattedDate = String.format("%s-%s-%s",getYear(),formattedMonth,formattedDay);
+        System.out.println(formattedDate);
+        System.out.println("--");
+        return formattedDate;
+    }
 
     public Date previous() {
         int dayBefore = getDay() - 1;
@@ -61,7 +70,8 @@ class Date implements Orderable, Comparable {
     }
 
     public Date next() {
-        int dayNext= getDay() - 1;
+        System.out.println("Next--");
+        int dayNext= getDay() + 1;
         int month = getMonth();
         int year = getYear();
 
@@ -82,10 +92,6 @@ class Date implements Orderable, Comparable {
             }
         };
     }
-
-//    public int compareTo(final Date d) {
-//        return d.getDay();
-//    }
 
     public String getDayOfTheWeek() {
         String dayOfTheWeek = null;
@@ -179,6 +185,15 @@ class Date implements Orderable, Comparable {
 
     private boolean isLeapYear() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Date{" +
+                "day=" + getDay() +
+                ", month=" + getMonth() +
+                ", year=" + getYear() +
+                '}';
     }
 
     @Override
