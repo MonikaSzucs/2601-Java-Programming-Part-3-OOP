@@ -1,3 +1,7 @@
+package ca.bcit.comp2601.assignment1.monikaszucs;
+
+import ca.bcit.comp2601.assignment1.monikaszucs.*;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;

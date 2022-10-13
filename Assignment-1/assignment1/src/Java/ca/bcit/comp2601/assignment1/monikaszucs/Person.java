@@ -1,10 +1,29 @@
+package ca.bcit.comp2601.assignment1.monikaszucs;
+
 import java.util.Comparator;
 
+/**
+ * Person.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Assignment 1
+ *
+ * @author Monika Szucs
+ * @version 1.1
+ *
+ * @Comparable implements a comparable
+ */
 class Person implements Comparable {
     Date born;
     Date died;
     Name name;
 
+    /**
+     * @param born when the person was born in Date format
+     * @param name the name of the person in Name format
+     * @throws IllegalPersonException throwing an illegal person exception if something is wrong
+     */
     Person(final Date born, final Name name) throws IllegalPersonException {
         if(born == null) {
             throw new IllegalPersonException("invalid date of birth");
@@ -14,18 +33,25 @@ class Person implements Comparable {
         }
         this.born = born;
         this.name = name;
-
     }
 
+    /**
+     * @param dateOfDeath when the person died in Date format
+     */
     public void die(final Date dateOfDeath) {
         died = dateOfDeath;
-//        System.out.println(died.getYear() + "-" + died.getMonth() + "-" + died.getDay());
     }
 
+    /**
+     * @return when the person was born in Date format
+     */
     public Date getDateOfBirth() {
         return new Date(born.getDay(), born.getMonth(), born.getYear());
     }
 
+    /**
+     * @return when or if the person has died
+     */
     public Date getDateOfDeath() {
         Date newDate;
         if(died != null) {
@@ -33,19 +59,28 @@ class Person implements Comparable {
         } else {
             newDate = new Date(1, 1, 1);
         }
-
         return newDate;
     }
 
-
+    /**
+     * @return null for died if the person is still alive
+     */
     public boolean isAlive() {
         return died == null;
     }
 
+    /**
+     * @param p comparing to the person to see if the date of birth matches
+     * @return
+     */
     public int compareTo(final Person p) {
         return this.getDateOfBirth().compareTo(p.getDateOfBirth());
     }
 
+    /**
+     * @param o the object
+     * @return if the person matches the object
+     */
     @Override
     public int compareTo(Object o) {
         if(o.getClass() != Person.class){
@@ -55,16 +90,20 @@ class Person implements Comparable {
         return compareTo(p);
     }
 
+    /**
+     * @return a String format of information about the person
+     */
     @Override
     public String toString() {
-        //Albert Einstein (A.E.) was born on Friday 1879-03-14 and died on Monday 1955-04-18.System.lineSeparator()
-        String returnValue = name.getPrettyName();
-        returnValue+=" was born"+ " "+born.getYyyyMmDd();
+        String returnValue;
+        returnValue = name.getPrettyName();
+
+        returnValue += " was born" + " " + born.getYyyyMmDd();
         if(!isAlive()){
-            returnValue+=" and died on " + died.getYyyyMmDd();
+            returnValue += " and died on " + died.getYyyyMmDd();
         }
         else{
-            returnValue+=" and is still alive";
+            returnValue += " and is still alive";
         }
         return returnValue;
     }

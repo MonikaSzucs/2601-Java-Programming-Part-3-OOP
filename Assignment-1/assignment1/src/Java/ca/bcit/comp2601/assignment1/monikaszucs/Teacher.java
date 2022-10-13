@@ -1,6 +1,26 @@
+package ca.bcit.comp2601.assignment1.monikaszucs;
+
+/**
+ * Teacher.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Assignment 1
+ *
+ * @author Monika Szucs
+ * @version 1.1
+ *
+ * @extends the Person class
+ */
 public class Teacher extends Person {
     private String specialty;
 
+    /**
+     * @param born when the person was born in Date format
+     * @param name the name of the person in Name format
+     * @param specialty the speciality of the person
+     * @throws IllegalPersonException throwing an Illegal Person Exception if there is an error
+     */
     Teacher(final Date born, final Name name, final String specialty) throws IllegalPersonException {
         super(born, name);
         if(born == null) {
@@ -17,14 +37,19 @@ public class Teacher extends Person {
         this.specialty = specialty;
     }
 
+    /**
+     * @return the specialty of the person
+     */
     public String getSpecialty() {
         return specialty;
     }
 
-
+    /**
+     * @return the toString
+     */
     public String toString() {
-        //"Tiger Woods (specialty: mathematics) was born 1975-12-30 and is still alive"
-        String returnString =  name.getPrettyName() +
+        String returnString;
+        returnString =  name.getPrettyName() +
                 " (" +
                 "specialty: " + getSpecialty() +
                 ')' +
@@ -39,8 +64,12 @@ public class Teacher extends Person {
         return returnString;
     }
 
+    /**
+     * @param o the object
+     * @return the value of 0
+     */
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(final Object o) {
         return 0;
     }
 }

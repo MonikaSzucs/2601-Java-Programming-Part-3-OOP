@@ -1,8 +1,28 @@
+package ca.bcit.comp2601.assignment1.monikaszucs;
+
+/**
+ * Date.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Assignment 1
+ *
+ * @author Monika Szucs
+ * @version 1.1
+ *
+ * @Implements Orderable
+ * @Implements Comparable
+ */
 class Date implements Orderable, Comparable {
     private final int day;
     private final int month;
     private final int year;
 
+    /**
+     * @param day the day of the month
+     * @param month the month numerical value
+     * @param year the year of the date
+     */
     Date(final int day, final int month, final int year) {
         if(year <= 0) {
             throw new IllegalArgumentException("invalid year");
@@ -10,35 +30,47 @@ class Date implements Orderable, Comparable {
         if(month > 12 || month < 1) {
             throw new IllegalArgumentException("invalid month");
         }
-
         this.day = day;
         this.month = month;
         this.year = year;
-        // check day out of bounds
-//        System.out.println("--here-");
-        //System.out.println(getNumberOfDaysPerMonth(month, year));
+
         if(day > getNumberOfDaysPerMonth(month, year)) {
-            //System.out.println(day+" "+month+" "+year+ " "+getNumberOfDaysPerMonth(month, year));
             throw new IllegalArgumentException("invalid day of the month");
         }
     }
 
+    /**
+     * @return the day of the month
+     */
     public int getDay() {
         return day;
     }
 
+    /**
+     * @return the month in numerical value
+     */
     public int getMonth() {
         return month;
     }
 
+    /**
+     * @return the year of the date
+     */
     public int getYear() {
         return year;
     }
 
+    /**
+     * @return the formatted date in YYYY-MM-DD
+     */
     public String getYyyyMmDd() {
         String formattedDate;
-        String formattedMonth = Integer.toString(getMonth());
-        String formattedDay = Integer.toString(getDay());
+        String formattedMonth;
+        String formattedDay;
+
+        formattedMonth = Integer.toString(getMonth());
+        formattedDay = Integer.toString(getDay());
+
         if(getMonth() < 10) {
             formattedMonth = "0" + getMonth();
         }
@@ -47,15 +79,21 @@ class Date implements Orderable, Comparable {
         }
 
         formattedDate = String.format("%s-%s-%s",getYear(),formattedMonth,formattedDay);
-//        System.out.println(formattedDate);
-//        System.out.println("--");
+
         return formattedDate;
     }
 
+    /**
+     * @return the previous Date
+     */
     public Date previous() {
-        int dayBefore = getDay() - 1;
-        int month = getMonth();
-        int year = getYear();
+        int dayBefore;
+        int month;
+        int year;
+
+        dayBefore = getDay() - 1;
+        month = getMonth();
+        year = getYear();
 
         if(dayBefore == 0) {
             month = getMonth() - 1;
@@ -74,21 +112,25 @@ class Date implements Orderable, Comparable {
         };
     }
 
+    /**
+     * @return the next date in Date format
+     */
     public Date next() {
-//        System.out.println("Next--");
-        int dayNext= getDay() + 1;
-        int month = getMonth();
-        int year = getYear();
+        int dayNext;
+        int month;
+        int year;
 
-        // Feb 29 + 1
-        // feb 30 >  march no. of days
+        dayNext = getDay() + 1;
+        month = getMonth();
+        year = getYear();
+
         if(dayNext > getNumberOfDaysPerMonth(getMonth(), getYear())) {
             month = getMonth() + 1;
             if (month == 13) {
                 month = 1;
                 year = getYear() + 1;
             }
-            dayNext = 1; //getNumberOfDaysPerMonth(getMonth(), getYear());
+            dayNext = 1;
         }
 
         return new Date(dayNext, month, year) {
@@ -99,8 +141,12 @@ class Date implements Orderable, Comparable {
         };
     }
 
+    /**
+     * @return the day of the week;
+     */
     public String getDayOfTheWeek() {
         String dayOfTheWeek = null;
+
         int grabbingLastTwoDigitsOfTheYear;
         int stepOne;
         int stepTwo;
@@ -185,6 +231,11 @@ class Date implements Orderable, Comparable {
         return codeForMonth;
     }
 
+    /**
+     * @param month the month
+     * @param year the year
+     * @return the number of days per month based on the year
+     */
     private int getNumberOfDaysPerMonth(final int month, final int year) {
         if(month == 2) {
             if(isLeapYear()) {
@@ -199,10 +250,16 @@ class Date implements Orderable, Comparable {
         }
     }
 
+    /**
+     * @return if the year is a leap year or not
+     */
     private boolean isLeapYear() {
         return (((getYear() % 4 == 0) && (getYear() % 100 != 0)) || (getYear() % 400 == 0));
     }
 
+    /**
+     * @return the date information in toString format
+     */
     @Override
     public String toString() {
         return "Date{" +
@@ -212,8 +269,12 @@ class Date implements Orderable, Comparable {
                 '}';
     }
 
+    /**
+     * @param o the Object
+     * @return if the date year, month or day is the previous, next or same as the current objects
+     */
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(final Object o) {
         if(o.getClass() != Date.class){
             throw new IllegalArgumentException("Comparing date object to an object of a different class.");
         }
