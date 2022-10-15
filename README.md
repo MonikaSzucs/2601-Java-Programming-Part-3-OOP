@@ -6,3 +6,8 @@
 ## SOLID Principles
 
 
+
+## Private and Static
+Means if they are both there it cannot be over written
+
+
