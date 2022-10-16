@@ -1,4 +1,4 @@
 public interface FileManager {
-    void save(final String fileName);
-    void delete(final String fileName);
+    public void save(final String fileName);
+    public void delete(final String fileName);
 }

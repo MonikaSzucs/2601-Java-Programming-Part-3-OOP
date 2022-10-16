@@ -1,6 +1,6 @@
 class CompactDisc extends MusicMedia {
     private int numberOfTracksOnTheCd;
-    public static final String READING_METHOD;
+    private static final String READING_METHOD;
 
     static
     {
@@ -28,5 +28,9 @@ class CompactDisc extends MusicMedia {
         return "CompactDisc{" +
                 "numberOfTracksOnTheCd=" + numberOfTracksOnTheCd +
                 '}';
+    }
+
+    public void play() {
+        System.out.println("The cd is being played");
     }
 }

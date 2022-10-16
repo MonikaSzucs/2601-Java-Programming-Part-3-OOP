@@ -36,4 +36,6 @@ abstract class MusicMedia {
                 ", artist='" + artist + '\'' +
                 '}';
     }
+
+    abstract void play();
 }
