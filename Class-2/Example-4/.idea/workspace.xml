@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4468e460-b9cb-4c5c-9bd4-f1adc64bea05" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/Example/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/example-2/example-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Bcit.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Bcit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Journal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Journal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/School.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/out/production/review-2501/ca/bcit/comp2601/lesson1/monikaszucs/School.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Bcit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Bcit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Journal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-1/review-2501/src/java/ca/bcit/comp2601/lesson1/monikaszucs/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-4/~WRL0003.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GBsWq6yOFij3GtxlIk3tKXcnhS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Example-5 -" />
+  </component>
+  <component name="RunManager" selected="Application.Dog">
+    <configuration name="Dog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Dog" />
+      <module name="lesson-2-sept-16" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lesson-2-sept-16" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Dog" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4468e460-b9cb-4c5c-9bd4-f1adc64bea05" name="Changes" comment="" />
+      <created>1665873346098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665873346098</updated>
+    </task>
+    <servers />
+  </component>
+</project>

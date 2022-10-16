@@ -5,7 +5,9 @@ public class Main {
         Person p1;
         p1 = new Person("Tiger");
         System.out.println(p1.getLastName());
-        // School school = new School();
-        // Bcit b = new Bcit();
+
+        System.out.println("---");
+        School school = new School();
+        Bcit b = new Bcit();
     }
 }

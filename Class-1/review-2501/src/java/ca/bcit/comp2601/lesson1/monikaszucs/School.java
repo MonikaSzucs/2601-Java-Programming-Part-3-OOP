@@ -16,7 +16,11 @@ public class School {
         for(Person person: people) {
             System.out.println(person.getDetails());
 
-
+            if(person instanceof BcitStudent) {
+                // casting
+                BcitStudent b = (BcitStudent)person;
+                System.out.println(b.getStudentNumber());
+            }
         }
     }
 }

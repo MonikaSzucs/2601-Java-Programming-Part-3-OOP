@@ -10,6 +10,7 @@ public class Journal {
     public static void main(final String[] args) {
 
         // write to file (in project folder)
+        // input and output will always cause errors so we need a try and catch
         try {
             FileWriter f;
             f = new FileWriter("books.txt");
@@ -41,7 +42,7 @@ public class Journal {
             while(s.hasNext()) {
                 String oneLine;
                 oneLine = s.nextLine();
-                System.out.println("Found a line " + oneLine);
+                System.out.println("Found a line: " + oneLine);
             }
             s.close();
         } catch(final FileNotFoundException e) {
@@ -49,7 +50,5 @@ public class Journal {
         } finally {
             // close files, log errors, release resources ( to free memory up )
         }
-
-
     }
 }

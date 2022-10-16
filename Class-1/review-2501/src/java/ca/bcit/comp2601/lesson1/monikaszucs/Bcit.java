@@ -12,12 +12,12 @@ public class Bcit {
         people[2] = new BcitStudent("Trevosam", "A0000002");
 
         try {
-            people[2] = new BcitStudent(null, null);
+            people[3] = new BcitStudent(null, null);
         } catch (final IllegalArgumentException e) {
-            throw new IllegalArgumentException("Error in student");
+            System.out.println("No person error here for you");
         }
 
-        people[3] = new Person("Woods");
+        people[4] = new Person("Woods");
 
         for(int i = 0; i < people.length; i ++) {
             if(people[i] != null) {

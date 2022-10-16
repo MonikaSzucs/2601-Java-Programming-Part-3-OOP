@@ -29,6 +29,8 @@ class Person {
         return lastName;
     }
 
+    //@Override
+    // this is here to protect the code to make sure you wrote teh method right but can also find it in another class
     String getDetails() {
         return "I am a " + this.getClass().getSimpleName() +
                 " and my last name is " + getLastName();
