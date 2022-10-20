@@ -19,6 +19,10 @@ class Person implements Comparable {
     Date died;
     Name name;
 
+    private static final int DAY_DEFAULT = 1;
+    private static final int MONTH_DEFAULT = 1;
+    private static final int YEAR_DEFAUlT = 1;
+
     /**
      * @param born when the person was born in Date format
      * @param name the name of the person in Name format
@@ -57,7 +61,7 @@ class Person implements Comparable {
         if(died != null) {
             newDate = new Date( died.getDay(), died.getMonth(),died.getYear());
         } else {
-            newDate = new Date(1, 1, 1);
+            newDate = new Date(DAY_DEFAULT, MONTH_DEFAULT, YEAR_DEFAUlT);
         }
         return newDate;
     }
@@ -71,7 +75,7 @@ class Person implements Comparable {
 
     /**
      * @param p comparing to the person to see if the date of birth matches
-     * @return
+     * @return if the date of birth is the same
      */
     public int compareTo(final Person p) {
         return this.getDateOfBirth().compareTo(p.getDateOfBirth());

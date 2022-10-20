@@ -17,6 +17,9 @@ class Name {
     private final String first;
     private final String last;
 
+    private static final int POSITION_CAPITALIZATION = 0;
+    private static final int POSITION_LOWERCASE = 1;
+
     /**
      * @param first the first name of the person
      * @param last the last name of the person
@@ -52,13 +55,13 @@ class Name {
      * @return the properly formatted name
      */
     public String getPrettyName() {
-        return first.toUpperCase().charAt(0) + first.toLowerCase().substring(1) + " " + last.toUpperCase().charAt(0) + last.toLowerCase().substring(1);
+        return first.toUpperCase().charAt(POSITION_CAPITALIZATION) + first.toLowerCase().substring(POSITION_LOWERCASE) + " " + last.toUpperCase().charAt(POSITION_CAPITALIZATION) + last.toLowerCase().substring(POSITION_LOWERCASE);
     }
 
     /**
      * @return the initials of the person
      */
     public String getInitials() {
-        return first.toUpperCase().charAt(0) + "." + last.toUpperCase().charAt(0) + ".";
+        return first.toUpperCase().charAt(POSITION_CAPITALIZATION) + "." + last.toUpperCase().charAt(POSITION_CAPITALIZATION) + ".";
     }
 }

@@ -22,6 +22,8 @@ import java.util.Scanner;
 public class School {
     private List<Person> person;
 
+    private static final int CURRENT_YEAR = 2022;
+
     /**
      * The school constructor
      */
@@ -58,53 +60,12 @@ public class School {
         Writeable w = (name,yearWasBorn,maxYear) -> { 
             for (int i = yearWasBorn; i <= maxYear; i++) {
                 int age = i - yearWasBorn;
-                // year born = 2000
-                // i = 2001
-                // i - year born = 1
-                //Tiger Woods: 1975 (age 0)
-                // System.out.println(name + ": " + i + " (age " + age + ")");
                 System.out.print(name + ": " + i + " (age " + age + ")" + System.lineSeparator());
-
-                // TODO: print above sout to a file
-                
-                // FileReader reader;
-                // FileWriter writer;
-                // Scanner scanner;
-
-                // try
-                // {
-                //     writer = new FileWriter("testing-output2.txt", true);
-                //     writer.write(name + ": " + i + " (age " + age + ")" + System.lineSeparator());
-                //     writer.close();
-                // }
-                // catch(final IOException e)
-                // {
-                //     System.out.println(e.getMessage());
-                // }
-                
             }
-            // System.out.println(name + ": " + yearWasBorn + " (age " + age + ")");
         };
 
         for(Person p: person) {
-            /*int age;
-            int currentYear;
-
-            age = 0;
-
-            for(int i = p.born.getYear(); i <= 2022; i++){
-                if(!p.isAlive() && i > p.died.getYear()){
-                    break;
-                }
-                currentYear = age + p.born.getYear();
-                w.printData(p.name.getPrettyName(), i, currentYear);
-                
-                //w(p.name.getPrettyName(), i, 2022);
-                // System.out.println(p.name.getPrettyName() + ": " + currentYear + " (age " + age + ")");
-                age++;
-            }
-            */
-            int yearToPass = p.isAlive() ? 2022 : p.getDateOfDeath().getYear();
+            int yearToPass = p.isAlive() ? CURRENT_YEAR : p.getDateOfDeath().getYear();
             w.printData(p.name.getPrettyName(), p.getDateOfBirth().getYear(), yearToPass);
         }
     }
@@ -127,8 +88,6 @@ public class School {
                 }
 
                 returnValue += "." + System.lineSeparator();
-                // returnValue += "\n";
-
                 f.write(returnValue);
             }
             f.close();

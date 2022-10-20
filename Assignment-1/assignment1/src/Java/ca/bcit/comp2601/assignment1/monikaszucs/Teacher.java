@@ -15,6 +15,8 @@ package ca.bcit.comp2601.assignment1.monikaszucs;
 public class Teacher extends Person {
     private String specialty;
 
+    private static final int NEUTRAL_COMPARE_TO = 0;
+
     /**
      * @param born when the person was born in Date format
      * @param name the name of the person in Name format
@@ -70,6 +72,6 @@ public class Teacher extends Person {
      */
     @Override
     public int compareTo(final Object o) {
-        return 0;
+        return NEUTRAL_COMPARE_TO;
     }
 }

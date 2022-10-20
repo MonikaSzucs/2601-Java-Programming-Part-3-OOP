@@ -15,6 +15,9 @@ package ca.bcit.comp2601.assignment1.monikaszucs;
 public class Student extends Person {
     private String studentNumber;
 
+    private static final int NEUTRAL_COMPARE_TO = 0;
+    private static final int STUDENT_NUMBER_MAX_LENGTH = 9;
+
     /**
      * @param born when the person was born in Date format
      * @param name the name of the person in Name format
@@ -29,7 +32,7 @@ public class Student extends Person {
         if(name == null) {
             throw new IllegalPersonException("invalid name");
         }
-        if(studentNumber == null || studentNumber.isBlank() || studentNumber.length() != 9) {
+        if(studentNumber == null || studentNumber.isBlank() || studentNumber.length() != STUDENT_NUMBER_MAX_LENGTH) {
             throw new IllegalPersonException("bad student number");
         }
         this.born = born;
@@ -71,6 +74,6 @@ public class Student extends Person {
      */
     @Override
     public int compareTo(Object o) {
-        return 0;
+        return NEUTRAL_COMPARE_TO;
     }
 }
