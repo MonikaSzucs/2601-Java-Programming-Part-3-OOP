@@ -27,3 +27,5 @@ It is when you replace the parents method.
 
 ## Interface
 The children must override those methods in the interface
+
+# Polymorphism is also sometimes called protocalls

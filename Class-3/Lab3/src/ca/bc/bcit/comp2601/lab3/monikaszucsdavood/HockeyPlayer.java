@@ -16,16 +16,17 @@ import java.util.Objects;
  * @version 1.1
  */
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
-    private int numberOfGoals;
+    private int                     numberOfGoals;
 
-    private static final String DRESS_CODE = "jersey";
-    private static final Boolean PAID_SALARY = true;
-    private static final Boolean EDUCATION_REQUIREMENT = false;
-    private static final String WORK_VERB = "play";
-    private static final double OVERTIME_PAY_RATE = 0.0;
-    private static final Integer POSITIVE_NUMBER = +120;
-    private static final Integer NEGATIVE_NUMBER = -120;
-    private static final Integer HASHCODE_RETURN = 0;
+    private static final int        MIN_NUMBER_OF_GOALS             = 0;
+    private static final boolean    PAID_SALARY                     = true;
+    private static final boolean    EDUCATION_REQUIREMENT           = false;
+    private static final String     DRESS_CODE                      = "jersey";
+    private static final String     WORK_VERB                       = "play";
+    private static final double     OVERTIME_PAY_RATE_USD_PER_HOUR  = 0.0;
+    private static final int        LARGER                          = +120;
+    private static final int        SMALLER                         = -120;
+    private static final int        EQUAL                           = 0;
 
     /**
      * @param name the name of the person
@@ -33,6 +34,10 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     HockeyPlayer(final String name, final int goalNumber) {
         super(name);
+
+        if(numberOfGoals < MIN_NUMBER_OF_GOALS) {
+            throw new IllegalArgumentException("In correct number of goals");
+        }
         this.numberOfGoals = goalNumber;
     }
 
@@ -71,7 +76,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      * @return if the player needs an education or not
      */
     @Override
-    public boolean postSecondaryEducationRequired() {
+    public boolean requiresPostSecondaryEducation() {
         return EDUCATION_REQUIREMENT;
     }
 
@@ -84,11 +89,11 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
     }
 
     /**
-     * @return the over time pay rate
+     * @return the over time pay rate (0 for hockey players)
      */
     @Override
     public double getOverTimePayRate() {
-        return OVERTIME_PAY_RATE;
+        return OVERTIME_PAY_RATE_USD_PER_HOUR;
     }
 
     /**
@@ -97,10 +102,12 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     @Override
     public int compareTo(final HockeyPlayer hockeyPlayer) {
-        if(numberOfGoals < hockeyPlayer.getGoals()) {
-            return POSITIVE_NUMBER;
+        if(this.getGoals() > hockeyPlayer.getGoals()) {
+            return LARGER;
+        } else if(this.getGoals() < hockeyPlayer.getGoals()) {
+            return SMALLER;
         } else {
-            return NEGATIVE_NUMBER;
+            return EQUAL;
         }
     }
 
@@ -125,8 +132,12 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     @Override
     public boolean equals(final Object o) {
-        if(this == o) return true;
-        if(!(o instanceof HockeyPlayer)) return false;
+        if(this == o) {
+            return true;
+        }
+        if(!(o instanceof HockeyPlayer)) {
+            return false;
+        }
         HockeyPlayer hockeyPlayer = (HockeyPlayer) o;
         return numberOfGoals == hockeyPlayer.numberOfGoals;
     }
@@ -136,6 +147,6 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
      */
     @Override
     public int hashCode() {
-        return HASHCODE_RETURN;
+        return Objects.hash(super.hashCode(), numberOfGoals);
     }
 }

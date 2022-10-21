@@ -1,5 +1,7 @@
 package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
 
+import java.util.Objects;
+
 /**
  * Employee.java
  *
@@ -21,6 +23,9 @@ public abstract class Employee implements Employable {
      * @param name the name of the employee
      */
     public Employee(final String name) {
+        if(name == null || name.isBlank()){
+            throw new IllegalArgumentException("The name is incorrect");
+        }
         this.name = name;
     }
 
@@ -49,7 +54,9 @@ public abstract class Employee implements Employable {
             return false;
         }
 
-        if(this == o) return true;
+        if(this == o) {
+            return true;
+        }
 
         if(!(o instanceof Employee)) {
             return false;
@@ -57,5 +64,26 @@ public abstract class Employee implements Employable {
 
         Employee employee = (Employee) o;
         return (this.name.equals(employee.name));
+    }
+
+    /**
+     * @return the address (hashcode) of calling object
+     */
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    /**
+     * @return all employee data
+     */
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    public String getDetails() {
+        return "Name = '" + this.name + "\'";
     }
 }

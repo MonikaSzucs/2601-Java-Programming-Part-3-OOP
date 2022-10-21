@@ -18,14 +18,15 @@ import java.util.Objects;
 public class Parent extends Employee implements Comparable<Parent> {
     private int numberOfHoursSpentPerWeekWithKids;
 
-    private static final String DRESS_CODE = "anything";
-    private static final Boolean PAID_SALARY = false;
-    private static final Boolean EDUCATION_REQUIRED = false;
-    private static final String WORK_VERB = "care";
-    private static final double OVERTIME_PAY_RATE = -2.0;
-    private static final Integer POSITIVE_NUMBER = +120;
-    private static final Integer NEGATIVE_NUMBER = -120;
-    private static final Integer HASHCODE_RETURN = 0;
+    private static final int        MIN_NUMBER_OF_HOURS_SPENT_PER_WEEK_WITH_KIDS    = 0;
+    private static final String     DRESS_CODE                                      = "anything";
+    private static final boolean    PAID_SALARY                                     = false;
+    private static final boolean    EDUCATION_REQUIRED                              = false;
+    private static final String     WORK_VERB                                       = "care";
+    private static final double     OVERTIME_PAY_RATE                               = -2.0;
+    private static final int        POSITIVE_NUMBER                                 = +120;
+    private static final int        NEGATIVE_NUMBER                                 = -120;
+    private static final int        HASHCODE_RETURN                                 = 0;
 
     /**
      * @param name the name of the parent
@@ -33,6 +34,9 @@ public class Parent extends Employee implements Comparable<Parent> {
      */
     Parent(final String name, final int numberOfHoursSpentPerWeekWithKids) {
         super(name);
+        if(numberOfHoursSpentPerWeekWithKids < MIN_NUMBER_OF_HOURS_SPENT_PER_WEEK_WITH_KIDS) {
+            throw new IllegalArgumentException("Invalid number of hours spent with kids");
+        }
         this.numberOfHoursSpentPerWeekWithKids = numberOfHoursSpentPerWeekWithKids;
     }
 
@@ -72,7 +76,7 @@ public class Parent extends Employee implements Comparable<Parent> {
      * @return the educational requirement to be a parent
      */
     @Override
-    public boolean postSecondaryEducationRequired() {
+    public boolean requiresPostSecondaryEducation() {
         return EDUCATION_REQUIRED;
     }
 

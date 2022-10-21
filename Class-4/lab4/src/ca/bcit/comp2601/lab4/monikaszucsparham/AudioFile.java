@@ -13,12 +13,21 @@ package ca.bcit.comp2601.lab4.monikaszucsparham;
  *
  */
 class AudioFile extends MusicMedia implements FileManager {
-    private String title;
-    private String artist;
-    private String fileName;
-    private int fileSize;
+    private String  fileName;
+    private int     fileSize;
 
-    private static final int MIN_SIZE_OF_FILE = 0;
+    private static final int    EMPTY_FILE;
+    public static final double  DEFAULT_FILE_SIZE_BPS;
+
+    {
+        fileName = "default_song_name.mp3"; // just an example (for demonstration purposes)
+    }
+
+    static
+    {
+        EMPTY_FILE            = 0;
+        DEFAULT_FILE_SIZE_BPS = 320; // default value used if file size is unknown
+    }
 
     /**
      * @param title the title of the song
@@ -31,9 +40,13 @@ class AudioFile extends MusicMedia implements FileManager {
         if(fileName == null || fileName.isBlank()) {
             throw new IllegalArgumentException("The file name is invalid");
         }
-        if(fileSize <= MIN_SIZE_OF_FILE) {
+        if(fileSize <= EMPTY_FILE) {
             throw new IllegalArgumentException("The file size is invalid");
         }
+
+        validateFileName(fileName);
+        validateFileSize(fileSize);
+
         this.fileName = fileName;
         this.fileSize = fileSize;
     }
@@ -41,14 +54,16 @@ class AudioFile extends MusicMedia implements FileManager {
     /**
      * @param fileName the name of the file
      */
-    public void setFileName(String fileName) {
+    public void setFileName(final String fileName) {
+        validateFileName(fileName);
         this.fileName = fileName;
     }
 
     /**
      * @param fileSize the size of the file
      */
-    public void setFileSize(int fileSize) {
+    public void setFileSize(final int fileSize) {
+        validateFileSize(fileSize);
         this.fileSize = fileSize;
     }
 
@@ -67,13 +82,33 @@ class AudioFile extends MusicMedia implements FileManager {
     }
 
     /**
+     * @param fileName validating the name of the file
+     */
+    private static void validateFileName(final String fileName) {
+        if(fileName == null || fileName.isBlank())
+        {
+            throw new IllegalArgumentException("Invalid file name: " + fileName);
+        }
+    }
+
+    /**
+     * @param fileSize validating the size of the file
+     */
+    private static void validateFileSize(final int fileSize) {
+        if(fileSize < EMPTY_FILE)
+        {
+            throw new IllegalArgumentException("Invalid file size: " + fileSize);
+        }
+    }
+
+    /**
      * @return the to String information of the audio file
      */
     @Override
     public String toString() {
         return "AudioFile{" +
-                "title='" + title + '\'' +
-                ", artist='" + artist + '\'' +
+                "title='" + super.getSongTitle() + '\'' +
+                ", artist='" + super.getArtist() + '\'' +
                 ", fileName='" + fileName + '\'' +
                 ", fileSize=" + fileSize +
                 '}';
@@ -83,20 +118,20 @@ class AudioFile extends MusicMedia implements FileManager {
      * @param fileName saving the name of the music file
      */
     public void save(final String fileName) {
-        System.out.println("Audio file for " + artist +" is being saved as " + fileName + "; size = " + fileSize);
+        System.out.println("Audio file for " + super.getArtist() +" is being saved as " + fileName + "; size = " + fileSize);
     }
 
     /**
      * @param fileName deleting the file name
      */
     public void delete(final String fileName) {
-        System.out.println("Audio file for " + artist +" is being deleted as " + fileName + "; size = " + fileSize);
+        System.out.println("Audio file for " + super.getArtist() +" is being deleted as " + fileName + "; size = " + fileSize);
     }
 
     /**
      * Playing the current song
      */
     public void play() {
-        System.out.println(fileName + " is currently playing: " + title + "-" + artist);
+        System.out.println(fileName + " is currently playing: " + super.getSongTitle() + "-" + super.getArtist());
     }
 }

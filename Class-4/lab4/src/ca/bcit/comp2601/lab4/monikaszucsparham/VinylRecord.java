@@ -19,18 +19,27 @@ class VinylRecord extends MusicMedia {
     private int sizeInches;
     private int weightInGrams;
 
-    private static final int MIN_NUMBER_OF_TRACKS = 0;
+    private static final int EMPTY;
 
     private static final int VINYL_RECORD_SIZE_INCHES_LARGE = 12;
     private static final int VINYL_RECORD_SIZE_INCHES_MEDIUM = 10;
     private static final int VINYL_RECORD_SIZE_INCHES_SMALL = 7;
 
-    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_LARGE = 200;
-    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_MEDIUM = 180;
-    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_SMALL = 140;
+    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_LARGE;
+    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_MEDIUM;
+    private static final int VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_SMALL;
 
-    private static final int VINYL_RECORD_SIZE_MEDIUM_WEIGHT_GRAMS = 100;
-    private static final int VINYL_RECORD_SIZE_SMALL_WEIGHT_GRAMS = 100;
+    private static final int VINYL_RECORD_SIZE_MEDIUM_WEIGHT_GRAMS;
+    private static final int VINYL_RECORD_SIZE_SMALL_WEIGHT_GRAMS;
+
+    static {
+        EMPTY = 0;
+        VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_LARGE = 200;
+        VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_MEDIUM = 180;
+        VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_SMALL = 140;
+        VINYL_RECORD_SIZE_MEDIUM_WEIGHT_GRAMS = 100;
+        VINYL_RECORD_SIZE_SMALL_WEIGHT_GRAMS = 100;
+    }
 
     /**
      * @param title the title of the song
@@ -42,10 +51,34 @@ class VinylRecord extends MusicMedia {
     VinylRecord(final String title, final String artist, final int numberOfTracks, final int sizeInches, final int weightInGrams) {
         super(title, artist);
 
-        if(numberOfTracks <= MIN_NUMBER_OF_TRACKS) {
+        if(numberOfTracks <= EMPTY) {
             throw new IllegalArgumentException("The number of tracks is invalid");
         }
-        switch (sizeInches) {
+
+        validatedSizeInInches(sizeInches);
+        validatedWeightInGrams(weightInGrams);
+
+        this.weightInGrams = weightInGrams;
+        this.sizeInches = sizeInches;
+        this.numberOfTracks = numberOfTracks;
+    }
+
+    /**
+     * @param sizeInches validating the size in inches
+     */
+    private void validatedSizeInInches(final int sizeInches) {
+        if(sizeInches == 12 || sizeInches == 10 || sizeInches == 8) {
+            this.sizeInches = sizeInches;
+        } else {
+            throw new IllegalArgumentException("Invalid file size: " + sizeInches);
+        }
+    }
+
+    /**
+     * @param weightInGrams validating the weight of the vinyl record in grams
+     */
+    private void validatedWeightInGrams(final int weightInGrams) {
+        switch (this.sizeInches) {
             case VINYL_RECORD_SIZE_INCHES_LARGE:
                 if(weightInGrams == VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_SMALL || weightInGrams == VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_MEDIUM || weightInGrams == VINYL_RECORD_SIZE_LARGE_WEIGHT_GRAMS_LARGE) {
                     this.weightInGrams = weightInGrams;
@@ -70,8 +103,6 @@ class VinylRecord extends MusicMedia {
             default:
                 throw new IllegalArgumentException("The size of 12, 10, or 7 was not found");
         }
-        this.sizeInches = sizeInches;
-        this.numberOfTracks = numberOfTracks;
     }
 
     /**
@@ -122,8 +153,8 @@ class VinylRecord extends MusicMedia {
     @Override
     public String toString() {
         return "VinylRecord{" +
-                "title='" + title + '\'' +
-                ", artist='" + artist + '\'' +
+                "title='" + super.getSongTitle() + '\'' +
+                ", artist='" + super.getArtist() + '\'' +
                 ", numberOfTracks=" + numberOfTracks +
                 ", sizeInches=" + sizeInches +
                 ", weightInGrams=" + weightInGrams +
@@ -134,12 +165,6 @@ class VinylRecord extends MusicMedia {
      * Playing the vinyl record
      */
     public void play() {
-        System.out.println("The track being played currently: " + title + "-"+ artist + ". The number of tracks on the record is " + numberOfTracks);
+        System.out.println("The track being played currently: " + super.getSongTitle() + "-"+ super.getArtist() + ". The number of tracks on the record is " + numberOfTracks);
     }
 }
-
-/*
-main () {
-    Human.numebrofeyes
-}
-*/

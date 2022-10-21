@@ -72,7 +72,7 @@ public class Professor extends Employee implements Comparable<Professor> {
      * @return if an education is required or not
      */
     @Override
-    public boolean postSecondaryEducationRequired() {
+    public boolean requiresPostSecondaryEducation() {
         return EDUCATION_REQUIRED;
     }
 

@@ -1,4 +1,5 @@
 package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
+// reverse domain name for package
 
 /**
  * Employable.java
@@ -15,15 +16,12 @@ package ca.bc.bcit.comp2601.lab3.monikaszucsdavood;
  */
 public interface Employable {
 
-    abstract String getDressCode();
-
-    abstract boolean isPaidSalary();
-
-    abstract boolean postSecondaryEducationRequired();
-
-    abstract String getWorkVerb();
-
-    abstract double getOverTimePayRate();
+    // use verbs
+    String getDressCode();
+    boolean isPaidSalary();
+    boolean requiresPostSecondaryEducation();
+    String getWorkVerb();
+    double getOverTimePayRate();
 
     // default means not abstract
 

@@ -15,11 +15,12 @@ package ca.bcit.comp2601.lab4.monikaszucsparham;
 class CompactDisc extends MusicMedia {
     private int numberOfTracksOnTheCd;
     private static final String READING_METHOD;
-    private static final int MIN_NUMBER_OF_TRACKS_ON_THE_CD = 0;
+    private static final int MIN_NUMBER_OF_TRACKS_ON_THE_CD;
 
     static
     {
-        READING_METHOD = "laser";
+        READING_METHOD                  = "laser";
+        MIN_NUMBER_OF_TRACKS_ON_THE_CD  = 0;
     }
 
     /**

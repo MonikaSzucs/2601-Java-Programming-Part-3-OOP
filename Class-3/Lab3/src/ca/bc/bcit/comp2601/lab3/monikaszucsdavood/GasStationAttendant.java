@@ -72,7 +72,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
      * @return if an education is required
      */
     @Override
-    public boolean postSecondaryEducationRequired() {
+    public boolean requiresPostSecondaryEducation() {
         return EDUCATION_REQUIRED;
     }
 
