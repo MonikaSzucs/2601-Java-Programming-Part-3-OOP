@@ -16,7 +16,7 @@ public class Driver {
     /**
      * @param args the main argument
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         MusicMedia m1;
         MusicMedia m2;
         MusicMedia m3;
