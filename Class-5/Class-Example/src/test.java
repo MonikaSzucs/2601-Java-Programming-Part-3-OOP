@@ -19,6 +19,7 @@ class Main {
     public static void main(final String[] args) {
         PoliceOfficer p = new PoliceOfficer();
         p.shout(() -> System.out.println("FREEZE"));
+
         Student s = new Student();
         s.greet(() -> {
             System.out.println("Hi I study at bcit");

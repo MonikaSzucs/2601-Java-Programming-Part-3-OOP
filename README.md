@@ -29,3 +29,6 @@ It is when you replace the parents method.
 The children must override those methods in the interface
 
 # Polymorphism is also sometimes called protocalls
+
+# Why would we use a lambda expression?
+It does the same code it makes it readable, flexible and short

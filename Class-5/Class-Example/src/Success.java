@@ -12,7 +12,11 @@ class Success {
         ideas.add("discipline equals freedom");
 
         ideas.forEach(System.out::println);
-        ideas.forEach(idea -> System.out.println((String)idea).toUpperCase());
+
+        // Cast it to a string to get the string methods
+        ideas.forEach(idea -> {
+            System.out.println(((String)idea).toUpperCase());
+        });
     }
 
     public static void whatever(String s) {
