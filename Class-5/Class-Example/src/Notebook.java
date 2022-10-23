@@ -21,6 +21,7 @@ public class Notebook{
     private static String upperIt(String input)    {
         return input.toUpperCase();
     }
+
     private static void display(List<String> list, Converter converter)    {
         for(String s: list)        {
             System.out.println(converter.convert(s));

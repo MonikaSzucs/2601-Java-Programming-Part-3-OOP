@@ -1,10 +1,28 @@
+package ca.bcit.comp2601.lab4.monikaszucsguilherme;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * Dictionary.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Lab #5
+ *
+ * @author Monika Szucs
+ * @author Guilherme
+ * @version 1.1
+ *
+ */
 public class Dictionary {
     List<String> titles;
 
+    /**
+     * Dictionary Constructor
+     */
     Dictionary() {
         titles = new ArrayList<>();
         String[] data = {
@@ -39,7 +57,13 @@ public class Dictionary {
         titles = Arrays.stream(data).toList();
     }
 
-    public String getWords(String word, int number, Wordable w) {
+    /**
+     * @param word the word passed in the argument
+     * @param number the number of words
+     * @param w referencing the interface Wordable to get exact formatting
+     * @return the String of the word
+     */
+    public String getWords(final String word, final int number, final Wordable w) {
         return w.createString(word, number);
     }
 }
