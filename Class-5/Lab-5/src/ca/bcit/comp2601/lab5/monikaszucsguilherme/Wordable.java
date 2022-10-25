@@ -1,4 +1,4 @@
-package ca.bcit.comp2601.lab4.monikaszucsguilherme;
+package ca.bcit.comp2601.lab5.monikaszucsguilherme;
 
 /**
  * Wordable.java
@@ -8,11 +8,17 @@ package ca.bcit.comp2601.lab4.monikaszucsguilherme;
  * Lab #5
  *
  * @author Monika Szucs
- * @author Guilherme
+ * @author Guilherme Trevisan
  * @version 1.1
  *
  */
 @FunctionalInterface
 interface Wordable {
+
+    /**
+     * @param s a word to be used in the method
+     * @param n a number
+     * @return a processed string
+     */
     String createString(String s, int n);
 }

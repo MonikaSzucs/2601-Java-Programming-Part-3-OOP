@@ -1,9 +1,8 @@
-package ca.bcit.comp2601.lab4.monikaszucsguilherme;
+package ca.bcit.comp2601.lab5.monikaszucsguilherme;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 
 /**
  * Dictionary.java
@@ -13,18 +12,18 @@ import java.util.List;
  * Lab #5
  *
  * @author Monika Szucs
- * @author Guilherme
+ * @author Guilherme Trevisan
  * @version 1.1
  *
  */
 public class Dictionary {
-    List<String> titles;
+    List<String> jaWords;
 
     /**
      * Dictionary Constructor
      */
     Dictionary() {
-        titles = new ArrayList<>();
+        jaWords = new ArrayList<>();
         String[] data = {
                 "jab", "jabbed", "jabber", "jabbered", "jabbering", "jabbers", "jabberwocky",
                 "jabbing", "jabot", "jabots", "jabs", "jacaranda", "jacarandas", "jacinth",
@@ -54,7 +53,7 @@ public class Dictionary {
                 "jazz", "jazzed", "jazzes", "jazzier", "jazziest", "jazzing", "jazzman", "jazzmen",
                 "jazzy"
         };
-        titles = Arrays.stream(data).toList();
+        jaWords = Arrays.stream(data).toList();
     }
 
     /**
