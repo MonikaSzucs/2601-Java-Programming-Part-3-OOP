@@ -19,7 +19,7 @@ class Success {
         });
     }
 
-    public static void whatever(String s) {
-        System.out.println(s +  s.toUpperCase());
-    }
+//    public static void whatever(String s) {
+//        System.out.println(s +  s.toUpperCase());
+//    }
 }
