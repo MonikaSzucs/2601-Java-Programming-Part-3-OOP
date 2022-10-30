@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f70ee98-8209-44cb-b603-849bf131f802" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Exercise-1/Exercise-1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Exercise-1/src/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Exercise-1/src/IllegalWeightException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Exercise-1/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Exercise-1/src/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/Quiz-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/src/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/src/B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/src/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Class-6/Quiz-2/src/Quizzable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class-5/Class-Example/out/production/Class-Example-1/Notebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-5/Class-Example/out/production/Class-Example-1/Notebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class-5/Class-Example/out/production/Class-Example-1/Success.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-5/Class-Example/out/production/Class-Example-1/Success.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Class-5/Class-Example/src/Success.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-5/Class-Example/src/Success.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/Labs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Labs/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +38,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../example-1" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Labs" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
