@@ -1,5 +1,6 @@
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -24,6 +25,8 @@ public class Main {
         Scanner scannerTwo;
 
         int count = 0;
+        FileWriter writer;
+        writer = new FileWriter("output.txt", true);
 
         try{
             firstFileRead = new FileReader("firstnames.txt");
@@ -31,34 +34,33 @@ public class Main {
             scannerOne = new Scanner(firstFileRead);
             scannerTwo = new Scanner(secondFileRead);
 
-            File f1=new File("C:\\Users\\mszuc\\Desktop\\2601-Java-Programming-Part-3-OOP\\Class-6\\Lab-6-version-2\\firstnames.txt"); //Creation of File Descriptor for input file
+            File f1=new File("firstnames.txt"); //Creation of File Descriptor for input file
             FileReader fr = new FileReader(f1);  //Creation of File Reader object
             BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
 
             String s;
 
-
             while(( s = br.readLine()) != null) {
-                FileWriter writer;
-                writer = new FileWriter("C:\\Users\\mszuc\\Desktop\\2601-Java-Programming-Part-3-OOP\\Class-6\\Lab-6-version-2\\output.txt", true);
 
-                File f2=new File("C:\\Users\\mszuc\\Desktop\\2601-Java-Programming-Part-3-OOP\\Class-6\\Lab-6-version-2\\fullnames.txt"); //Creation of File Descriptor for input file
+                File f2=new File("fullnames.txt"); //Creation of File Descriptor for input file
                 FileReader fr2 = new FileReader(f2);  //Creation of File Reader object
                 BufferedReader br2 = new BufferedReader(fr2); //Creation of BufferedReader object
-                String s2;
+                String S2;
 
-                for (String item:  br2.readLine().split("\\s+")) {
-                    //System.out.println(s);
-                    //System.out.println(item);
-                    if (item.equals(s)) {
-                        System.out.println(s);
-                        System.out.println(item);
-                        writer.write(item + "\n");
+                String line = br2.readLine();
+
+                while(line != null) {
+                    String[] split = line.split(("\\s"));
+
+                    for(int i=0; i < split.length; i++) {
+
+                        if(split[i].equalsIgnoreCase(s)) {
+                            System.out.println(split[i]);
+                        }
                     }
-                }
 
-                writer.close();
-                //System.out.println("**********************************************************");
+                    line = br2.readLine();
+                }
             }
 
 
