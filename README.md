@@ -44,3 +44,49 @@ write just enough code to pass that text
 
 https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
 
+## Design sprint
+http://www.gv.com/sprint/
+
+# Steps of design
+## traditional
+design for 4 months
+code fro 2 months, unofficially testing along the way
+audited by QA, using requiremetns from teh customer show me the errors
+i fix repeat
+
+customer tests it next
+
+## TDD and agile
+lots of up-front design still
+
+1. interview teh client and record with ipad and cameras
+"our app runs on ios 14+ on iphones only, it starts with our icon in the center"
+
+2. transcribe that into written statements and pictures 
+3. change teh paragraphs into checklists 
+- ios 14
+- ios 14+
+- iphone
+- if no wifi  or cell ???
+- icon?? icon2x.png horizontally and vertically, min 2 sec
+
+4. each checlist item becomes a unit test
+5. code, pass the tests
+
+## TDD
+there is no QA team
+you write a test, code to pass the test
+repeat
+then do end-to-end, integration test...
+
+## Exercises 
+Design and app to help pubs and bars get their alchol deliveries faster or cheaper
+
+App to match dogs with dog walkers in north van
+listen
+
+lots of people
+
+When you solved the problem it takes off 
+
+## design by contract
