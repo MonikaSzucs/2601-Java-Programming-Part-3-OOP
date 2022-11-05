@@ -1,4 +1,4 @@
-package ca.bcit.comp2601.lab5.monikaszucsdavood;
+package ca.bcit.comp2601.lab5.monikaszucs;
 
 
 import java.io.*;
@@ -12,7 +12,6 @@ import java.util.Scanner;
  * Lab #5
  *
  * @author Monika Szucs
- * @author Davood
  * @version 1.2
  *
  */

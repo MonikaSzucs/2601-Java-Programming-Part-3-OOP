@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe565d34-543f-49a6-a3ad-7968c324c4ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/firstnames.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/InvalidFileName.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/InvalidFileName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/MissingFileName.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/out/production/Lab-6-version-2/ca/bcit/comp2601/lab5/monikaszucsdavood/MissingFileName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/InvalidFileName.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/InvalidFileName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/MissingFileName.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-6-version-2/src/ca/bcit/comp2601/lab5/monikaszucsdavood/MissingFileName.java" afterDir="false" />
-    </list>
+    <list default="true" id="fe565d34-543f-49a6-a3ad-7968c324c4ea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

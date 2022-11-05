@@ -1,4 +1,4 @@
-package ca.bcit.comp2601.lab5.monikaszucsdavood;
+package ca.bcit.comp2601.lab5.monikaszucs;
 
 /**
  * MissingFileName.java
@@ -8,7 +8,6 @@ package ca.bcit.comp2601.lab5.monikaszucsdavood;
  * Lab #5
  *
  * @author Monika Szucs
- * @author Davood
  * @version 1.2
  *
  * Checked Exception

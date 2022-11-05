@@ -32,3 +32,15 @@ The children must override those methods in the interface
 
 # Why would we use a lambda expression?
 It does the same code it makes it readable, flexible and short
+
+# Testing
+1 Unit tests
+
+2 tdd: test-driven development
+write a test
+write just enough code to pass that text
+
+3 design by contract
+
+https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
+
