@@ -33,18 +33,20 @@ The children must override those methods in the interface
 # Why would we use a lambda expression?
 It does the same code it makes it readable, flexible and short
 
-# Testing
+# Testing (these three features will make your code bomb proof)
 1 Unit tests
 
 2 tdd: test-driven development
-write a test
-write just enough code to pass that text
+write a test first
+write just enough code to pass that test
 
 3 design by contract
+means you will triple check all the values of all the arguments right away. check all the arguments for good and bad values when you start and when you leave
 
+## Types of Testing
 https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
 
-## Design sprint
+## Design sprint - testing and tesitng w/ human beings read this book - Google Ventures uses this. - Human testing
 http://www.gv.com/sprint/
 
 # Steps of design
@@ -90,3 +92,48 @@ lots of people
 When you solved the problem it takes off 
 
 ## design by contract
+
+## More important than efficiency:
+- correct code
+- maintainable
+- robus
+- readable
+- modular
+- secure
+- easy to update
+- reusable
+- well commented
+
+
+## Checkout
+Hamcrest
+file > project structure > libraries > + > search for hamcrest
+- helps make testing easier to read
+
+## Avoid using
+assertThat
+
+## Tips
+dont test loops just test the code directly
+
+## What to test in a single block of test?
+### void badWeightThrowsIllegalArg()  (check to make sure they throw illegal argument exception)
+0
+negative
+2000 (way too big)
+150.00000000000000001
+
+### void testSetWeight() (do these values result in a valid Person object being creating?)
+1
+100
+1000
+
+## Unit-testing best practices
+- keep the tests and code in separate folders
+- keep the tests and code in the same package
+- avoid assertTrue() and assertFalse() they are too unclear
+
+## If you get errors setting up tests
+- file > project structure > dependencies
+  - make the JUnit set to Compile in the dropdown
+  - also when you setup the junit tests by right clicking the class make sure you search for the junit test you want to add before you really add it.
