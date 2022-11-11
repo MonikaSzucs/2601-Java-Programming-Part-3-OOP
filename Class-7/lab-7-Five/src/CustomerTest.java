@@ -65,8 +65,8 @@ class CustomerTest {
 		assertEquals(emptyCustomer.getPasscode(), emptyCustomer2.getPasscode());
 
 		assertEquals("Justin", customer1.getFirstName());
-		assertEquals(customer1.getLastName(), "Bieber");
-		assertEquals(customer1.getPasscode(), "yummy");
+		assertEquals("Bieber", customer1.getLastName());
+		assertEquals("yummy", customer1.getPasscode());
 		assertEquals(customer1.getAccount().toString(), emptyAccount.toString());
 
 		//setAccount test
@@ -75,33 +75,33 @@ class CustomerTest {
 
 		//setFirstName
 		customer1.setFirstName("");
-		assertEquals(customer1.getFirstName(), "Justin");
+		assertEquals("Justin", customer1.getFirstName());
 
 		customer1.setFirstName(null);
-		assertEquals(customer1.getFirstName(), "Justin");
+		assertEquals("Justin", customer1.getFirstName());
 
 		customer1.setFirstName("Selena");
-		assertEquals(customer1.getFirstName(), "Selena");
+		assertEquals("Selena", customer1.getFirstName());
 
 		//setLastName
 		customer1.setLastName("");
-		assertEquals(customer1.getLastName(), "Bieber");
+		assertEquals("Bieber", customer1.getLastName());
 
 		customer1.setLastName(null);
-		assertEquals(customer1.getLastName(), "Bieber");
+		assertEquals("Bieber", customer1.getLastName());
 
 		customer1.setLastName("Gomez");
-		assertEquals(customer1.getLastName(), "Gomez");
+		assertEquals("Gomez", customer1.getLastName());
 
 		//setPasscode
 		customer1.setPasscode("");
-		assertEquals(customer1.getPasscode(), "yummy");
+		assertEquals("yummy", customer1.getPasscode());
 
 		customer1.setPasscode(null);
-		assertEquals(customer1.getPasscode(), "yummy");
+		assertEquals("yummy", customer1.getPasscode());
 
 		customer1.setPasscode("loveSong");
-		assertEquals(customer1.getPasscode(), "loveSong");
+		assertEquals("loveSong", customer1.getPasscode());
 
 		System.out.println(emptyCustomer.toString());
 		assertEquals(customer1.toString(),"Customer [firstName=Selena, lastName=Gomez, passcode=loveSong, " +
@@ -110,8 +110,4 @@ class CustomerTest {
 		assertEquals(emptyCustomer.toString(),"Customer [firstName=null, lastName=null, passcode=null, " +
 				"account=null]");
 	}
-
-	// testEmptyConstructor
-
-
 }
