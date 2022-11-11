@@ -53,25 +53,25 @@ class CustomerTest {
 
 	@Test
 	void test() {
-		assertEquals(emptyCustomer.getFirstName(), null);
-		assertEquals(emptyCustomer.getLastName(), null);
-		assertEquals(emptyCustomer.getAccount(), null);
-		assertEquals(emptyCustomer.getPasscode(), null);
+		assertEquals(null, emptyCustomer.getFirstName());
+		assertEquals(null, emptyCustomer.getLastName());
+		assertEquals(null, emptyCustomer.getAccount());
+		assertEquals(null, emptyCustomer.getPasscode());
 
 
-		assertEquals(emptyCustomer.getFirstName(), emptyCustomer2.getFirstName());
-		assertEquals(emptyCustomer.getLastName(), emptyCustomer2.getLastName());
-		assertEquals(emptyCustomer.getAccount(), emptyCustomer2.getAccount());
-		assertEquals(emptyCustomer.getPasscode(), emptyCustomer2.getPasscode());
+		assertEquals(emptyCustomer2.getFirstName(), emptyCustomer.getFirstName());
+		assertEquals(emptyCustomer2.getLastName(), emptyCustomer.getLastName());
+		assertEquals(emptyCustomer2.getAccount(), emptyCustomer.getAccount());
+		assertEquals(emptyCustomer2.getPasscode(), emptyCustomer.getPasscode());
 
 		assertEquals("Justin", customer1.getFirstName());
 		assertEquals("Bieber", customer1.getLastName());
 		assertEquals("yummy", customer1.getPasscode());
-		assertEquals(customer1.getAccount().toString(), emptyAccount.toString());
+		assertEquals(emptyAccount.toString(), customer1.getAccount().toString());
 
 		//setAccount test
 		customer1.setAccount(newAccount);
-		assertEquals(customer1.getAccount().toString(), newAccount.toString());
+		assertEquals(newAccount.toString(), customer1.getAccount().toString());
 
 		//setFirstName
 		customer1.setFirstName("");
@@ -104,10 +104,10 @@ class CustomerTest {
 		assertEquals("loveSong", customer1.getPasscode());
 
 		System.out.println(emptyCustomer.toString());
-		assertEquals(customer1.toString(),"Customer [firstName=Selena, lastName=Gomez, passcode=loveSong, " +
-				"account="+newAccount.toString()+"]");
+		assertEquals("Customer [firstName=Selena, lastName=Gomez, passcode=loveSong, " +
+				"account="+newAccount.toString()+"]", customer1.toString());
 
-		assertEquals(emptyCustomer.toString(),"Customer [firstName=null, lastName=null, passcode=null, " +
-				"account=null]");
+		assertEquals("Customer [firstName=null, lastName=null, passcode=null, " +
+				"account=null]", emptyCustomer.toString());
 	}
 }
