@@ -51,7 +51,7 @@ class AccountTest {
 		account1 = new Account();
 		account2 = new Account(null,0.0);
 		account2.setActive(false);
-		assertEquals(account1.toString(),account2.toString());
+		assertEquals(account2.toString(), account1.toString());
 
 		filledConstructorTest = new Account(filledConstructorTestAccountNumber,filledConstructorTestBalance);
 	}
@@ -59,26 +59,23 @@ class AccountTest {
 	@AfterEach
 	void tearDown() throws Exception {
 
-
 	}
-//add double.max to account balance
-// no illegal argument exception thrown for negative numbers in add to balance
 
 	@Test
 	void test() {
 		//Testing empty constructor account
-		assertEquals(emptyAccount.getAccountNumber(), null);
-		assertEquals(emptyAccount.isActive(), false);
-		assertEquals(emptyAccount.getBalance(), 0);
+		assertEquals(null, emptyAccount.getAccountNumber());
+		assertEquals(false, emptyAccount.isActive());
+		assertEquals(0, emptyAccount.getBalance());
 
-		assertEquals(emptyAccount.getAccountNumber(), emptyComparisonAccount.getAccountNumber());
-		assertEquals(emptyAccount.isActive(), emptyComparisonAccount.isActive());
-		assertEquals(emptyAccount.getBalance(), emptyComparisonAccount.getBalance());
+		assertEquals(emptyComparisonAccount.getAccountNumber(), emptyAccount.getAccountNumber());
+		assertEquals(emptyComparisonAccount.isActive(), emptyAccount.isActive());
+		assertEquals(emptyComparisonAccount.getBalance(), emptyAccount.getBalance());
 
 		//Testing if constructor with parameters works fine
-		assertEquals(filledConstructorTest.getAccountNumber(), filledConstructorTestAccountNumber);
-		assertEquals(filledConstructorTest.isActive(), true);
-		assertEquals(filledConstructorTest.getBalance(), filledConstructorTestBalance);
+		assertEquals(filledConstructorTestAccountNumber, filledConstructorTest.getAccountNumber());
+		assertEquals(true, filledConstructorTest.isActive());
+		assertEquals(filledConstructorTestBalance, filledConstructorTest.getBalance());
 
 		//Add to balance
 		filledConstructorTest.addToBalance(0);
@@ -105,40 +102,31 @@ class AccountTest {
 		assertEquals(filledConstructorTestBalance, filledConstructorTest.getBalance());
 
 		//Testing active functions
-		assertEquals(emptyAccount.isActive(),false);
+		assertEquals(false, emptyAccount.isActive());
 
-		assertEquals(filledConstructorTest.isActive(),true);
+		assertEquals(true, filledConstructorTest.isActive());
 
 		filledConstructorTest.setActive(false);
-		assertEquals(filledConstructorTest.isActive(),false);
+		assertEquals(false, filledConstructorTest.isActive());
 
 		filledConstructorTest.setActive(true);
-		assertEquals(filledConstructorTest.isActive(),true);
+		assertEquals(true, filledConstructorTest.isActive());
 
 		//Set Balance
-		assertEquals(filledConstructorTest.getBalance(),filledConstructorTestBalance);
+		assertEquals(filledConstructorTestBalance, filledConstructorTest.getBalance());
 
 		filledConstructorTestBalance = 100;
 		filledConstructorTest.setBalance(100);
-		assertEquals(filledConstructorTest.getBalance(), filledConstructorTestBalance);
+		assertEquals(filledConstructorTestBalance, filledConstructorTest.getBalance());
 
 		filledConstructorTest.setBalance(-100);
-		assertEquals(filledConstructorTest.getBalance(),filledConstructorTestBalance);
+		assertEquals(filledConstructorTestBalance, filledConstructorTest.getBalance());
 
 		// toString
-		assertEquals(filledConstructorTest.toString(), "Account [accountNumber="+filledConstructorTestAccountNumber
-				+", balance="+filledConstructorTestBalance+", active="+true+"]");
+		assertEquals("Account [accountNumber="+filledConstructorTestAccountNumber
+				+", balance="+filledConstructorTestBalance+", active="+true+"]", filledConstructorTest.toString());
 
-		assertEquals(emptyAccount.toString(), "Account [accountNumber=null, balance="+0.0+", active="+false+"]");
-		//fail("Not yet implemented");
-
-//		assertEquals("HARRY POTTER", b1.getTitle());
-//		assertEquals("IT", b2.getTitle());
-//
-//		IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> {
-//			b1 = new Book(null, "rowling", 1996, 700);
-//		});
-//		assertEquals("a book needs a title!!!", ex.getMessage());
+		assertEquals("Account [accountNumber=null, balance="+0.0+", active="+false+"]", emptyAccount.toString());
 	}
 
 }

@@ -69,7 +69,7 @@ class BankTest {
 			String currentExpectedInfo = "Customer [firstName=FirstName"+i+", lastName=LastName"+i+", passcode=12345678"+i+", account=Account " +
 					"[accountNumber=12345"+i+", balance="+theBalance+", active=true]]"+System.lineSeparator();
 
-			assertEquals(getCustomerInfo(temporaryCustomer), currentExpectedInfo);
+			assertEquals(currentExpectedInfo, getCustomerInfo(temporaryCustomer));
 
 			theExpectedOutput+= "Customer [firstName=FirstName"+i+", lastName=LastName"+i+", passcode=12345678"+i+", account=Account " +
 					"[accountNumber=12345"+i+", balance="+theBalance+", active=true]]"+System.lineSeparator();
