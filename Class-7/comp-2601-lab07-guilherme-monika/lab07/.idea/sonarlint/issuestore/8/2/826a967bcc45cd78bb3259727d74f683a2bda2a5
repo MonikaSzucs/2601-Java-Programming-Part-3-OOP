@@ -1,0 +1,43 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(°‘êèıÿÿÿÿ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ôÆÛ
+[	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(À
+[	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(à¥Ö•
+\
+java:S11929"FDefine a constant instead of duplicating this literal "Tiger" 3 times.(ãàë°
+c
+java:S11922"HDefine a constant instead of duplicating this literal "Unknown" 6 times.(É¾˜øÿÿÿÿ
+]
+java:S1192>"GDefine a constant instead of duplicating this literal "Liskov" 3 times.(à ûä
+^
+java:S1192="HDefine a constant instead of duplicating this literal "Barbara" 3 times.(³ä¾
+\
+java:S1192:"FDefine a constant instead of duplicating this literal "Woods" 3 times.(‘ØÏ
+0
+java:S1220""Move this file to a named package.
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(°‘êèıÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ë©İÁ
+‚
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ôÆÛ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•¥Á
+‚
+java:S1130 "lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(À
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(¨—Ó 
+‚
+java:S1130("lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(à¥Ö•
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(‹³«òıÿÿÿÿ
+M
+java:S1854Ñ"6Remove this useless assignment to local variable "ex".(¢Í¡Í
+C
+java:S1481Ğ"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ
+M
+java:S1854Ü"6Remove this useless assignment to local variable "ex".(èì“
+C
+java:S1481Û"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ
+M
+java:S1854ç"6Remove this useless assignment to local variable "ex".(‚ášô
+C
+java:S1481æ"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ
+F
+java:S59602"+Remove this assertion from production code.(É¾˜øÿÿÿÿ

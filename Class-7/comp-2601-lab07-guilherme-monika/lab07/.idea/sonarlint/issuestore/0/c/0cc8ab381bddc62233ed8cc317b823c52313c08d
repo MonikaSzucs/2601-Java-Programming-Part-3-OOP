@@ -1,0 +1,41 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(°‘êèıÿÿÿÿ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ôÆÛ
+[	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(À
+[	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(à¥Ö•
+0
+java:S1220""Move this file to a named package.
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(°‘êèıÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ë©İÁ
+‚
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ôÆÛ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•¥Á
+‚
+java:S1130 "lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(À
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(¨—Ó 
+‚
+java:S1130("lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(à¥Ö•
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(‹³«òıÿÿÿÿ
+T
+java:S1854¢"6Remove this useless assignment to local variable "ex".(¦‹£8œÍáõÄ0
+J
+java:S1481¡"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ8œÍáõÄ0
+Y
+java:S1854­"6Remove this useless assignment to local variable "ex".(Ó¿á½ÿÿÿÿÿ8œÍáõÄ0
+J
+java:S1481¬"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ8ÍáõÄ0
+Y
+java:S1854¸"6Remove this useless assignment to local variable "ex".(Î³üøÿÿÿÿ8ÍáõÄ0
+J
+java:S1481·"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ8ÍáõÄ0
+Y
+java:S1854Â"6Remove this useless assignment to local variable "ex".(šÂûÛúÿÿÿÿ8ÍáõÄ0
+J
+java:S1481Á"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ8ÍáõÄ0
+Y
+java:S1854Ì"6Remove this useless assignment to local variable "ex".(ã÷Å…ùÿÿÿÿ8ÍáõÄ0
+J
+java:S1481Ë"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ8ÍáõÄ0
+A
+java:S59601"+Remove this assertion from production code.(àÁ¢†

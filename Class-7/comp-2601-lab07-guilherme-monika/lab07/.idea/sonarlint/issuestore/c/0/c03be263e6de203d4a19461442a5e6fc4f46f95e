@@ -1,0 +1,32 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(°‘êèıÿÿÿÿ
+[	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(ôÆÛ
+[	java:S112%"FDefine and throw a dedicated exception instead of using a generic one.(À
+[	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(à¥Ö•
+Ü
+java:S1192;"¾Define a constant instead of duplicating this literal "Customer [firstName=Tiger, lastName=Woods, passcode=1234, account=Account [accountNumber=54321, balance=1000.0, active=true]]" 3 times.(ÕƒÃ»8‘ƒ­úÄ0
+0
+java:S1220""Move this file to a named package.
+<
+java:S1170"!Make this final field static too.(õÂé•üÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(õÂé•üÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(°‘êèıÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ë©İÁ8¸œå«Å0
+‚
+java:S1130 "lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ôÆÛ
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(•¥Á8ûúå«Å0
+‰
+java:S1130%"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(À8ºœå«Å0
+L
+java:S2696&"6Make the enclosing method "static" or remove this set.(¸±“²
+‰
+java:S11303"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(à¥Ö•8ıúå«Å0
+L
+java:S26964"6Make the enclosing method "static" or remove this set.(õ¤ô¼
+L
+java:S1854l"6Remove this useless assignment to local variable "ex".(İºÀ
+B
+java:S1481k"'Remove this unused "ex" local variable.(§‘‡„üÿÿÿÿ
+@
+java:S5960="+Remove this assertion from production code.(ğãç_

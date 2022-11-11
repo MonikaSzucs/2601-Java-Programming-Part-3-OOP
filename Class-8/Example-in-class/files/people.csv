@@ -1,0 +1,29 @@
+1,golfer,TRUE,tiger,tont,woods,america
+2,golfer,FALSE,arnold,daniel,palmer,america
+3,golfer,TRUE,jack,william,nicklaus,america
+4,golfer,TRUE,greg,john,norman,australia
+5,golfer,TRUE,adam,derek,scott,australia
+6,golfer,TRUE,annika,charlotta,sörenstam,sweden
+7,golfer,TRUE,se,ri,pak,south korea
+8,hockey,TRUE,wayne,douglas,gretzky,canada
+9,hockey,TRUE,mario,le magnifique,lemieux,canada
+10,hockey,TRUE,sidney,patrick,crosby,canada
+11,hockey,TRUE,hayley,highchair,wickenheiser,canada
+12,scientist,FALSE,richard,phillips,feynman,america
+13,scientist,FALSE,albert,genius,einstein,germany
+14,scientist,TRUE,richard,clinton,dawkins,kenya
+15,scientist,FALSE,carl,edward,sagan,america
+16,music,TRUE,kendrick,lamar,duckworth,america
+17,music,TRUE,aubrey,drake,graham,canada
+18,music,TRUE,marshall,bruce,mathers,america
+19,music,FALSE,john,winston,lennon,england
+20,music,FALSE,robert,nesta,marley,jamaica
+22,music,TRUE,madonna,louise,ciccone,america
+23,music,TRUE,céline,marie,dion,america
+24,music,TRUE,bruce,frederick,springsteen,america
+25,computing,TRUE,william,henry,gates,america
+26,computing,FALSE,alan,mathison,turing,england
+27,computing,TRUE,stephen,gary,wozniak,america
+28,computing,TRUE,mark,elliot,zuckerbert,america
+29,computing,FALSE,john,von,neumann,hungary
+30,computing,FALSE,augusta,ada,king,england
