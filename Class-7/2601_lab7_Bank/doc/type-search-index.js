@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"<Unnamed>","l":"Account"},{"l":"All Classes","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Bank"},{"p":"<Unnamed>","l":"Customer"}];updateSearchResults();
