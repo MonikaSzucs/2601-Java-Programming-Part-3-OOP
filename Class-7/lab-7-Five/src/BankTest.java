@@ -23,6 +23,7 @@ class BankTest {
 
 	static Bank theEmptyBank;
 	static String theExpectedOutput = "";
+
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
