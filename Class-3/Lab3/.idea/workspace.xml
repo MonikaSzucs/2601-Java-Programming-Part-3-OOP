@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59505c4a-ade8-44cc-a650-c889bab450f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab3/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/GasStationAttendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/HockeyPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/bc/bcit/comp2601/lab3/monikaszucsdavood/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/Question 1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/src/java/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question 1/src/tests/NameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/Question-3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/src/IllegalDivisorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Class-8/Quiz/Question-3/src/Math.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Class-4/example-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Class-4/example-2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Class-6/Lab-6-version-2" />
   </component>
   <component name="RunManager" selected="Application.Employees (1)">
     <configuration name="Employees (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
