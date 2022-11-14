@@ -1,3 +1,5 @@
+package ca.bcit.comp2601.lab8.monikaszucs;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,6 +10,16 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * CarSearchGUI.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Lab #8
+ *
+ * @author Monika Szucs
+ * @version 1.1
+ */
 public class CarSearchGUI extends JFrame {
 
     private static final ArrayList<Cars> carList = new ArrayList<>();
@@ -16,8 +28,12 @@ public class CarSearchGUI extends JFrame {
 
     private JList<Cars> jList = new JList<>(jListModel);
 
+    /**
+     * Setting up the size of the interface
+     */
     public CarSearchGUI() {
         super("Car Search Application");
+
         setSize(700, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setJMenuBar(getAppMenuBar());
@@ -25,6 +41,9 @@ public class CarSearchGUI extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * @return the display of the App Menu Bar
+     */
     public JMenuBar getAppMenuBar() {
         JMenuBar menuBar = new JMenuBar();
 
@@ -77,6 +96,11 @@ public class CarSearchGUI extends JFrame {
         searchItem4.setMnemonic(KeyEvent.VK_E);
         searchMenu.add(searchItem4);
 
+        searchMenu.add(searchItem1);
+        searchMenu.add(searchItem2);
+        searchMenu.add(searchItem3);
+        searchMenu.add(searchItem4);
+
         menuBar.add(fileMenu);
         menuBar.add(searchMenu);
         menuBar.add(helpMenu);
@@ -94,9 +118,76 @@ public class CarSearchGUI extends JFrame {
             }
         });
 
+        searchItem1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jListModel.clear();
+
+                String searchQuery = JOptionPane.showInputDialog(null,
+                        "What make of the car are you looking for",
+                        "Search by job",
+                        JOptionPane.QUESTION_MESSAGE);
+                for(Cars c: carList) {
+                    if(c.getMake().contains(searchQuery.toLowerCase())) {
+                        jListModel.addElement(c);
+                    }
+                }
+            }
+        });
+
+        searchItem2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jListModel.clear();
+                String searchQuery = JOptionPane.showInputDialog(null,
+                        "What model of car are you looking for?",
+                        JOptionPane.QUESTION_MESSAGE);
+                for(Cars c: carList) {
+                    if(c.getModel().contains(searchQuery.toLowerCase())) {
+                        jListModel.addElement(c);
+                    }
+                }
+            }
+        });
+
+        searchItem3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jListModel.clear();
+                String searchQuery = JOptionPane.showInputDialog(null,
+                        "What year did you want your car?",
+                        JOptionPane.QUESTION_MESSAGE);
+                for(Cars c: carList) {
+                    if(c.getYear() == Integer.parseInt(searchQuery)) {
+                        jListModel.addElement(c);
+                    }
+                }
+            }
+        });
+
+        searchItem4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jListModel.clear();
+                String searchQuery = JOptionPane.showInputDialog(null,
+                        "Do you want the car electric? (TRUE or FALSE?)",
+                        JOptionPane.QUESTION_MESSAGE);
+                for(Cars c: carList) {
+                    if(c.isElectric() == Boolean.parseBoolean(searchQuery.toLowerCase())) {
+                        jListModel.addElement(c);
+                    }
+                }
+            }
+        });
+
         return menuBar;
     }
 
+    /**
+     *
+     * @param args the main argument
+     * @throws FileNotFoundException checking to see if an excel file is not found in the searched directory
+     */
     public static void main(final String[] args) throws FileNotFoundException {
         Scanner file;
         file = new Scanner(new File("files\\cars.csv"));

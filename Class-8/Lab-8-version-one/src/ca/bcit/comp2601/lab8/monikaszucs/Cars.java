@@ -1,3 +1,15 @@
+package ca.bcit.comp2601.lab8.monikaszucs;
+
+/**
+ * Cars.java
+ *
+ * COMP 2601 - CRN: 48065
+ * Friday evenings, Fall 2022
+ * Lab #8
+ *
+ * @author Monika Szucs
+ * @version 1.1
+ */
 public class Cars {
     private int id;
     private String make;
