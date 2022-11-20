@@ -59,7 +59,7 @@ public class Canada {
                 .filter(p -> p.getPopulation() > 250000)
                 .collect(Collectors.toList());
 
-        System.out.println(smallProvinces.size());
+        System.out.println(largeProvinces.size());
         int numLargeProvinces = largeProvinces.size();
 
         System.out.println("--------------------");
@@ -139,7 +139,9 @@ public class Canada {
 
         System.out.println("--------------------");
         System.out.println("Is there a probince named Alberta? (any case)");
-        System.out.println(provinces.stream().filter(p -> !p.getName().isBlank()).anyMatch(p -> p.getName().equalsIgnoreCase("alberta")));
+        System.out.println(provinces.stream()
+                .filter(p -> !p.getName().isBlank())
+                .anyMatch(p -> p.getName().equalsIgnoreCase("alberta")));
 
         System.out.println("--------------------");
         System.out.println("Get all provinces that begin with the letter B");
