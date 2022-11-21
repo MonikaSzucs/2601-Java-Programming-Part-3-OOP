@@ -158,6 +158,7 @@ public class Canada {
         // get total population
         int canadaPopulation = provinces.stream()
                 .mapToInt(Province::getPopulation).sum();
+
         allTheProvinces.forEach(p -> System.out.printf("%s...%.2f%%\n", p.getName(),
                 (((double)p.getPopulation()/canadaPopulation) * MAX_PERCENTAGE)));
 

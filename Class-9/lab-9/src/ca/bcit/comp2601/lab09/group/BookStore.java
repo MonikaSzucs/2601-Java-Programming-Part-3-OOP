@@ -1,7 +1,15 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+package ca.bcit.comp2601.lab09.group;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * BookStore Class
+ *
+ * @author Guilherme Trevison, Monika Szucs, Davood Tabrizi Nejad
+ * @version 1.1
+ * @since 2022-11-20
+ */
 class BookStore {
     private String name;
     private static List<Novel> novels;
@@ -10,12 +18,14 @@ class BookStore {
         novels = new ArrayList<>();
     }
 
-    BookStore() {
-
+    BookStore(final String name) {
+        if(name == null || name.isBlank()) {
+            throw new IllegalArgumentException("The name cannot be blank");
+        }
+        this.name = name;
     }
 
     public static void main(String[] args) {
-
         novels.add(new Novel("The Adventure of Augie March", "Saul Bellow", 1953));
         novels.add(new Novel("All the King's Men", "Robert Penn Warren", 1946));
         novels.add(new Novel("American Pastoral", "Philip Roth", 1997));
@@ -125,6 +135,11 @@ class BookStore {
         getLongest();
         System.out.println(isThereABookWrittenBetween(1970));
         System.out.println(howManyBooksContain("Under"));
+        System.out.println(whichPercentWrittenBetween(1970, 1980));
+        System.out.println(getOldestBook().getYearPublished());
+
+        List booksWithLength = getBooksThisLength(10);
+        booksWithLength.forEach(n -> System.out.println(n.toString()));
     }
 
     public static void printAllTitles() {
@@ -174,25 +189,36 @@ class BookStore {
     public static int howManyBooksContain(final String word) {
         System.out.println("--- Returns the amount of books that contain the word in the title ---");
         List<Novel> numberBooksContainingWord = novels.stream()
-                .mapToInt(line -> countMatches(line, "hello")).sum()
+                .filter(n -> n.getTitle().contains(word))
                 .collect(Collectors.toList());
-
-
         return numberBooksContainingWord.size();
     }
 
-    public void whichPercentWrittenBetween(final int first,final int last) {
-        System.out.println();
+    public static String whichPercentWrittenBetween(final int first,final int last) {
+        System.out.println("--- Returns the percentage of books written between specific years ---");
+        List<Novel> allNovels = novels.stream()
+                .filter(p -> ((p.getYearPublished() >= first) && (p.getYearPublished() <= last)))
+                .collect(Collectors.toList());
+        System.out.println(allNovels);
+        System.out.println(allNovels.size());
+
+        double checkingPercentage = ((double)allNovels.size() / (double)novels.size()) * 100;
+        return String.format("%.2f", checkingPercentage);
     }
 
-    public String getOldestBook() {
-        return "";
+    public static Novel getOldestBook() {
+        System.out.println("--- Returns the oldest book ---");
+        Optional<Novel> oldestBook = novels.stream()
+                .min(Comparator.comparing(Novel::getYearPublished));
+        return oldestBook.get();
     }
 
-    public List getBooksThisLength() {
-        List<Novel> books;
-        books = new ArrayList<>();
-        return books;
+    public static List<Novel> getBooksThisLength(final int titleLength) {
+        System.out.println("--- Returns books with a called length ---");
+        List<Novel> booksThisLength = novels.stream()
+                .filter(n -> n.getTitle().length() == titleLength)
+                .collect(Collectors.toList());
+        return booksThisLength;
     }
 
 }
