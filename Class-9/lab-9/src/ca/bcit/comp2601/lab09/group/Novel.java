@@ -56,6 +56,9 @@ class Novel {
         return yearPublished;
     }
 
+    /**
+     * @return returning the toString containing the title, author name and year published
+     */
     @Override
     public String toString() {
         return "Novel{" +

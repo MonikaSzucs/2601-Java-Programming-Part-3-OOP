@@ -142,11 +142,17 @@ class BookStore {
         booksWithLength.forEach(n -> System.out.println(n.toString()));
     }
 
+    /**
+     * Printing all the novel title
+     */
     public static void printAllTitles() {
         System.out.println("--- Print All Titles To UpperCase ---");
         novels.forEach(p -> System.out.println(p.getTitle().toUpperCase()));
     }
 
+    /**
+     * @param title the book title
+     */
     public static void printBookTitle(final String title) {
         System.out.println("--- Print All Titles that matches the parameter ---");
         List<Novel> matchTitles = novels.stream()
@@ -156,6 +162,9 @@ class BookStore {
 
     }
 
+    /**
+     * Printing the titles in alphabetical order
+     */
     public static void printTitlesInAlphaOrder() {
         System.out.println("--- Print Title in Alphabetical Order ---");
         List<Novel> alphabeticalOrder = novels.stream()
@@ -163,6 +172,9 @@ class BookStore {
         alphabeticalOrder.forEach(p -> System.out.println(p.getTitle()));
     }
 
+    /**
+     * @param decade the maximum year selected
+     */
     public static void printGroupByDecade(final int decade) {
         System.out.println("--- Print Books only between 2000 to 2009 ---");
         List<Novel> booksInTwoThousands = novels.stream()
@@ -171,6 +183,9 @@ class BookStore {
         booksInTwoThousands.forEach(p -> System.out.println(p.getTitle() + " was released in " + p.getYearPublished()));
     }
 
+    /**
+     * The longest book title
+     */
     public static void getLongest() {
         System.out.println("--- Print the longest book title ---");
         Optional<Novel> longestBookTitle = novels.stream()
@@ -179,6 +194,10 @@ class BookStore {
         longestBookTitle.ifPresent((p -> System.out.println("The longest book title is " + p.getTitle())));
     }
 
+    /**
+     * @param year the maximum year for the year published
+     * @return the book that has been found between given years
+     */
     public static boolean isThereABookWrittenBetween(final int year) {
         System.out.println("--- Returns boolean of whether there is a book written between a certain year---");
         boolean bookWrittenBetween = novels.stream()
@@ -186,6 +205,10 @@ class BookStore {
         return bookWrittenBetween;
     }
 
+    /**
+     * @param word finding a word in a book title
+     * @return the books that contain the word being searched for
+     */
     public static int howManyBooksContain(final String word) {
         System.out.println("--- Returns the amount of books that contain the word in the title ---");
         List<Novel> numberBooksContainingWord = novels.stream()
@@ -194,6 +217,11 @@ class BookStore {
         return numberBooksContainingWord.size();
     }
 
+    /**
+     * @param first the start of the year
+     * @param last the end of the year
+     * @return how many books are found between given years out of the total
+     */
     public static String whichPercentWrittenBetween(final int first,final int last) {
         System.out.println("--- Returns the percentage of books written between specific years ---");
         List<Novel> allNovels = novels.stream()
@@ -206,6 +234,9 @@ class BookStore {
         return String.format("%.2f", checkingPercentage);
     }
 
+    /**
+     * @return the oldest book
+     */
     public static Novel getOldestBook() {
         System.out.println("--- Returns the oldest book ---");
         Optional<Novel> oldestBook = novels.stream()
@@ -213,6 +244,10 @@ class BookStore {
         return oldestBook.get();
     }
 
+    /**
+     * @param titleLength the length of the book title we want to find
+     * @return the length of the title that matches the length we were looking for
+     */
     public static List<Novel> getBooksThisLength(final int titleLength) {
         System.out.println("--- Returns books with a called length ---");
         List<Novel> booksThisLength = novels.stream()
@@ -220,5 +255,4 @@ class BookStore {
                 .collect(Collectors.toList());
         return booksThisLength;
     }
-
 }
