@@ -170,9 +170,7 @@ public class BookStore {
                 .filter(n->n.getYearPublished() >= decade && n.getYearPublished() <= maxYear)
                 .sorted(Comparator.comparing(Novel::getYearPublished))
                 .collect(Collectors.groupingBy(Novel::getYearPublished));
-        ;
-        novFiltered.forEach((yearPublished, novels)->
-        {
+        novFiltered.forEach((yearPublished, novels)-> {
             System.out.print(yearPublished + " : ");
             String titleList;
             titleList = BLANK_STRING;
@@ -187,7 +185,7 @@ public class BookStore {
     /**
      * Find the longest title in the bookstore
      */
-    private static void getLongest(){
+    private static void getLongest() {
         Optional<Novel>longest = novels.stream()
                 .filter(n->!n.getTitle().isBlank())
                 .max(Comparator.comparing(n->n.getTitle().length()));
@@ -199,7 +197,7 @@ public class BookStore {
      * @param year year to find books
      * @return true or false if a book is found
      */
-    private static boolean isThereABookWrittenBetween(final int year){
+    private static boolean isThereABookWrittenBetween(final int year) {
         boolean isBookFound = novels.stream()
                 .anyMatch(n->n.getYearPublished() == year);
         return isBookFound;
@@ -210,7 +208,7 @@ public class BookStore {
      * @param word word to look for
      * @returns number of books with provided word in title
      */
-    private static int howManyBooksContain(final String word){
+    private static int howManyBooksContain(final String word) {
         List<Novel> novelsContaining = novels.stream()
                 .filter(n->n.getTitle().contains(word))
                 .collect(Collectors.toList());
@@ -223,7 +221,7 @@ public class BookStore {
      * @param last ending year e.g. 2009 (result from 2000 to 2009)
      * @return
      */
-    private static double whichPercentWrittenBetween(final int first, final int last){
+    private static double whichPercentWrittenBetween(final int first, final int last) {
         int numBooks = novels.size();
         List<Novel> novFiltered = novels.stream()
                 .filter(n->n.getYearPublished() >= first && n.getYearPublished() <= last)
@@ -237,7 +235,7 @@ public class BookStore {
      * Returns the oldest book
      * @returns oldest book
      */
-    private static Novel getOldestBook(){
+    private static Novel getOldestBook() {
         Optional<Novel> oldest = novels.stream()
                 .min(Comparator.comparing(Novel::getYearPublished));
         return oldest.get();
@@ -248,7 +246,7 @@ public class BookStore {
      * @param titleLength length of character in book's title
      * @return a list of novels that match the provided length
      */
-    private static List<Novel> getBooksThisLength(final int titleLength){
+    private static List<Novel> getBooksThisLength(final int titleLength) {
         List<Novel> filteredNovels = novels.stream()
                 .filter(n->(n.getTitle().length()==titleLength))
                 .collect(Collectors.toList());
