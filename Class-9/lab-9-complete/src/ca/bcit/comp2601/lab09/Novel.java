@@ -9,9 +9,9 @@ package ca.bcit.comp2601.lab09;
  */
 public class Novel {
 
-    private final String title;
-    private final String authorName;
-    private final int yearPublished;
+    private final   String title;
+    private final   String authorName;
+    private final   int yearPublished;
 
     /**
      * Default Constructor for Novel
@@ -22,17 +22,17 @@ public class Novel {
      */
     public Novel(final String title, final String authorName, final int yearPublished) {
         // title
-        if (title == null || title.isBlank()) {
+        if(title == null || title.isBlank()) {
             throw new IllegalArgumentException("Invalid title. Cannot be null or blank");
-        } else {
-            this.title = title;
         }
+
         // authorName
         if (authorName == null || authorName.isBlank()) {
             throw new IllegalArgumentException("Invalid author. Cannot be null or blank");
-        } else {
-            this.authorName = authorName;
         }
+
+        this.authorName = authorName;
+        this.title = title;
         // yearPublished
         this.yearPublished = yearPublished;
     }

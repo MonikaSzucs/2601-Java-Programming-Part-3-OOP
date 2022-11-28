@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * BookStore Class
@@ -15,8 +16,9 @@ import java.util.stream.Collectors;
 public class BookStore {
     private final String bookStoreName;
     private static List<Novel> novels;
+
     private static final String INPUT_FILE;
-    private static final String DELIMITER_COMMA;
+    private static final String DELIMITER;
     private static final String BLANK_STRING;
     private static final int OFFSET_YEAR_PUBLISHED;
     private static final int OFFSET_AUTHOR_NAME;
@@ -29,17 +31,17 @@ public class BookStore {
 
     static {
         novels = new ArrayList<>();
-        INPUT_FILE = "files\\data_lab09.csv";
-        DELIMITER_COMMA = ",";
-        BLANK_STRING = "";
-        OFFSET_YEAR_PUBLISHED = -1;
-        OFFSET_AUTHOR_NAME = -2;
-        OFFSET_LAST_ELEMENTS = -1;
-        OFFSET_DECADE = 9;
-        INDEX_FIRST_LETTER = 0;
-        OFFSET_DELIMITER_REMOVAL = 2;
-        MAX_PERCENTAGE = 100;
-        DOUBLE_NORMALIZATION = 1.0;
+        INPUT_FILE                  = "files\\data_lab09.csv";
+        DELIMITER                   = ",";
+        BLANK_STRING                = "";
+        OFFSET_YEAR_PUBLISHED       = -1;
+        OFFSET_AUTHOR_NAME          = -2;
+        OFFSET_LAST_ELEMENTS        = -1;
+        OFFSET_DECADE               = 9;
+        INDEX_FIRST_LETTER          = 0;
+        OFFSET_DELIMITER_REMOVAL    = 2;
+        MAX_PERCENTAGE              = 100;
+        DOUBLE_NORMALIZATION        = 1.0;
     }
 
     /**
@@ -48,20 +50,24 @@ public class BookStore {
      * @param bookStoreName name of bookstore
      * @throws FileNotFoundException throws exception if provided file is not found
      */
-    public BookStore(final String bookStoreName) throws FileNotFoundException {
+    public BookStore(final String bookStoreName)
+            throws FileNotFoundException {
         this.bookStoreName = bookStoreName;
 
         // Charset changed to include French accents
-        Scanner scanner = new Scanner(new File(INPUT_FILE), StandardCharsets.ISO_8859_1.toString());
+        Scanner scanner;
+        scanner = new Scanner(new File(INPUT_FILE), StandardCharsets.ISO_8859_1.toString());
 
         // Populate Novels List
         while(scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            Novel newNovel = parseNovelData(line);
+            String line;
+            Novel newNovel;
+            line = scanner.nextLine();
+            newNovel = parseNovelData(line);
+
+            // if you just have only one if the just do if not an empty else
             if (newNovel != null){
                 novels.add(newNovel);
-            } else {
-                // Do nothing
             }
         }
         scanner.close();
@@ -130,6 +136,25 @@ public class BookStore {
         System.out.println("Getting a list of all books whose title is this length of 8:");
         List booksWithLength = getBooksThisLength(8);
         booksWithLength.forEach(n-> System.out.println(n.toString()));
+
+        System.out.println();
+        System.out.println("prints all titles containing the substring, but prints that matching list in reverse alphabetical order");
+        printTitlesContaining("God");
+
+        System.out.println();
+        System.out.println("Prints the shortest title that starts with ");
+        getShortestTitleStartingWith("A");
+
+        System.out.println();
+        System.out.println("Prints all authors with space in title");
+        List novelsWithSpace = getAllNovelsWithSpaceInTitle();
+        novelsWithSpace.forEach(n -> System.out.println(n.toString()));
+
+        System.out.println();
+        System.out.println("Prints all authors who published between start and end year");
+        List novelWithAuthorPublished = getAllAuthorsWhoPublishedBetween(1950, 1970);
+        novelWithAuthorPublished.forEach(n -> System.out.println(n.toString()));
+
     }
 
     /**
@@ -261,6 +286,48 @@ public class BookStore {
     }
 
     /**
+     *
+     * @param substring the word to find in the string
+     */
+    private static void printTitlesContaining(final String substring) {
+        List<Novel> novelsContaining = novels.stream()
+                .filter(n->n.getTitle().contains(substring))
+                .sorted(Comparator.comparing(n -> n.getTitle().replaceAll("\'", "")))
+                // .sorted(Comparator.comparing(n->n.getTitle().replaceAll("\"",BLANK_STRING)))
+                .collect(Collectors.toList());
+        //novelsContaining.sort(Comparator.reverseOrder());
+        //Stream.of(novelsContaining)
+                //.sorted(Comparator.comparingInt(String::length).reversed());
+        novelsContaining.forEach(n-> System.out.println(n.getTitle()));
+    }
+
+    private static void getShortestTitleStartingWith(final String substring) {
+        Optional<Novel> shortestTitle = novels.stream()
+                .filter(n->!n.getTitle().isBlank() && n.getTitle().startsWith(substring))
+                .min(Comparator.comparing(n->n.getTitle().length()));
+        shortestTitle.ifPresent(n-> System.out.println("Shortest title that starts with " + substring + " is " + n.getTitle()));
+    }
+
+    private static List<Novel> getAllNovelsWithSpaceInTitle() {
+        List<Novel> novelsContaining = novels.stream()
+                .filter(n -> n.getTitle().contains(" "))
+                .collect(Collectors.toList());
+        novelsContaining.forEach(n-> System.out.println(n.getTitle()));
+
+        return novelsContaining;
+    }
+
+    private static List<Novel> getAllAuthorsWhoPublishedBetween(final int first, final int last) {
+        int numBooks = novels.size();
+        List<Novel> novFiltered = novels.stream()
+                .filter(n->n.getYearPublished() >= first && n.getYearPublished() <= last)
+                .sorted(Comparator.comparing(Novel::getYearPublished))
+                .collect(Collectors.toList());
+        System.out.println(novFiltered);
+        return novFiltered;
+    }
+
+    /**
      * Helper method used to remove non-printable characters from strings
      * @param inputString string to be cleaned
      * @return string without non-printable characters
@@ -281,20 +348,21 @@ public class BookStore {
      *                           e.g. "Are You There God? It's Me, Margaret.,Judy Blume,1970"
      * @return a Novel if all necessary parameters are valid. Null if it failed
      */
-    private static Novel parseNovelData(final String commaSeparatedLine){
+    private static Novel parseNovelData(final String commaSeparatedLine) {
         try{
             String title;
             String authorName;
             int yearPublished;
             List<String> novelData;
-            novelData = new ArrayList<>(List.of(commaSeparatedLine.split(DELIMITER_COMMA)));
+            novelData = new ArrayList<>(List.of(commaSeparatedLine.split(DELIMITER)));
             yearPublished = Integer.parseInt(novelData.get(novelData.size()+OFFSET_YEAR_PUBLISHED));
             authorName = novelData.get(novelData.size()+OFFSET_AUTHOR_NAME);
             novelData.remove(novelData.size()+OFFSET_LAST_ELEMENTS);
             novelData.remove(novelData.size()+OFFSET_LAST_ELEMENTS);
-            title = removeNonPrintableChars(String.join(DELIMITER_COMMA, novelData));
+            title = removeNonPrintableChars(String.join(DELIMITER, novelData));
             return new Novel(title, authorName, yearPublished);
-        } catch(Exception e) {
+        } catch(final Exception e) {
+            e.printStackTrace();
             return null;
         } finally {
             // Do nothing
