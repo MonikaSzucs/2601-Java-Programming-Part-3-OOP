@@ -3,7 +3,6 @@ import java.util.List;
 
 class SocialMedia implements NewPost {
     private List<Observer> observers = new ArrayList<Observer>();
-
     private String username;
     private String news;
 
@@ -27,6 +26,7 @@ class SocialMedia implements NewPost {
 
     public void sendNews(final String news) {
         System.out.printf("\nUsername: %s, News: %s\n", username, news);
+        notifyFollowers(news);
     }
 
     @Override
@@ -40,7 +40,8 @@ class SocialMedia implements NewPost {
     }
 
     @Override
-    public void notifyFollower(final String n) {
+    public void notifyFollowers(final String n) {
         observers.forEach(observer -> observer.notification(news, n));
     }
 }
+

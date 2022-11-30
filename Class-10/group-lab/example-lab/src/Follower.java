@@ -8,6 +8,6 @@ public class Follower implements Observer {
 
     @Override
     public void notification(final String handle, final String news) {
-        System.out.printf("%s received news: %s 0 NEWS '%s'\n", username, handle, news);
+        System.out.printf("%s received news: %s - NEWS '%s'\n", username, handle, news);
     }
 }
