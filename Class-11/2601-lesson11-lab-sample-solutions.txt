@@ -1,0 +1,213 @@
+Thread lab:
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class PrintThread implements Runnable
+
+{
+    private static int number;
+
+    public static void main(final String[] args) {
+
+        Thread thread1 = new Thread(PrintThread::printTime);
+        Thread thread2 = new Thread(PrintThread::printPrimes);
+        thread1.start();
+        thread2.start();
+        System.out.println("The rest of the program will keep running");
+        System.out.println("And the program will end only after the Thread is done");
+    }
+
+    public static void printPrimes()
+    {
+        int number = 3;
+        boolean prime = true;
+        while(number <= 1000) {
+            prime = true;
+            for(int i = 2; i < number; i++) {
+                if(number % i == 0) {
+                    prime = false;
+                    break;
+                }
+
+            }
+            if(prime)
+            {
+                System.out.println("prime: " + number);
+            }
+            number++;
+            try
+            {
+                Thread.sleep(700);
+            } catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void printTime()
+    {
+
+        SimpleDateFormat sdf;
+        while(true)
+        {
+            sdf = new SimpleDateFormat("hh:mm:ss a");
+            System.out.println(new Date(System.currentTimeMillis()));
+            try
+            {
+                Thread.sleep(1000);
+            } catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+------------------
+
+Timer Lab:
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class ClockTimer {
+    private static Timer clockTimer;
+    private static Timer numberTimer;
+    private static Timer nameTimer;
+
+    private static int clockTicks;
+    private static int number;
+
+    static {
+        clockTimer = new Timer();
+        numberTimer = new Timer();
+        nameTimer = new Timer();
+        clockTicks = 0;
+        number = 1;
+    }
+
+    public static void main(final String[] args) {
+        clockTimer.scheduleAtFixedRate(new RunnableTimerTask(ClockTimer::printTime), 0, 1000);
+        numberTimer.scheduleAtFixedRate(new RunnableTimerTask(ClockTimer::printNumber), 0, 1234);
+
+        nameTimer.scheduleAtFixedRate(new RunnableTimerTask(ClockTimer::printName), 0, 1200);
+
+
+        Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("Cancel name after 5.1 seconds");
+                nameTimer.cancel();
+                t.cancel();
+            }
+        }, 5100);
+    }
+
+    public static void printName()
+    {
+        System.out.println("Jason");
+    }
+
+
+
+    public static void printNumber() {
+        System.out.println("Number is " + number);
+        number++;
+
+        if(number > 7) {
+            System.out.println("Stopping the number after 7 prints");
+            numberTimer.cancel(); // stop after 7 prints
+        }
+    }
+
+    public static void printTime() {
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+        System.out.println(new Date(System.currentTimeMillis()));
+        clockTicks++;
+        if(clockTicks >= 4) {
+            System.out.println("Stopping the clock after 4 prints");
+            clockTimer.cancel(); // stop after 4 prints
+        }
+    }
+
+    private static class RunnableTimerTask extends TimerTask {
+        private Runnable runnable;
+        public RunnableTimerTask(Runnable runnable) {
+            this.runnable = runnable;
+        }
+
+        @Override
+        public void run() {
+            runnable.run();
+        }
+    }
+}
+
+
+
+------------------------
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+class FutureDemo {
+    private static final ExecutorService threadPool;
+
+    static {
+        threadPool = Executors.newFixedThreadPool(1);
+    }
+
+    public static void main(final String[] args) throws InterruptedException, ExecutionException {
+        FactorialCalculator task = new FactorialCalculator(10);
+        System.out.println("Submitting Task ...");
+        Future future = threadPool.submit(task);
+        // Future future2 = threadPool.submit(task2);
+        System.out.println("Task is submitted");
+        while (!future.isDone())
+        {
+            System.out.println("Task is not completed yet....");
+            Thread.sleep(100);  // sleep for 100 ms before checking again
+        }
+        System.out.println("Task is completed, let's check the result");
+        long factorial = (long) future.get();
+        System.out.println("Factorial of 10 is : " + factorial);
+        threadPool.shutdown();
+    }
+
+    private static class FactorialCalculator implements Callable {
+        private final int number;
+        public FactorialCalculator(int number) {
+            this.number = number;
+        }
+
+        @Override
+        public Long call() {
+            long output = 0;
+            try {
+                output = factorial(number);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(FutureDemo.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return output;
+        }
+
+        private long factorial(int number) throws InterruptedException {
+            long result = 1;
+            while (number > 0) {
+                Thread.sleep(200);  // adding delay for example
+                result = result * number;
+                number--;
+            }
+            return result;
+        }
+    }
+}
+
