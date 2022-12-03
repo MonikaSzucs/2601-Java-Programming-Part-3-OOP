@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2ac5a4-1cc0-4e98-b88e-1ac6d738065d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MyExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MyExecutorCurrentTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$RunnableTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$RunnableTimerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockNameTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockNameTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerCancel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimerCancel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../example-1" />
   </component>
-  <component name="RunManager" selected="Application.ClockNameTimer">
+  <component name="RunManager" selected="Application.MyExecutorCurrentTime">
     <configuration name="ClockNameTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClockNameTimer" />
       <module name="in-class-lab" />
@@ -49,15 +46,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PrintThread" />
+    <configuration name="MyExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyExecutor" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintThreadTeacherExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PrintThreadTeacherExample" />
+    <configuration name="MyExecutorCurrentTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyExecutorCurrentTime" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,11 +76,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyExecutorCurrentTime" />
+        <item itemvalue="Application.MyExecutor" />
         <item itemvalue="Application.ClockNameTimer" />
         <item itemvalue="Application.TimerCancel" />
         <item itemvalue="Application.PrintTimer" />
-        <item itemvalue="Application.PrintThreadTeacherExample" />
-        <item itemvalue="Application.PrintThread" />
       </list>
     </recent_temporary>
   </component>
