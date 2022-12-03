@@ -19,10 +19,10 @@ import java.util.Scanner;
  *
  */
 class CountryList {
-    private List<CountryProcessor> countryProcessor;
+    private List<CountryProcessor> listOfCountries;
 
     CountryList() throws FileNotFoundException {
-        countryProcessor = new ArrayList<>();
+        listOfCountries = new ArrayList<>();
 
         Scanner scanner;
         scanner = new Scanner(new File("files\\data_lab09.csv"), StandardCharsets.ISO_8859_1.toString());
