@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2ac5a4-1cc0-4e98-b88e-1ac6d738065d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyExecutorCurrentTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FutureDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FutureNumberAdder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainParallelStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainParallelStreamExampleTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ParallelStreamListOfNovels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,37 +41,37 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../example-1" />
   </component>
-  <component name="RunManager" selected="Application.MyExecutorCurrentTime">
-    <configuration name="ClockNameTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClockNameTimer" />
+  <component name="RunManager" selected="Application.ParallelStreamListOfNovels">
+    <configuration name="FutureDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FutureDemo" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyExecutor" />
+    <configuration name="FutureNumberAdder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FutureNumberAdder" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyExecutorCurrentTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyExecutorCurrentTime" />
+    <configuration name="MainParallelStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainParallelStream" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PrintTimer" />
+    <configuration name="MainParallelStreamExampleTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainParallelStreamExampleTwo" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerCancel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TimerCancel" />
+    <configuration name="ParallelStreamListOfNovels" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ParallelStreamListOfNovels" />
       <module name="in-class-lab" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,11 +79,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyExecutorCurrentTime" />
-        <item itemvalue="Application.MyExecutor" />
-        <item itemvalue="Application.ClockNameTimer" />
-        <item itemvalue="Application.TimerCancel" />
-        <item itemvalue="Application.PrintTimer" />
+        <item itemvalue="Application.ParallelStreamListOfNovels" />
+        <item itemvalue="Application.MainParallelStream" />
+        <item itemvalue="Application.MainParallelStreamExampleTwo" />
+        <item itemvalue="Application.FutureDemo" />
+        <item itemvalue="Application.FutureNumberAdder" />
       </list>
     </recent_temporary>
   </component>
