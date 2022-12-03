@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2ac5a4-1cc0-4e98-b88e-1ac6d738065d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in-class-lab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrintThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrintThreadTeacherExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrintTimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimerCancel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$RunnableTimerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel$RunnableTimerTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/in-class-lab/TimerCancel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockNameTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockNameTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimerCancel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimerCancel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../example-1" />
   </component>
-  <component name="RunManager" selected="Application.TimerCancel">
+  <component name="RunManager" selected="Application.ClockNameTimer">
+    <configuration name="ClockNameTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClockNameTimer" />
+      <module name="in-class-lab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrintThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrintThread" />
       <module name="in-class-lab" />
@@ -77,6 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClockNameTimer" />
         <item itemvalue="Application.TimerCancel" />
         <item itemvalue="Application.PrintTimer" />
         <item itemvalue="Application.PrintThreadTeacherExample" />

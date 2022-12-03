@@ -24,7 +24,7 @@ public class TimerCancel {
         System.out.println("The number is now " + number);
         number++;
     }
-    private static class RunnableTimerTask extends TimerTask {
+    static class RunnableTimerTask extends TimerTask {
         private Runnable runnable;
         public RunnableTimerTask(Runnable runnable) {
             this.runnable = runnable;
