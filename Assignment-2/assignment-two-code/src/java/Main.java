@@ -24,14 +24,39 @@ public class Main {
             } else if(i == 3) {
 
             } else if(i == 4) {
-
+                concurrentMain();
             } else if(i == 5) {
                 proceed = false;
             } else {
                 System.out.println("Please make sure you enter a number between 1 and 5 (inclusive)");
             }
         }
-
         reader.close();
+    }
+
+    public static void concurrentMain() {
+        try (Scanner input = new Scanner(System.in)) {
+            int rangeStart, rangeEnd, numberOfThreads;
+            do {
+                System.out.print("Enter the range start: ");
+                rangeStart = input.nextInt();
+
+                System.out.print("Enter the range end: ");
+                rangeEnd = input.nextInt();
+
+                System.out.print("Enter the number of threads: ");
+                numberOfThreads = input.nextInt();
+
+                if (rangeStart >= rangeEnd || numberOfThreads < 1) {
+                    System.out.println("Warning: range start should be less then range end. Also number of threads should not be less then 1.");
+                }
+            } while (rangeStart >= rangeEnd || numberOfThreads < 1);
+
+
+            int sum = DivideAndConquerSum.sum(rangeStart, rangeEnd, numberOfThreads);
+
+            System.out.println(String.format("Sum of numbers in the range [%s, %s] found in %s threads is %s",
+                    rangeStart, rangeEnd, numberOfThreads, sum));
+        }
     }
 }
