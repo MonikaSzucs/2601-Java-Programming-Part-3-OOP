@@ -24,7 +24,7 @@ import java.util.Scanner;
  *
  */
 public class CountryList extends JFrame{
-    private static final ArrayList<CountryCapital> newCountryCapitalList = new ArrayList<>();
+    static final ArrayList<CountryCapital> newCountryCapitalList = new ArrayList<>();
 
     private final DefaultListModel<CountryCapital> jListCountryCapital = new DefaultListModel<>();
 
@@ -150,32 +150,8 @@ public class CountryList extends JFrame{
      * @param args the main argument
      * @throws FileNotFoundException checking to see if an excel file is not found in the searched directory
      */
-    public static void main(final String[] args) throws FileNotFoundException {
-        Scanner file;
-        file = new Scanner(new File("files\\countries-and-capitals.txt"));
-
-        while(file.hasNextLine()) {
-            // Read a line
-            String line = file.nextLine();
-            System.out.println(line);
-
-            // Split the line string into tokens
-            String[] countryCapitalList = line.split(",");
-            System.out.println(countryCapitalList[0]);
-
-            String country =countryCapitalList[0];
-            String capital = countryCapitalList[1];
-
-
-            // Create an instance of Course and add to the array list
-            newCountryCapitalList.add(new CountryCapital(country, capital));
-
-        }
-
-        // Close the file
-        file.close();
-
-        CountryList app = new CountryList();
-    }
+//    public static void main(final String[] args) throws FileNotFoundException {
+//
+//    }
 
 }
