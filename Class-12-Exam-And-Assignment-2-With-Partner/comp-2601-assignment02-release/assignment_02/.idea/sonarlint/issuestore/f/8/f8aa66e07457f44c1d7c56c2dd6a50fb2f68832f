@@ -1,0 +1,15 @@
+
+`	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Ä´Ö‚ýÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¤Ýäòúÿÿÿÿ
+t
+java:S2142%"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(üŸ´Â
+”
+java:S11300"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(¨¢ÍÀ8õð²ÓÍ0
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(Ç­…Ìûÿÿÿÿ
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(€ŠÏÂ
+S	java:S106="9Replace this use of System.out or System.err by a logger.(ƒ‹Ž©ÿÿÿÿÿ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(¶÷ÅÅøÿÿÿÿ
+M	java:S106H"9Replace this use of System.out or System.err by a logger.(‚¦´	

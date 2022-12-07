@@ -1,0 +1,13 @@
+
+Q
+java:S3740	"/Provide the parametrized type for this generic.(†£‹òşÿÿÿÿ8‘î¥ÜÌ0
+w
+java:S1210°"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(‡ÕÔÏ8î¥ÜÌ0
+d
+java:S6201A"BReplace this instanceof check and cast with 'instanceof Date date'(Œéâ¹ıÿÿÿÿ8âí¹­Í0
+k
+java:S4201A"IRemove this unnecessary null check; "instanceof" returns false for nulls.(Œéâ¹ıÿÿÿÿ8£î¥ÜÌ0
+a
+java:S4351˜">Refactor this method so that its argument is of type 'Object'.(„¾¥ëûÿÿÿÿ8§î¥ÜÌ0
+d
+java:S6201·"FReplace this instanceof check and cast with 'instanceof Person person'(Õö¨Ì8©î¥ÜÌ0

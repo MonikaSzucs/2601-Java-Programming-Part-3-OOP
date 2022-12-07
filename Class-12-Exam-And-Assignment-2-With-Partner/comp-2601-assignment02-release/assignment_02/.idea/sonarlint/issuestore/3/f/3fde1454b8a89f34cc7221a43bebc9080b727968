@@ -1,0 +1,31 @@
+
+E
+java:S3740|"/Provide the parametrized type for this generic.(Þç•º
+F
+java:S3740£"/Provide the parametrized type for this generic.(ÏÕßü
+F
+java:S3740°"/Provide the parametrized type for this generic.(Þç•º
+<
+java:S1168X"&Return an empty array instead of null.(¥¹ï
+S	java:S106g"9Replace this use of System.out or System.err by a logger.(ýÎöÀûÿÿÿÿ
+N	java:S106t"9Replace this use of System.out or System.err by a logger.(ú†íÄ
+i
+java:S6204€"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+T	java:S106"9Replace this use of System.out or System.err by a logger.(¯Þ‚„üÿÿÿÿ
+O	java:S106‚"9Replace this use of System.out or System.err by a logger.(ø¢Õ­
+O	java:S106"9Replace this use of System.out or System.err by a logger.(ØÌ®–
+X
+java:S1612˜"<Replace this lambda with method reference 'Entry::getValue'.(ïðâËüÿÿÿÿ
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(µäÝþÿÿÿÿ
+i
+java:S6204¥"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(Æ¯ˆü
+T	java:S106¨"9Replace this use of System.out or System.err by a logger.(½ú§¯ýÿÿÿÿ
+i
+java:S6204³"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+O	java:S106´"9Replace this use of System.out or System.err by a logger.(…áÌÓ
+O	java:S106µ"9Replace this use of System.out or System.err by a logger.(ø¢Õ­
+_
+java:S5361Â"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Í˜æ‡
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(ê‚Ìßúÿÿÿÿ
+T	java:S106Å"9Replace this use of System.out or System.err by a logger.(å‚™Ïÿÿÿÿÿ

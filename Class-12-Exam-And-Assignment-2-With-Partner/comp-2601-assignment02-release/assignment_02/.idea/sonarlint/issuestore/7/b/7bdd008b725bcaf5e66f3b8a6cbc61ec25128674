@@ -1,0 +1,19 @@
+
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(‰µÒ¥ùÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(á…‡şÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(®Ø««üÿÿÿÿ
+M	java:S106*"9Replace this use of System.out or System.err by a logger.(÷×é
+
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(Ã®Ï–
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(èÙú½ùÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(ØåƒÌûÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(‰µÒ¥ùÿÿÿÿ
+S
+java:S1854;"6Remove this useless assignment to local variable "cl".(Ò¢µ8åÂùÔÍ0
+D
+java:S1481;"'Remove this unused "cl" local variable.(Ò¢µ8æÂùÔÍ0
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(ë‰Öıÿÿÿÿ
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(Áå¨ÿÿÿÿÿ
+S	java:S106Z"9Replace this use of System.out or System.err by a logger.(Û¬çŞøÿÿÿÿ
+S	java:S106^"9Replace this use of System.out or System.err by a logger.(Û¬çŞøÿÿÿÿ
+Q	java:S125]"<This block of commented-out lines of code should be removed.(†€éˆ
